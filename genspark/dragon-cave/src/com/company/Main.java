@@ -35,22 +35,31 @@ public class Main {
                 is greedy and hungry and will eat you on sight.
                 Which cave will you go in to? (1 or 2)
                 """);
+
+        try {
+            Scanner getInput = new Scanner(System.in);
+            String input = getInput.nextLine();
+            int inputNumber = Integer.parseInt(input);
+            userResponse(inputNumber);
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
+    }
+
+    public static String userResponse(int x) {
         String result = """
                 You approach the cave...
                 It is dark and spooky...
                 A large dragon jumps out in front of you! He opens his jaws and...
                 """;
-        try {
-            Scanner getInput = new Scanner(System.in);
-            String input = getInput.nextLine();
-            int inputNumber = Integer.parseInt(input);
-            if (inputNumber == 1) {
-                System.out.println(result + "Gobbles you down in one bite!!");
-            } else System.out.println(result + "Welcomes you in and shares his treasure!!");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        
+        if (x == 1) {
+            System.out.println(result + "Gobbles you down in one bite!!");
+            return result + "Gobbles you down in one bite!!";
+        } else
+            System.out.println(result + "Welcomes you in and shares his treasure!!");
+            return result + "Welcomes you in and shares his treasure!!";
     }
 }
 
