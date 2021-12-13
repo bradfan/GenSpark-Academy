@@ -17,7 +17,10 @@ class MainTest {
 
     @DisplayName("Test for User Response")
     @Test
-    void userResponse() {
+    void userResponse(int x) {
+        assertEquals("You approach the cave...\n" +
+                "                It is dark and spooky...\n" +
+                "                A large dragon jumps out in front of you! He opens his jaws and...", main.userResponse(x), "User response method crashed.");
     }
 
     @AfterEach
