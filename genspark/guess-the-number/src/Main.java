@@ -69,8 +69,7 @@ public class Main {
                                 + text);
                     } if (input == random) {
                         win = true;
-                        System.out.println("Good job, " + name + "! You guessed my number in " + tries + " guesses!");
-                        System.out.println("Would you like to play again? (y or n)");
+                        System.out.println("Good job, " + name + "! You guessed my number in " + tries + " guesses!\n\"Would you like to play again? (y or n)\"");
                         Scanner restart = new Scanner(System.in);
                         again = restart.nextLine().charAt(0);
                     }
