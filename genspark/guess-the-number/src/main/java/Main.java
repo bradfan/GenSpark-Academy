@@ -20,7 +20,6 @@ public class Main {
             double random = Math.floor((Math.random() * 20) + 1);
             int tries = 0;
             boolean win = false;
-
             while (!win) {
                 try {
                     Scanner getInput = new Scanner(System.in);
