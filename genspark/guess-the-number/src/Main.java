@@ -42,10 +42,14 @@ public class Main {
         System.out.println("Guess the number");
         char again = 'y';
         while(again == 'y') {
-            System.out.println("Hello! What is your name?");
-            Scanner nameInput = new Scanner(System.in);
-            String name = nameInput.nextLine();
-
+            String name = "";
+            try {
+                System.out.println("Hello! What is your name?");
+                Scanner nameInput = new Scanner(System.in);
+                name = nameInput.nextLine();
+            } catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
             String text = """
                     Take a guess.""";
             System.out.println("Well, " + name + ", I am thinking of a number between 1 and 20.");
@@ -70,13 +74,16 @@ public class Main {
                     } if (input == random) {
                         win = true;
                         System.out.println("Good job, " + name + "! You guessed my number in " + tries + " guesses!\n\"Would you like to play again? (y or n)\"");
-                        Scanner restart = new Scanner(System.in);
-                        again = restart.nextLine().charAt(0);
+                        try {
+                            Scanner restart = new Scanner(System.in);
+                            again = restart.nextLine().charAt(0);
+                        } catch(Exception e){
+                            System.out.println(e.getMessage());
+                        }
                     }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
-
             }
         }
     }
