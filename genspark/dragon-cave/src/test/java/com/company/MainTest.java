@@ -17,10 +17,11 @@ class MainTest {
 
     @DisplayName("Test for User Response")
     @Test
-    void userResponse(int x) {
+    void userResponse() {
         assertEquals("You approach the cave...\n" +
-                "                It is dark and spooky...\n" +
-                "                A large dragon jumps out in front of you! He opens his jaws and...", main.userResponse(x), "User response method crashed.");
+                "It is dark and spooky...\n" +
+                "A large dragon jumps out in front of you! He opens his jaws and...\n" +
+                "Gobbles you down in one bite!!", main.userResponse(1), "User response method crashed.");
     }
 
     @AfterEach
@@ -28,3 +29,7 @@ class MainTest {
     }
 
 }
+
+//You approach the cave...\n" +
+//                "                It is dark and spooky...\n" +
+//                "                A large dragon jumps out in front of you! He opens his jaws and...
