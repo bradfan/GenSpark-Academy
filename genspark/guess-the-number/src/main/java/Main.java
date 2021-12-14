@@ -6,17 +6,14 @@ public class Main {
         char again = 'y';
         while(again == 'y') {
             String name = "";
-            public static String getName() {
-                try {
-                    System.out.println("Hello! What is your name?");
-                    Scanner nameInput = new Scanner(System.in);
-                    name = nameInput.nextLine();
-                } catch(Exception e) {
-                    System.out.println(e.getMessage());
-                }
-
+            try {
+                System.out.println("Hello! What is your name?");
+                Scanner nameInput = new Scanner(System.in);
+                name = nameInput.nextLine();
+            } catch(Exception e) {
+                System.out.println(e.getMessage());
             }
-
+            getName(name);
             String text = """
                     Take a guess.""";
             System.out.println("Well, " + name + ", I am thinking of a number between 1 and 20.");
@@ -53,7 +50,11 @@ public class Main {
             }
         }
     }
+    public static String getName(String name) {
+         return name;
+    }
 }
+
 //        Original project 2
 //        System.out.println("Guess the number");
 //        char again = 'y';
@@ -91,3 +92,6 @@ public class Main {
 //                }
 //            }
 //        }
+
+//
+
