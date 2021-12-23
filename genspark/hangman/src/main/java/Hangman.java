@@ -24,7 +24,7 @@ public class Hangman {
             int tries = 3;
             boolean win = false;
             while(tries > 0) {
-                System.out.println("tries: " + tries);
+               
                 String oneDisplay = """
                         +---+
                             |
