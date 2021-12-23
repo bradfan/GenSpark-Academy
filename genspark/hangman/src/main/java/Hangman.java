@@ -114,25 +114,21 @@ public class Hangman {
             }
 
 
-//            for (int i = 0; i < letters.length; i++) {
-
-                String a = letters.toString();
-                if (!a.contains("_")) {
-//                    isGameOver = false;
-                    System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
-                    System.out.println("Do you want to play again? (yes or no)");
-                    try {
-                        Scanner restart = new Scanner(System.in);
-                        again = restart.nextLine().charAt(0);
-                    } catch(Exception e){
-                        System.out.println(e.getMessage());
-                    }
+            for (int i = 0; i < letters.length; i++) {
+                if (letters[i] == '_') {
+                    isGameOver = false;
                 }
-//            }
-
-//             if (isGameOver) {
-//
-//            }
+            }
+               if (isGameOver) {
+                System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
+                System.out.println("Do you want to play again? (yes or no)");
+                try {
+                    Scanner restart = new Scanner(System.in);
+                    again = restart.nextLine().charAt(0);
+                } catch(Exception e){
+                    System.out.println(e.getMessage());
+                }
+            }
 
 
 //               end of the "again" while loop bracket
