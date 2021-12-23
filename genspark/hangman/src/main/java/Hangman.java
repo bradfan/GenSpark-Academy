@@ -12,6 +12,7 @@ public class Hangman {
         System.out.println("Just for dev: " + randomWord);
         char[] letters = new char[randomWord.length()];
         ArrayList<Character> missedLetter = new ArrayList<>();
+        boolean isGameOver = true;
         //        set up for do you want to play again
         char again = 'y';
         while(again == 'y') {
@@ -23,6 +24,7 @@ public class Hangman {
             int tries = 3;
             boolean win = false;
             while(tries > 0) {
+                System.out.println("tries: " + tries);
                 String oneDisplay = """
                         +---+
                             |
@@ -86,11 +88,8 @@ public class Hangman {
                           guessCorrect = true;
                       }
                   }
-                boolean isGameOver = true;
+
                 for (int i = 0; i < letters.length; i++) {
-                    if (letters[i] == '_') {
-                        isGameOver = false;
-                    }
                     System.out.print(letters[i]);
                 }
 
@@ -98,19 +97,26 @@ public class Hangman {
                     tries--;
                     missedLetter.add(letter);
                 }
-                  if (isGameOver) {
-                      System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
-                      System.out.println("Do you want to play again? (yes or no)");
-                      try {
-                          Scanner restart = new Scanner(System.in);
-                          again = restart.nextLine().charAt(0);
-                      } catch(Exception e){
-                          System.out.println(e.getMessage());
-                      }
-                  }
 
+              }
+
+            for (int i = 0; i < letters.length; i++) {
+                if (letters[i] == '_') {
+                    isGameOver = false;
+                }
 
             }
+               if (isGameOver) {
+                System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
+                System.out.println("Do you want to play again? (yes or no)");
+                try {
+                    Scanner restart = new Scanner(System.in);
+                    again = restart.nextLine().charAt(0);
+                } catch(Exception e){
+                    System.out.println(e.getMessage());
+                }
+            }
         }
+
    }
 }
