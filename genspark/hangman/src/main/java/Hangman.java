@@ -1,17 +1,19 @@
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Hangman {
 
 
     public static void main(String[] args) {
-//        sets up random word creation and sets char array to be checked against guess
+
         String[] words = new String[] {"cat", "dog", "bat", "mice", "bird"};
         String randomWord = words[(int) (Math.random() * words.length)];
         System.out.println("Just for dev: " + randomWord);
         char[] letters = new char[randomWord.length()];
-//        set up for do you want to play again
+        ArrayList<Character> missedLetter = new ArrayList<>();
+        //        set up for do you want to play again
         char again = 'y';
-        
         while(again == 'y') {
             System.out.println("HANGMAN");
 //            player gets three guesses
@@ -19,7 +21,7 @@ public class Hangman {
                 letters[i] = '_';
             }
             int tries = 3;
-            System.out.println("Just for dev: " + tries);
+            boolean win = false;
             while(tries > 0) {
                 String oneDisplay = """
                         +---+
@@ -58,11 +60,13 @@ public class Hangman {
                          break;
                  }
 
-                String missed = "Missed Letters:";
+                 String missed = "Missed Letters: ";
+                 for ( char c : missedLetter) {
+                   missed = missed + c;
+                }
                 System.out.println(missed);
 
-                String newGuess = "Guess a letter.";
-                System.out.println(newGuess);
+                System.out.println("Guess a letter.");
 
                 String inputGuess = "";
                 try {
@@ -82,20 +86,28 @@ public class Hangman {
                           guessCorrect = true;
                       }
                   }
-                 if (!guessCorrect) {
-                    tries--;
-                }
+                boolean isGameOver = true;
                 for (int i = 0; i < letters.length; i++) {
+                    if (letters[i] == '_') {
+                        isGameOver = false;
+                    }
                     System.out.print(letters[i]);
-
                 }
-                 if(tries == 0) {
-                     System.out.println(fourDisplay);
 
-                 }
-
-
-
+                if (!guessCorrect) {
+                    tries--;
+                    missedLetter.add(letter);
+                }
+                  if (isGameOver) {
+                      System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
+                      System.out.println("Do you want to play again? (yes or no)");
+                      try {
+                          Scanner restart = new Scanner(System.in);
+                          again = restart.nextLine().charAt(0);
+                      } catch(Exception e){
+                          System.out.println(e.getMessage());
+                      }
+                  }
 
 
             }
