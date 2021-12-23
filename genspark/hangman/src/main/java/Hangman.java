@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Hangman {
+
+
     public static void main(String[] args) {
 //        sets up random word creation and sets char array to be checked against guess
         String[] words = new String[] {"cat", "dog", "bat", "mice", "bird"};
@@ -9,9 +11,13 @@ public class Hangman {
         char[] letters = new char[randomWord.length()];
 //        set up for do you want to play again
         char again = 'y';
+        
         while(again == 'y') {
             System.out.println("HANGMAN");
 //            player gets three guesses
+            for (int i = 0; i < letters.length; i++) {
+                letters[i] = '_';
+            }
             int tries = 3;
             System.out.println("Just for dev: " + tries);
             while(tries > 0) {
@@ -58,12 +64,6 @@ public class Hangman {
                 String newGuess = "Guess a letter.";
                 System.out.println(newGuess);
 
-                for (int i = 0; i < letters.length; i++) {
-                    letters[i] = '_';
-                    System.out.print(letters[i]);
-
-                }
-
                 String inputGuess = "";
                 try {
                     Scanner userInput = new Scanner(System.in);
@@ -72,7 +72,7 @@ public class Hangman {
                 } catch(Exception e){
                     System.out.println(e.getMessage());
                 }
-//
+
                 boolean guessCorrect = false;
                 char letter = inputGuess.charAt(0);
                   for (int i = 0; i <randomWord.length(); i++) {
@@ -81,10 +81,18 @@ public class Hangman {
                           letters[i] = l;
                           guessCorrect = true;
                       }
-                      if (!guessCorrect) {
-                          tries--;
-                      }
                   }
+                 if (!guessCorrect) {
+                    tries--;
+                }
+                for (int i = 0; i < letters.length; i++) {
+                    System.out.print(letters[i]);
+
+                }
+                 if(tries == 0) {
+                     System.out.println(fourDisplay);
+
+                 }
 
 
 
