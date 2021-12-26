@@ -57,6 +57,7 @@ public class Hangman {
         char[] letters = new char[randomWord.length()];
         ArrayList<Character> missedLetter = new ArrayList<>();
         boolean isGameOver = true;
+        boolean win = false;
         //        set up for do you want to play again
         char again = 'y';
         while(again == 'y') {
@@ -66,7 +67,7 @@ public class Hangman {
                 letters[i] = '_';
             }
             int tries = 3;
-            boolean win = false;
+//            boolean win = false;
 
            while(tries > 0) {
 
@@ -115,12 +116,18 @@ public class Hangman {
                 System.out.println("Sorry. The word was " + "'" + randomWord + "'");
             }
 
-
             for (int i = 0; i < letters.length; i++) {
                 if (letters[i] == '_') {
                     isGameOver = false;
                 }
             }
+
+
+//            for (int i = 0; i < letters.length; i++) {
+//                if (letters[i] != '_') {
+//                    win = true;
+//                }
+//            }
                if (isGameOver) {
                 System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
                 System.out.println("Do you want to play again? (yes or no)");
@@ -135,9 +142,6 @@ public class Hangman {
 
 //               end of the "again" while loop bracket
         }
-
-
-
 
    }
 }
