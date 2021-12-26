@@ -67,7 +67,8 @@ public class Hangman {
             }
             int tries = 3;
             boolean win = false;
-            while(tries > 0) {
+
+           while(tries > 0) {
 
                 RetrieveDisplay(tries);
 
@@ -107,7 +108,8 @@ public class Hangman {
                     missedLetter.add(letter);
                 }
 
-              }
+             }
+
             if(tries == 0) {
                 again = 'n';
                 System.out.println("Sorry. The word was " + "'" + randomWord + "'");
