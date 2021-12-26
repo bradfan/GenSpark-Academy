@@ -108,19 +108,33 @@ public class Hangman {
                     tries--;
                     missedLetter.add(letter);
                 }
+               for (int i = 0; i < letters.length; i++) {
+                   if (letters[i] == '_') {
+                       isGameOver = false;
+                   }
+                   if (letters[i] != '_') {
+                       isGameOver = true;
+                   }
+               }
+               if (isGameOver) {
+                   System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
+                   System.out.println("Do you want to play again? (yes or no)");
+                   try {
+                       Scanner restart = new Scanner(System.in);
+                       again = restart.nextLine().charAt(0);
+                   } catch(Exception e){
+                       System.out.println(e.getMessage());
+                   }
+               }
 
+//end of the tries loop
              }
-
-            if(tries == 0) {
+           if(tries == 0) {
                 again = 'n';
                 System.out.println("Sorry. The word was " + "'" + randomWord + "'");
             }
 
-            for (int i = 0; i < letters.length; i++) {
-                if (letters[i] == '_') {
-                    isGameOver = false;
-                }
-            }
+
 
 
 //            for (int i = 0; i < letters.length; i++) {
@@ -128,16 +142,7 @@ public class Hangman {
 //                    win = true;
 //                }
 //            }
-               if (isGameOver) {
-                System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
-                System.out.println("Do you want to play again? (yes or no)");
-                try {
-                    Scanner restart = new Scanner(System.in);
-                    again = restart.nextLine().charAt(0);
-                } catch(Exception e){
-                    System.out.println(e.getMessage());
-                }
-            }
+
 
 
 //               end of the "again" while loop bracket
