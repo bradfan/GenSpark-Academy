@@ -1,6 +1,5 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Hangman {
@@ -28,13 +27,6 @@ public class Hangman {
                           | |
                             |
                            === """;
-        String fourDisplay = """
-                        
-                        +---+
-                          O |
-                          | |
-                          ^ |
-                           === """;
 
         switch(tries) {
             case 1:
@@ -60,28 +52,25 @@ public class Hangman {
         return null;
     }
 
-
     public static void main(String[] args) {
         //        set up for do you want to play again
-        System.out.println("HANGMAN");
-        String[] words = new String[] {"cat", "dog", "bat", "mice", "bird"};
-        String randomWord = words[(int) (Math.random() * words.length)];
-        System.out.println("Just for dev: " + randomWord);
-        char[] letters = new char[randomWord.length()];
-        ArrayList<Character> missedLetter = new ArrayList<>();
-        boolean isGameOver = true;
-        boolean win = false;
         char again = 'y';
         while(again == 'y') {
+            System.out.println("HANGMAN");
+            String[] words = new String[] {"cat", "dog", "bat", "mice", "bird"};
+            String randomWord = words[(int) (Math.random() * words.length)];
+            System.out.println("Just for dev: " + randomWord);
+            char[] letters = new char[randomWord.length()];
+            ArrayList<Character> missedLetter = new ArrayList<>();
+            boolean isGameOver = true;
+            boolean win = false;
             //            player gets three guesses
             for (int i = 0; i < letters.length; i++) {
                 letters[i] = '_';
             }
             int tries = 3;
-            while(tries > 0) {
-
-               RetrieveDisplay(tries);
-
+            while(!win) {
+                RetrieveDisplay(tries);
                 String missed = "Missed Letters: ";
                  for ( char c : missedLetter) {
                    missed = missed + c;
@@ -114,7 +103,6 @@ public class Hangman {
                     System.out.print(letters[i]);
 
                 }
-
                 if (!guessCorrect) {
                     tries--;
                     missedLetter.add(letter);
@@ -128,6 +116,7 @@ public class Hangman {
                    }
                }
                if (isGameOver) {
+                   win = true;
                    System.out.println();
                    System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
                    System.out.println("Do you want to play again? (yes or no)");
@@ -138,19 +127,14 @@ public class Hangman {
                        System.out.println(e.getMessage());
                    }
                }
-
-//end of the tries loop
+               //end of the tries loop
            }
            if(tries == 0) {
                 again = 'n';
                System.out.println();
                 System.out.println("Sorry. The word was " + "'" + randomWord + "'");
             }
-
-
-
            //               end of the "again" while loop bracket
         }
-
-   }
+    }
 }
