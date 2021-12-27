@@ -1,5 +1,6 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Hangman {
@@ -48,20 +49,30 @@ public class Hangman {
         return result;
     }
 
+    public static String ChosenLetter(char letter) {
+        HashSet<Character> filter = new HashSet<>();
+        filter.add(letter);
+        if (filter.add(letter) == false) {
+            return "You have already guessed that letter. Choose again";
+        }
+        else return null;
+    }
+
 
     public static void main(String[] args) {
 
-        String[] words = new String[] {"cat", "dog", "bat", "mice", "bird"};
-        String randomWord = words[(int) (Math.random() * words.length)];
-        System.out.println("Just for dev: " + randomWord);
-        char[] letters = new char[randomWord.length()];
-        ArrayList<Character> missedLetter = new ArrayList<>();
-        boolean isGameOver = true;
-        boolean win = false;
         //        set up for do you want to play again
         char again = 'y';
         while(again == 'y') {
             System.out.println("HANGMAN");
+            String[] words = new String[] {"cat", "dog", "bat", "mice", "bird"};
+            String randomWord = words[(int) (Math.random() * words.length)];
+            System.out.println("Just for dev: " + randomWord);
+            char[] letters = new char[randomWord.length()];
+            ArrayList<Character> missedLetter = new ArrayList<>();
+            boolean isGameOver = true;
+            boolean win = false;
+
 //            player gets three guesses
             for (int i = 0; i < letters.length; i++) {
                 letters[i] = '_';
@@ -81,6 +92,8 @@ public class Hangman {
 
                 System.out.println("Guess a letter.");
 
+
+
                 String inputGuess = "";
                 try {
                     Scanner userInput = new Scanner(System.in);
@@ -98,7 +111,11 @@ public class Hangman {
                           letters[i] = l;
                           guessCorrect = true;
                       }
+                      if (l != letter ) {
+                          ChosenLetter(letter);
+                      }
                   }
+
 
                 for (int i = 0; i < letters.length; i++) {
                     System.out.print(letters[i]);
@@ -128,24 +145,14 @@ public class Hangman {
                }
 
 //end of the tries loop
-             }
+           }
            if(tries == 0) {
                 again = 'n';
+               System.out.println();
                 System.out.println("Sorry. The word was " + "'" + randomWord + "'");
             }
 
-
-
-
-//            for (int i = 0; i < letters.length; i++) {
-//                if (letters[i] != '_') {
-//                    win = true;
-//                }
-//            }
-
-
-
-//               end of the "again" while loop bracket
+           //               end of the "again" while loop bracket
         }
 
    }
