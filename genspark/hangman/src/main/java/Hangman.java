@@ -49,13 +49,11 @@ public class Hangman {
         return result;
     }
 
-    public static String ChosenLetter(char letter) {
-        HashSet<Character> filter = new HashSet<>();
-        filter.add(letter);
-        if (filter.add(letter) == false) {
-            return "You have already guessed that letter. Choose again";
+    public static String ChosenLetter(ArrayList missedLetter, char letter) {
+        if (missedLetter.contains(letter)) {
+            System.out.println("You have already guessed that letter. Choose again");
         }
-        else return null;
+        return null;
     }
 
 
@@ -90,9 +88,7 @@ public class Hangman {
                 }
                 System.out.println(missed);
 
-                System.out.println("Guess a letter.");
-
-
+                 System.out.println("Guess a letter.");
 
                 String inputGuess = "";
                 try {
@@ -111,11 +107,8 @@ public class Hangman {
                           letters[i] = l;
                           guessCorrect = true;
                       }
-                      if (l != letter ) {
-                          ChosenLetter(letter);
-                      }
                   }
-
+               ChosenLetter(missedLetter, letter);
 
                 for (int i = 0; i < letters.length; i++) {
                     System.out.print(letters[i]);
