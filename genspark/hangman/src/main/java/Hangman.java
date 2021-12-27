@@ -132,6 +132,7 @@ public class Hangman {
                    }
                }
                if (isGameOver) {
+                   System.out.println();
                    System.out.println("Yes! The secret word is " + randomWord + "! You have won!");
                    System.out.println("Do you want to play again? (yes or no)");
                    try {
