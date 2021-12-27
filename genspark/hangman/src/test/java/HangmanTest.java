@@ -24,7 +24,7 @@ class HangmanTest {
                            === """;
         assertEquals(threeDisplay, hangman.RetrieveDisplay(1), "Retrieve Display method crashed.");
     }
-
+//  assertEquals('the expected return', 'pass in the data () to create expected return', type message should test fail.
     @AfterEach
     void tearDown() {
     }
