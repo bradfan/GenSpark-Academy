@@ -8,24 +8,28 @@ public class Hangman {
     public static String RetrieveDisplay(int tries) {
         String result = "";
         String oneDisplay = """
+                        
                         +---+
                             |
                             |
                             |
                            === """;
         String twoDisplay = """
+                        
                         +---+
                           O |
                             |
                             |
                            === """;
         String threeDisplay = """
+                        
                         +---+
                           O |
                           | |
                             |
                            === """;
         String fourDisplay = """
+                        
                         +---+
                           O |
                           | |
@@ -112,6 +116,7 @@ public class Hangman {
 
                 for (int i = 0; i < letters.length; i++) {
                     System.out.print(letters[i]);
+
                 }
 
                 if (!guessCorrect) {
