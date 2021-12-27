@@ -134,9 +134,9 @@ public class Hangman {
                    }
                }
 
-               //end of the tries loop
+               // end of the tries loop
            }
-            //               end of the "again" while loop bracket
+            // end of the "again" while loop bracket
         }
     }
 }
