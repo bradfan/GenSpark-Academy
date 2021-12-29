@@ -18,6 +18,7 @@ public class Human {
         this.defense = defense;
     }
 
+//    setters and getters
     public boolean isAlive() {
         return isAlive;
     }
