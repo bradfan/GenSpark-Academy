@@ -53,19 +53,20 @@ public class Goblin {
     }
 
 
-//    add attack method here similar to the class problems example below?
+    public void goblinAttack(Human human) {
+        try {
+            int damage = (int)(Math.random() * 10);
+            if (damage >= human.getHitPoints()) {
+                human.setHitPoints(0);
+            } else {
+                human.setHitPoints(human.getHitPoints() - damage);
+//                this.setHitPoints(this.getHitPoints() - damage);
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
 
-//    public String attack(Object newObj) {
-//        String result = "The zombie bites the human for " + Zombie.strength + " damage,";
-////        takes an object and type casts it to a Human
-//        Human human = new Human();
-//         human = (Human) newObj;
-//         if(human.getHealth() <= 3){
-//             human.setHealth(human.getHealth() - Zombie.strength);
-//             return  result + " the human has died...";
-//         } else return result + " the human survives but will be turning soon...";
-//
-//}
+    }
 
 }
 
