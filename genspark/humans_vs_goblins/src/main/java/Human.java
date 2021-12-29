@@ -4,7 +4,7 @@ public class Human {
     private boolean isAlive;
     private int location;
     private int hitPoints = 20;
-    //    offense to be determined randomly during combat
+    //    offense may be useless. be sure to remove after dev if it is.
     private int offense;
 
 
