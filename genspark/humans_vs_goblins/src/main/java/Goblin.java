@@ -4,18 +4,19 @@ public class Goblin {
     private boolean isAlive;
     private int location;
     private int hitPoints = 20;
-    private int offense = 10;
-    private int defense = 20;
+    //    offense to be determined randomly during combat
+    private int offense;
+
 
     //default constructor
     public Goblin() {
 
     }
     //    parameterized constructor
-    public Goblin(int hitPoints, int offense, int defense) {
+    public Goblin(int hitPoints, int offense) {
         this.hitPoints = hitPoints;
         this.offense = offense;
-        this.defense = defense;
+
     }
 
     //    setters and getters
@@ -50,14 +51,22 @@ public class Goblin {
     public void setOffense(int offense) {
         this.offense = offense;
     }
+    
 
-    public int getDefense() {
-        return defense;
-    }
+//    add attack method here similar to the class problems example below?
 
-    public void setDefense(int defense) {
-        this.defense = defense;
-    }
+//    public String attack(Object newObj) {
+//        String result = "The zombie bites the human for " + Zombie.strength + " damage,";
+////        takes an object and type casts it to a Human
+//        Human human = new Human();
+//         human = (Human) newObj;
+//         if(human.getHealth() <= 3){
+//             human.setHealth(human.getHealth() - Zombie.strength);
+//             return  result + " the human has died...";
+//         } else return result + " the human survives but will be turning soon...";
+//
+//}
+
 }
 
 

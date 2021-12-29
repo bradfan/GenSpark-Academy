@@ -4,8 +4,9 @@ public class Human {
     private boolean isAlive;
     private int location;
     private int hitPoints = 20;
-    private int offense = 20;
-    private int defense = 10;
+//    offense to be determined randomly during combat
+    private int offense;
+
 
 //default constructor
     public Human() {
@@ -15,7 +16,7 @@ public class Human {
     public Human(int hitPoints, int offense, int defense) {
         this.hitPoints = hitPoints;
         this.offense = offense;
-        this.defense = defense;
+
     }
 
 //    setters and getters
@@ -51,13 +52,23 @@ public class Human {
         this.offense = offense;
     }
 
-    public int getDefense() {
-        return defense;
-    }
 
-    public void setDefense(int defense) {
-        this.defense = defense;
-    }
 }
+
+//    add attack method here similar to the class problems example below?
+
+//    public String attack(Object newObj) {
+//        String result = "The zombie bites the human for " + Zombie.strength + " damage,";
+////        takes an object and type casts it to a Human
+//        Human human = new Human();
+//         human = (Human) newObj;
+//         if(human.getHealth() <= 3){
+//             human.setHealth(human.getHealth() - Zombie.strength);
+//             return  result + " the human has died...";
+//         } else return result + " the human survives but will be turning soon...";
+//
+//}
+
+
 
 
