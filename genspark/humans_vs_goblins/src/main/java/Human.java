@@ -13,7 +13,7 @@ public class Human {
 
     }
 //    parameterized constructor
-    public Human(int hitPoints, int offense, int defense) {
+    public Human(int hitPoints, int offense) {
         this.hitPoints = hitPoints;
         this.offense = offense;
 

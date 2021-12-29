@@ -51,7 +51,7 @@ public class Goblin {
     public void setOffense(int offense) {
         this.offense = offense;
     }
-    
+
 
 //    add attack method here similar to the class problems example below?
 
