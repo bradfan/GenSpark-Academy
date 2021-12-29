@@ -4,22 +4,24 @@ public class Human {
     private boolean isAlive;
     private int location;
     private int hitPoints = 20;
-//    offense to be determined randomly during combat
+    //    offense to be determined randomly during combat
     private int offense;
 
 
-//default constructor
+    //default constructor
     public Human() {
 
     }
-//    parameterized constructor
-    public Human(int hitPoints, int offense) {
+
+    //    parameterized constructor
+    public Human(int hitPoints, int offense, int location) {
         this.hitPoints = hitPoints;
         this.offense = offense;
+        this.location = location;
 
     }
 
-//    setters and getters
+    //    setters and getters
     public boolean isAlive() {
         return isAlive;
     }
@@ -52,22 +54,22 @@ public class Human {
         this.offense = offense;
     }
 
+    public void humanAttack(Goblin goblin) {
+        try {
+            int damage = (int)(Math.random() * 10);
+            if (damage >= goblin.getHitPoints()) {
+                goblin.setHitPoints(0);
+            } else {
+                goblin.setHitPoints(goblin.getHitPoints() - damage);
+//                this.setHitPoints(this.getHitPoints() - damage);
+            }
+        } catch (Exception e) {
+            e.getMessage();
+        }
+
+    }
 
 }
-
-//    add attack method here similar to the class problems example below?
-
-//    public String attack(Object newObj) {
-//        String result = "The zombie bites the human for " + Zombie.strength + " damage,";
-////        takes an object and type casts it to a Human
-//        Human human = new Human();
-//         human = (Human) newObj;
-//         if(human.getHealth() <= 3){
-//             human.setHealth(human.getHealth() - Zombie.strength);
-//             return  result + " the human has died...";
-//         } else return result + " the human survives but will be turning soon...";
-//
-//}
 
 
 
