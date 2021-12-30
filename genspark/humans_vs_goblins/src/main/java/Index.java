@@ -1,29 +1,51 @@
-
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Index {
 
     public static void main(String[] args) {
+        System.out.println("""
+                As per your orders, you have been dropped into the center of the Goblin Maze!
+                Somewhere in this maze, a nasty Goblin is guarding his treasure!
+                When you find this creature, destroy it and claim your prize!
+                Navigate this terrible place by using
+                n for North,
+                s for South,
+                w for West,
+                and e for East.""");
+        String whereDoYouGo = "The goblin isn't here. Do you move N, S, E or W?";
         Land land = new Land();
         Human human = new Human();
         Goblin goblin = new Goblin();
-        int [][] grid = {{10, 11, 12, 13, 14},
-                         {15, 16, 17, 18, 19},
-                         {20, 21, 22, 23, 24},
-                         {25, 26, 27, 28, 29},
-                         {30, 31, 32, 34, 35}};
+        ArrayList<Object> grid = new ArrayList<>();
+        land.createGrid();
+        land.setGoblinLocation(goblin);
+        System.out.println("For dev: goblin is on grid: " + land.getGoblinLocation(goblin));
+        land.setHumanLocation(human);
+        System.out.println("For dev: human is on grid: " + land.getHumanLocation(human));
 
-        for(int rows = 0; rows < 5; rows++) {
-            System.out.println();
-            for(int cols = 0; cols < 5; cols++) {
-                System.out.print(grid[rows][cols] + " ");
-            }
-            System.out.println();
+        while(land.getHumanLocation(human) != land.getGoblinLocation(goblin) ) {
+            System.out.println(whereDoYouGo);
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.nextLine();
+            String firstChar = input.charAt(0) + "";
+            
+
+
+
+
+
+
+
+
         }
 
 
 
 
 
-
     }
+
+
 }

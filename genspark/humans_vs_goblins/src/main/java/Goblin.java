@@ -16,6 +16,7 @@ public class Goblin {
     public Goblin(int hitPoints, int offense, int location) {
         this.hitPoints = hitPoints;
         this.offense = offense;
+        this.location = location;
 
     }
 
@@ -67,6 +68,7 @@ public class Goblin {
         }
 
     }
+
 
 }
 
