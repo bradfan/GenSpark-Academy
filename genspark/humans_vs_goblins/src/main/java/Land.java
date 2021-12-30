@@ -46,33 +46,27 @@ public class Land {
            } return 99;
        }
        public void setHumanLocation(Human human) {
-        int humanStart = 12;
-        grid.set(humanStart, human);
-    }
-      public int getHumanLocation(Human human) {
-//           int currentIndex = grid.indexOf(human);
-        if (grid.contains(human)) {
-//            System.out.print(grid.set(currentIndex, 88));
-//            grid.set keeps setting indexOf(human) to '-1' no matter the second object
-            return grid.indexOf(human);
-        } return 99;
+           grid.set(human.getLocation(), human);
     }
 
-    public int humanMoveNorth(Human human) {
+    public void humanMovesNorth(Human human) {
+           grid.set(human.getLocation() - 5, human);
            human.setLocation(human.getLocation() - 5);
-           return human.getLocation();
-      }
-    public int humanMoveSouth(Human human) {
+       }
+    public void humanMovesSouth(Human human) {
+        grid.set(human.getLocation() + 5, human);
         human.setLocation(human.getLocation() + 5);
-        return human.getLocation();
+
     }
-    public int humanMoveWest(Human human) {
+    public void humanMovesWest(Human human) {
+        grid.set(human.getLocation() - 1, human);
         human.setLocation(human.getLocation() - 1);
-        return human.getLocation();
+
     }
-    public int humanMoveEast(Human human) {
-        human.setLocation(human.getLocation() +1);
-        return human.getLocation();
+    public void humanMovesEast(Human human) {
+        grid.set(human.getLocation() + 1, human);
+        human.setLocation(human.getLocation() + 1);
+
     }
 
 
