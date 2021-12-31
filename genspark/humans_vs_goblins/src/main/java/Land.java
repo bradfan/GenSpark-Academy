@@ -37,7 +37,7 @@ public class Land {
        }
 
        public void setGoblinLocation(Goblin goblin) {
-           int goblinStart = (int) (Math.random() *24);
+           int goblinStart = (int) (Math.random() * 23);
            grid.set(goblinStart, goblin);
        }
        public int getGoblinLocation(Goblin goblin) {

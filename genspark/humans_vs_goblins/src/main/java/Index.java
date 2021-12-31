@@ -23,7 +23,8 @@ public class Index {
                 The goblin isn't here. Do you move N, S, E or W?""";
         Land land = new Land();
         Human human = new Human();
-        human.setLocation(12);
+        human.setLocation(24);
+
         Goblin goblin = new Goblin();
         ArrayList<Object> grid = new ArrayList<>();
         land.createGrid();
@@ -49,7 +50,7 @@ public class Index {
                            human.getLocation() == 4) {
                        System.out.println("You are at the North edge of the maze and can go no further in that direction.");
                    } else  land.humanMovesNorth(human);
-                   System.out.println("You are on grid: " + human.getLocation() + ".");
+                   System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }
                 case "s": {
@@ -62,8 +63,8 @@ public class Index {
                             human.getLocation() == 24) {
                         System.out.println("You are at the South edge of the maze and can go no further in that direction.");
                     } else land.humanMovesSouth(human);
-//                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("You are on grid: " + human.getLocation() + ".");
+
+                    System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }
                 case "w": {
@@ -76,8 +77,8 @@ public class Index {
                             human.getLocation() == 20) {
                         System.out.println("You are at the West edge of the maze and can go no further in that direction.");
                     } else land.humanMovesWest(human);
-//                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("You are on grid: " + human.getLocation() + ".");
+
+                    System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }
                 case "e": {
@@ -90,8 +91,8 @@ public class Index {
                             human.getLocation() == 24) {
                         System.out.println("You are at the East edge of the maze and can go no further in that direction.");
                     } else land.humanMovesEast(human);
-//                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("You are on grid: " + human.getLocation() + ".");
+
+                    System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }  default:
                     System.out.println("You must input either n, s, w or e.");
