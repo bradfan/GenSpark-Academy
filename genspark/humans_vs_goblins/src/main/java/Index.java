@@ -40,6 +40,8 @@ public class Index {
 
             switch(firstChar) {
                 case "n": {
+                   land.createGrid();
+//                   revisit this re: UTF characters
                     land.humanMovesNorth(human);
 //                    land.grid.set(grid.indexOf(human), "X");
                     System.out.println("You are on grid: " + human.getLocation() + ".");
