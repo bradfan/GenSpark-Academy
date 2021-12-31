@@ -30,7 +30,7 @@ public class Index {
         land.setGoblinLocation(goblin);
         System.out.println("For dev: goblin is on grid: " + land.getGoblinLocation(goblin));
         land.setHumanLocation(human);
-        System.out.println("For dev: human is on grid: " + human.getLocation());
+        System.out.println("You are on grid: " + human.getLocation() + ".");
 
        while(human.getLocation() != goblin.getLocation()) {
             System.out.println(whereDoYouGo);
@@ -42,25 +42,25 @@ public class Index {
                 case "n": {
                     land.humanMovesNorth(human);
 //                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("for dev: other current grid square: " + human.getLocation());
+                    System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }
                 case "s": {
                     land.humanMovesSouth(human);
 //                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("for dev: other current grid square: " + human.getLocation());
+                    System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }
                 case "w": {
                     land.humanMovesWest(human);
 //                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("for dev: other current grid square: " + human.getLocation());
+                    System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }
                 case "e": {
                     land.humanMovesEast(human);
 //                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("for dev: other current grid square: " + human.getLocation());
+                    System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }  default:
                     System.out.println("You must input either n, s, w or e.");
