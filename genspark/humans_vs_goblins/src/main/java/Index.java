@@ -41,26 +41,55 @@ public class Index {
             switch(firstChar) {
                 case "n": {
                    land.createGrid();
-//                   revisit this re: UTF characters
-                    land.humanMovesNorth(human);
-//                    land.grid.set(grid.indexOf(human), "X");
-                    System.out.println("You are on grid: " + human.getLocation() + ".");
+                    //revisit this re: UTF characters
+                   if(human.getLocation() == 0 ||
+                           human.getLocation() == 1 ||
+                           human.getLocation() == 2 ||
+                           human.getLocation() == 3 ||
+                           human.getLocation() == 4) {
+                       System.out.println("You are at the North edge of the maze and can go no further in that direction.");
+                   } else  land.humanMovesNorth(human);
+                   System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }
                 case "s": {
-                    land.humanMovesSouth(human);
+                    land.createGrid();
+                    //revisit this re: UTF characters
+                    if(human.getLocation() == 20 ||
+                            human.getLocation() == 21 ||
+                            human.getLocation() == 22 ||
+                            human.getLocation() == 23 ||
+                            human.getLocation() == 24) {
+                        System.out.println("You are at the South edge of the maze and can go no further in that direction.");
+                    } else land.humanMovesSouth(human);
 //                    land.grid.set(grid.indexOf(human), "X");
                     System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }
                 case "w": {
-                    land.humanMovesWest(human);
+                    land.createGrid();
+                    //revisit this re: UTF characters
+                    if(human.getLocation() == 0 ||
+                            human.getLocation() == 5 ||
+                            human.getLocation() == 10 ||
+                            human.getLocation() == 15 ||
+                            human.getLocation() == 20) {
+                        System.out.println("You are at the West edge of the maze and can go no further in that direction.");
+                    } else land.humanMovesWest(human);
 //                    land.grid.set(grid.indexOf(human), "X");
                     System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
                 }
                 case "e": {
-                    land.humanMovesEast(human);
+                    land.createGrid();
+                    //revisit this re: UTF characters
+                    if(human.getLocation() == 4 ||
+                            human.getLocation() == 9 ||
+                            human.getLocation() == 14 ||
+                            human.getLocation() == 19 ||
+                            human.getLocation() == 24) {
+                        System.out.println("You are at the East edge of the maze and can go no further in that direction.");
+                    } else land.humanMovesEast(human);
 //                    land.grid.set(grid.indexOf(human), "X");
                     System.out.println("You are on grid: " + human.getLocation() + ".");
                     break;
