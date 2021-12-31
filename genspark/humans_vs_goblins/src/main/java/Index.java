@@ -8,9 +8,11 @@ public class Index {
         System.out.println("""
                 
                 As you were briefed before the mission,
-                you have been dropped into the center of the Goblin Maze!
-                Somewhere in this maze, a nasty Goblin is guarding it's treasure!
-                It's your job to find this creature, destroy it and claim your prize!
+                you have entered the Goblin Maze its SE corner and the
+                only way in or out closed behind you!
+                Somewhere in this maze, a nasty Goblin is looking for you!
+                It's your job to find this creature and destroy it!
+                The only way out is to kill or be killed!
                 Navigate this terrible place by using
                 n for North,
                 s for South,
