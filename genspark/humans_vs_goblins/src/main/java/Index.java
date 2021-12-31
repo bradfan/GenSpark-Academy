@@ -26,17 +26,19 @@ public class Index {
         Land land = new Land();
         Human human = new Human();
         human.setLocation(24);
-
+        human.isAlive();
         Goblin goblin = new Goblin();
+        goblin.setLocation(12);
+        goblin.isAlive();
         ArrayList<Object> grid = new ArrayList<>();
         land.createGrid();
         land.setGoblinLocation(goblin);
-        System.out.println("For dev: goblin is on grid: " + land.getGoblinLocation(goblin));
+        System.out.println("For dev: goblin is on grid: " + goblin.getLocation());
         land.setHumanLocation(human);
         System.out.println("You are on grid: " + human.getLocation() + ".");
 
-       while(human.getLocation() != goblin.getLocation()) {
-            System.out.println(whereDoYouGo);
+       while(human.isAlive() && goblin.isAlive()) {
+           System.out.println(whereDoYouGo);
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             String firstChar = input.charAt(0) + "";
@@ -51,8 +53,15 @@ public class Index {
                            human.getLocation() == 3 ||
                            human.getLocation() == 4) {
                        System.out.println("You are at the North edge of the maze and can go no further in that direction.");
-                   } else  land.humanMovesNorth(human);
-                   System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
+                   } else  if((human.getLocation() - 5) == goblin.getLocation()) {
+                       goblin.goblinAttack(human);
+                   } else land.humanMovesNorth(human);
+                       System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
+                    System.out.println("human location: " + human.getLocation());
+                    System.out.println("goblin location: " + goblin.getLocation());
+                    boolean melee = human.getLocation() != goblin.getLocation();
+
+
                     break;
                 }
                 case "s": {
@@ -80,6 +89,7 @@ public class Index {
                         System.out.println("You are at the West edge of the maze and can go no further in that direction.");
                     } else land.humanMovesWest(human);
 
+
                     System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }
@@ -98,10 +108,22 @@ public class Index {
                     break;
                 }  default:
                     System.out.println("You must input either n, s, w or e.");
-
+//end of switch statement
             }
-
-
+            if(human.getHitPoints() == 0) {
+              human.setAlive(false);
+                System.out.println("""
+                        You were attacked by that creepy goblin
+                        and died in the Goblin Maze""");
+            } else human.humanAttack(goblin);
+            if(goblin.getHitPoints() == 0) {
+                goblin.setAlive(false);
+                System.out.println("""
+                        You attacked that stinky goblin and wasted it!!
+                        We will evac you from your current location.
+                        Good job!!""");
+            } else goblin.goblinAttack(human);
+//end of the while loop
        }
 
     }

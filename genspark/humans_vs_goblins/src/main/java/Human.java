@@ -1,9 +1,9 @@
 
 
 public class Human {
-    private boolean isAlive;
+    private boolean isAlive = true;
     private int location;
-    private int hitPoints = 20;
+    private int hitPoints = 10;
     //    offense may be useless. be sure to remove after dev if it is.
     private int offense;
 
@@ -61,7 +61,7 @@ public class Human {
                 goblin.setHitPoints(0);
             } else {
                 goblin.setHitPoints(goblin.getHitPoints() - damage);
-//                this.setHitPoints(this.getHitPoints() - damage);
+                this.setHitPoints(this.getHitPoints() - damage);
             }
         } catch (Exception e) {
             e.getMessage();

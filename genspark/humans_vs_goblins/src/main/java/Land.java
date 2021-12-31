@@ -37,14 +37,14 @@ public class Land {
        }
 
        public void setGoblinLocation(Goblin goblin) {
-           int goblinStart = (int) (Math.random() * 23);
-           grid.set(goblinStart, goblin);
+           grid.set(goblin.getLocation(), goblin);
        }
-       public int getGoblinLocation(Goblin goblin) {
-           if (grid.contains(goblin)) {
-               return grid.indexOf(goblin);
-           } return 99;
-       }
+//       public int getGoblinLocation(Goblin goblin) {
+//           if (grid.contains(goblin)) {
+//               return grid.indexOf(goblin);
+//           } return 99;
+//       }
+
        public void setHumanLocation(Human human) {
            grid.set(human.getLocation(), human);
     }

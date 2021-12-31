@@ -1,9 +1,9 @@
 
 
 public class Goblin {
-    private boolean isAlive;
+    private boolean isAlive = true;
     private int location;
-    private int hitPoints = 20;
+    private int hitPoints = 10;
     //    offense may be useless. be sure to remove it after dev if it is.
     private int offense;
 
@@ -61,7 +61,7 @@ public class Goblin {
                 human.setHitPoints(0);
             } else {
                 human.setHitPoints(human.getHitPoints() - damage);
-//                this.setHitPoints(this.getHitPoints() - damage);
+               this.setHitPoints(this.getHitPoints() - damage);
             }
         } catch (Exception e) {
             e.getMessage();
