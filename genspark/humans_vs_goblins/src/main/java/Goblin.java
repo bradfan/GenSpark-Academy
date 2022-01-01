@@ -1,4 +1,4 @@
-
+import java.nio.charset.StandardCharsets;
 
 public class Goblin {
     private boolean isAlive = true;
@@ -68,8 +68,11 @@ public class Goblin {
         }
 
     }
-    public String toString() {
-        return "G";
+    public String toString(){
+        String goblinGrid = "X";
+        byte[] bytes = goblinGrid.getBytes(StandardCharsets.UTF_8);
+        String utf8EncodedString = new String(bytes, StandardCharsets.UTF_8);
+        return utf8EncodedString + " ";
     }
 
 }
