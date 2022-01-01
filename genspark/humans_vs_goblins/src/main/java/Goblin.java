@@ -4,9 +4,6 @@ public class Goblin {
     private boolean isAlive = true;
     private int location;
     private int hitPoints = 10;
-    //    offense may be useless. be sure to remove it after dev if it is.
-    private int offense;
-
 
     //default constructor
     public Goblin() {
@@ -15,9 +12,7 @@ public class Goblin {
     //    parameterized constructor
     public Goblin(int hitPoints, int offense, int location) {
         this.hitPoints = hitPoints;
-        this.offense = offense;
         this.location = location;
-
     }
 
     //    setters and getters
@@ -42,15 +37,6 @@ public class Goblin {
     public void setHitPoints(int hitPoints) {
         this.hitPoints = hitPoints;
     }
-
-    public int getOffense() {
-        return offense;
-    }
-
-    public void setOffense(int offense) {
-        this.offense = offense;
-    }
-
 
     public void goblinAttack(Human human) {
         try {
