@@ -14,6 +14,9 @@ public class GoblinTest {
 
     @DisplayName("Test  ")
     @Test
+    void setHitPoints() {
+        assertEquals(1, goblin.setLocation(1), "This method has crashed.");
+    }
 
 
     //  assertEquals('the expected return', 'pass in the data () to create expected return', type message should test fail.

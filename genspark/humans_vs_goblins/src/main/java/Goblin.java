@@ -33,8 +33,9 @@ public class Goblin {
         return location;
     }
 
-    public void setLocation(int location) {
+    public int setLocation(int location) {
         this.location = location;
+        return location;
     }
 
     public int getHitPoints() {
