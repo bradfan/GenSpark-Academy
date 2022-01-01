@@ -10,33 +10,36 @@ public class Land {
        }
 
        public void createGrid() {
-           for (int i = 0; i < 5; i++) {
-                this.grid.add(i);
-               System.out.print(grid.get(i) + "  ");
+           try {
+               for (int i = 0; i < 5; i++) {
+                   this.grid.add(i);
+                   System.out.print(grid.get(i) + "  ");
+               }
+               System.out.println();
+               for (int i = 5; i < 10; i++) {
+                   this.grid.add(i);
+                   System.out.print(grid.get(i) + "  ");
+               }
+               System.out.println();
+               for (int i = 10; i < 15; i++) {
+                   this.grid.add(i);
+                   System.out.print(grid.get(i) + " ");
+               }
+               System.out.println();
+               for (int i = 15; i < 20; i++) {
+                   grid.add(i);
+                   System.out.print(grid.get(i) + " ");
+               }
+               System.out.println();
+               for (int i = 20; i < 25; i++) {
+                   grid.add(i);
+                   System.out.print(grid.get(i) + " ");
+               }
+               System.out.println();
+           }catch (Exception e) {
+               e.getMessage();
            }
-           System.out.println();
-           for (int i = 5; i < 10; i++) {
-               this.grid.add(i);
-               System.out.print(grid.get(i) + "  ");
-           }
-           System.out.println();
-           for (int i = 10; i < 15; i++) {
-               this.grid.add(i);
-               System.out.print(grid.get(i) + " ");
-           }
-           System.out.println();
-           for (int i = 15; i < 20; i++) {
-               grid.add(i);
-               System.out.print(grid.get(i) + " ");
-           }
-           System.out.println();
-           for (int i = 20; i < 25; i++) {
-               grid.add(i);
-               System.out.print(grid.get(i) + " ");
-           }
-           System.out.println();
        }
-
        public void setGoblinLocation(Goblin goblin) {
            grid.set(goblin.getLocation(), goblin);
        }
@@ -46,7 +49,7 @@ public class Land {
 //           } return 99;
 //       }
 
-       public void setHumanLocation(Human human) {
+    public void setHumanLocation(Human human) {
            grid.set(human.getLocation(), human);
     }
 

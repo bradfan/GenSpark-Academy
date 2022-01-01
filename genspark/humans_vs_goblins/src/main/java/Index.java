@@ -45,29 +45,30 @@ public class Index {
             switch(firstChar) {
                 case "n": {
                    land.createGrid();
-                    //revisit this re: UTF characters
                    if(human.getLocation() == 0 ||
                            human.getLocation() == 1 ||
                            human.getLocation() == 2 ||
                            human.getLocation() == 3 ||
                            human.getLocation() == 4) {
-                       System.out.println("You are at the North edge of the maze and can go no further in that direction.");
+                       System.out.println();
                    }
                     else land.humanMovesNorth(human);
+                    System.out.println("For dev: goblin is on grid: " + goblin.getLocation());
                        System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                        break;
                 }
                 case "s": {
                     land.createGrid();
-                    //revisit this re: UTF characters
                     if(human.getLocation() == 20 ||
                             human.getLocation() == 21 ||
                             human.getLocation() == 22 ||
                             human.getLocation() == 23 ||
                             human.getLocation() == 24) {
-                        System.out.println("You are at the South edge of the maze and can go no further in that direction.");
+                        System.out.println("""
+                               You are at the South edge of the maze 
+                               and can go no further in that direction.""");
                     } else land.humanMovesSouth(human);
-
+                    System.out.println("For dev: goblin is on grid: " + goblin.getLocation());
                     System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }
@@ -79,10 +80,11 @@ public class Index {
                             human.getLocation() == 10 ||
                             human.getLocation() == 15 ||
                             human.getLocation() == 20) {
-                        System.out.println("You are at the West edge of the maze and can go no further in that direction.");
+                        System.out.println("""
+                               You are at the West edge of the maze 
+                               and can go no further in that direction.""");
                     } else land.humanMovesWest(human);
-
-
+                    System.out.println("For dev: goblin is on grid: " + goblin.getLocation());
                     System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }
@@ -94,19 +96,21 @@ public class Index {
                             human.getLocation() == 14 ||
                             human.getLocation() == 19 ||
                             human.getLocation() == 24) {
-                        System.out.println("You are at the East edge of the maze and can go no further in that direction.");
+                        System.out.println("""
+                               You are at the East edge of the maze 
+                               and can go no further in that direction.""");
                     } else land.humanMovesEast(human);
-
+                    System.out.println("For dev: goblin is on grid: " + goblin.getLocation());
                     System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
                     break;
                 }  default:
                     System.out.println("You must input either n, s, w or e.");
 //end of switch statement
             }
-           if(goblin.getLocation() + 1 == human.getLocation() ||
-                   goblin.getLocation() - 1 == human.getLocation() ||
-                   goblin.getLocation() + 5 == human.getLocation() ||
-                   goblin.getLocation() - 5 == human.getLocation()) {
+           if(human.getLocation() + 1 == goblin.getLocation() ||
+                   human.getLocation() - 1 == goblin.getLocation() ||
+                   human.getLocation() + 5 == goblin.getLocation() ||
+                   human.getLocation() - 5 == goblin.getLocation()) {
                goblin.goblinAttack(human);
            }
 
