@@ -1,3 +1,4 @@
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class Land {
@@ -69,6 +70,15 @@ public class Land {
 
     }
 
+
+
+
+    public String toString() {
+           String landGrid = "You can check out any time you like but you can never leave...";
+        byte[] bytes = landGrid.getBytes(StandardCharsets.UTF_8);
+        String utf8EncodedString = new String(bytes, StandardCharsets.UTF_8);
+        return utf8EncodedString + " ";     
+    }
 
 
 }
