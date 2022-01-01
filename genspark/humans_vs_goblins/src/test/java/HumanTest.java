@@ -12,10 +12,10 @@ public class HumanTest {
     void setUp() { human = new Human(); }
 
 
-    @DisplayName("Test Human setLocation")
+    @DisplayName("Test Human getLocation")
     @Test
-    void setLocation() {
-        assertEquals(1, human.setLocation(1), "This method has crashed.");
+    void getLocation() {
+        assertEquals(0, human.getLocation(), "This method has crashed.");
     }
     //  assertEquals('the expected return', 'pass in the data () to create expected return', type message should test fail.
 

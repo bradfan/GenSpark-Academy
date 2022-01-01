@@ -37,7 +37,7 @@ public class Index {
         System.out.println("You are on grid: " + human.getLocation() + ".");
 
        while(human.isAlive() && goblin.isAlive()) {
-           System.out.println(whereDoYouGo);
+            System.out.println(whereDoYouGo);
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             String firstChar = input.charAt(0) + "";

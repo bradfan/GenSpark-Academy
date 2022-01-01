@@ -34,10 +34,7 @@ public class Human {
         return location;
     }
 
-    public int setLocation(int location) {
-        this.location = location;
-        return location;
-    }
+    public void setLocation(int location) {this.location = location;}
 
     public int getHitPoints() {
         return hitPoints;
