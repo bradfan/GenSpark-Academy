@@ -68,7 +68,9 @@ public class Goblin {
         }
 
     }
-
+    public String toString() {
+        return "G";
+    }
 
 }
 

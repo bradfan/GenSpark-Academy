@@ -53,16 +53,10 @@ public class Index {
                            human.getLocation() == 3 ||
                            human.getLocation() == 4) {
                        System.out.println("You are at the North edge of the maze and can go no further in that direction.");
-                   } else  if((human.getLocation() - 5) == goblin.getLocation()) {
-                       goblin.goblinAttack(human);
-                   } else land.humanMovesNorth(human);
+                   }
+                    else land.humanMovesNorth(human);
                        System.out.println("You are on grid coordinate: " + human.getLocation() + ".");
-                    System.out.println("human location: " + human.getLocation());
-                    System.out.println("goblin location: " + goblin.getLocation());
-                    boolean melee = human.getLocation() != goblin.getLocation();
-
-
-                    break;
+                       break;
                 }
                 case "s": {
                     land.createGrid();
@@ -110,23 +104,32 @@ public class Index {
                     System.out.println("You must input either n, s, w or e.");
 //end of switch statement
             }
+           if(goblin.getLocation() + 1 == human.getLocation() ||
+                   goblin.getLocation() - 1 == human.getLocation() ||
+                   goblin.getLocation() + 5 == human.getLocation() ||
+                   goblin.getLocation() - 5 == human.getLocation()) {
+               goblin.goblinAttack(human);
+           }
+
             if(human.getHitPoints() == 0) {
               human.setAlive(false);
                 System.out.println("""
+                        Goblin ATTACKS!!
                         You were attacked by that creepy goblin
-                        and died in the Goblin Maze""");
+                        and died in the Goblin Maze.""");
             } else human.humanAttack(goblin);
             if(goblin.getHitPoints() == 0) {
                 goblin.setAlive(false);
                 System.out.println("""
-                        You attacked that stinky goblin and wasted it!!
-                        We will evac you from your current location.
+                        Goblin ATTACKS
+                        but you fought that stinky goblin and wasted it!!
+                        We will evacuate you from your current location.
                         Good job!!""");
             } else goblin.goblinAttack(human);
 //end of the while loop
        }
-
+//main
     }
 
-
+//class
 }
