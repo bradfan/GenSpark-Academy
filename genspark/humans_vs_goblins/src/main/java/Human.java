@@ -1,4 +1,4 @@
-
+import java.nio.charset.StandardCharsets;
 
 public class Human {
     private boolean isAlive = true;
@@ -68,8 +68,11 @@ public class Human {
         }
 
     }
-    public String toString() {
-        return "H";
+    public String toString(){
+        String humanGrid = "X";
+        byte[] bytes = humanGrid.getBytes(StandardCharsets.UTF_8);
+        String utf8EncodedString = new String(bytes, StandardCharsets.UTF_8);
+        return utf8EncodedString + " ";
     }
 
 
