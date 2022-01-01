@@ -12,7 +12,7 @@ public class HumanTest {
     void setUp() { human = new Human(); }
 
 
-    @DisplayName("Test setLocation")
+    @DisplayName("Test Human setLocation")
     @Test
     void setLocation() {
         assertEquals(1, human.setLocation(1), "This method has crashed.");

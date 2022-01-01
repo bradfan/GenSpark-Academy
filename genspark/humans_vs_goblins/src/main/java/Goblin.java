@@ -70,7 +70,7 @@ public class Goblin {
 
     }
     public String toString(){
-        String goblinGrid = "X";
+        String goblinGrid = "12";
         byte[] bytes = goblinGrid.getBytes(StandardCharsets.UTF_8);
         String utf8EncodedString = new String(bytes, StandardCharsets.UTF_8);
         return utf8EncodedString + " ";
