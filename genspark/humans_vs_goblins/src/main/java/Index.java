@@ -21,7 +21,6 @@ public class Index {
                 The grid coordinates below will help you in your quest!
                 """);
         String whereDoYouGo = """
-                
                 The goblin isn't here. Do you move N, S, E or W?""";
         Land land = new Land();
         Human human = new Human();
