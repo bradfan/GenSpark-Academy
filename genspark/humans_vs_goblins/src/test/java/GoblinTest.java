@@ -11,10 +11,10 @@ public class GoblinTest {
     @BeforeEach
     void setUp() { goblin = new Goblin(); }
 
-    @DisplayName("Test Goblin setHitPoints")
+    @DisplayName("Test Goblin getHitPoints")
     @Test
-    void setHitPoints() {
-        assertEquals(1, goblin.setLocation(1), "This method has crashed.");
+    void getHitPoints() {
+        assertEquals(10, goblin.getHitPoints(), "This method has crashed.");
     }
     //  assertEquals('the expected return', 'pass in the data () to create expected return', type message should test fail.
 
