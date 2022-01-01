@@ -53,7 +53,7 @@ public class Goblin {
 
     }
     public String toString(){
-        String goblinGrid = "^";
+        String goblinGrid = "0";
         byte[] bytes = goblinGrid.getBytes(StandardCharsets.UTF_8);
         String utf8EncodedString = new String(bytes, StandardCharsets.UTF_8);
         return utf8EncodedString + " ";

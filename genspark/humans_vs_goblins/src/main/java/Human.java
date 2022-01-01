@@ -3,7 +3,7 @@ import java.nio.charset.StandardCharsets;
 public class Human {
     private boolean isAlive = true;
     private int location;
-    private int hitPoints = 10;
+    private int hitPoints = 12;
 
     //default constructor
     public Human() {

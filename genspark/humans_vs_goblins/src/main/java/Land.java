@@ -42,7 +42,11 @@ public class Land {
        }
        public void setGoblinLocation(Goblin goblin) {
            grid.set(goblin.getLocation(), goblin);
+           goblin.setLocation(goblin.getLocation());
        }
+
+
+
 //       public int getGoblinLocation(Goblin goblin) {
 //           if (grid.contains(goblin)) {
 //               return grid.indexOf(goblin);
