@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Collections;
@@ -8,16 +9,10 @@ public class Index {
 
     public static void main(String[] args) throws IOException {
 
-     var a = Files.lines(Paths.get("hangman_display.text"));
-     Files.write(Paths.get("C:\\GenSpark-Academy\\genspark\\Hamgman_project_7\\src\\main\\java\\hangman_display.text"), Collections.singleton("Hello"));
 
-
-
-
-
-
-
-
+     Files.write(Paths.get("C:\\GenSpark-Academy\\genspark\\Hamgman_project_7\\src\\main\\java\\hangman_display.text"), "Hello".getBytes(StandardCharsets.UTF_8));
+        var a = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hamgman_project_7\\src\\main\\java\\hangman_display.text"));
+        System.out.println(a);
 
 
     }
