@@ -1,16 +1,11 @@
+
+
+
+
 public class Practice {
 
-    public String name = "Brad";
-    public int age = 53;
+    public static void main(String[] args) {
 
-    public String getName() {
-
-        return name;
-    }
-
-    public int getAge() {
-
-        return age;
     }
 
 
