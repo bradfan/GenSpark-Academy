@@ -7,9 +7,29 @@ public class Index {
     public static void main(String[] args) throws IOException {
         Index index = new Index();
         index.userName();
-        index.retrieveDisplayOne();
-        index.retrieveDisplayTwo();
-        index.retrieveDisplayThree();
+        index.determineWord();
+        int tries = 3;
+        char again = 'y';
+        while(again == 'y' && tries > 0) {
+            switch (tries) {
+                case 1:
+                    index.retrieveDisplayThree();
+                    break;
+                case 2:
+                    index.retrieveDisplayTwo();
+                    break;
+                case 3:
+                    index.retrieveDisplayOne();
+                    break;
+            }
+
+
+
+//            end of WHILE LOOP bracket.
+        }
+
+
+
 
 
 
@@ -49,8 +69,9 @@ public class Index {
             System.out.println(e.getMessage());
         }
     }
+//    can I have each method return a String that looks like the original game???
 
-      public String userName() {
+    public String userName() {
           String name = "";
           try {
               System.out.println("Hello, welcome to HANGMAN! What is your name?");
@@ -61,8 +82,12 @@ public class Index {
           }
           return name;
       }
-
-
+    public String determineWord() {
+            String[] words = new String[]{"cat", "dog", "bat", "mice", "bird"};
+            String randomWord = words[(int) (Math.random() * words.length)];
+            System.out.println("Just for dev: " + randomWord);
+            return randomWord;
+    }
 
 
 
