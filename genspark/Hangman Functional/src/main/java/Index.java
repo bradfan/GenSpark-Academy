@@ -1,6 +1,10 @@
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Index {
 
@@ -10,6 +14,7 @@ public class Index {
         index.determineWord();
         int tries = 3;
         char again = 'y';
+//        while the game is running
         while(again == 'y' && tries > 0) {
             switch (tries) {
                 case 1:
@@ -36,40 +41,42 @@ public class Index {
 //  end of MAIN bracket
     }
 //    methods below here
-      public void retrieveDisplayOne() throws IOException{
-         try{
-             File file = new File("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text");
-             Scanner scanFile = new Scanner(file);
-             while(scanFile.hasNextLine()) {
-                 System.out.println(scanFile.nextLine());
-             }
-         } catch(Exception e) {
-             System.out.println(e.getMessage());
-         }
-    }
-    public void retrieveDisplayTwo() throws IOException{
-        try{
-            File file = new File("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display2.text");
-            Scanner scanFile = new Scanner(file);
-            while(scanFile.hasNextLine()) {
-                System.out.println(scanFile.nextLine());
-            }
-        } catch(Exception e) {
+      public String retrieveDisplayOne() throws IOException {
+          String displayOne = null;
+          try {
+              List<String> one = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
+              displayOne = one.stream().collect(Collectors.joining("\n"));
+              System.out.print(displayOne);
+              System.out.println();
+          } catch (Exception e) {
+              System.out.println(e.getMessage());
+          }
+          return displayOne;
+      }
+    public String retrieveDisplayTwo() throws IOException {
+        String displayTwo = null;
+        try {
+            List<String> two = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
+            displayTwo = two.stream().collect(Collectors.joining("\n"));
+            System.out.print(displayTwo);
+            System.out.println();
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        return displayTwo;
     }
-    public void retrieveDisplayThree() throws IOException{
-        try{
-            File file = new File("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display3.text");
-            Scanner scanFile = new Scanner(file);
-            while(scanFile.hasNextLine()) {
-                System.out.println(scanFile.nextLine());
-            }
-        } catch(Exception e) {
+    public String retrieveDisplayThree() throws IOException {
+        String displayThree = null;
+        try {
+            List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
+            displayThree = three.stream().collect(Collectors.joining("\n"));
+            System.out.print(displayThree);
+            System.out.println();
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        return displayThree;
     }
-//    can I have each method return a String that looks like the original game???
 
     public String userName() {
           String name = "";
