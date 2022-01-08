@@ -56,28 +56,25 @@ public class Index {
 
     public static void main(String[] args) throws IOException {
         Index index = new Index();
-        int tries = index.getTries();
+        index.setTries(3);
         index.userName();
         index.setSecretWord(index.determineWord());
         System.out.println("Just for dev: " + index.secretWord);
         char again = 'y';
 //        while the game is running
-        while (again == 'y' && tries > 0) {
-
+        while (again == 'y') {
         index.retrieveDisplay();
         System.out.println();
         System.out.println(index.missedLetter);
         index.letterInput();
         index.isCorrectLetter(index.getSecretWord(), index.getInput());
+        System.out.println("You can guess " + index.tries + " times.");
         index.displayWord(index.getSecretWord(), index.correctLetters);
 
 //            // end of WHILE LOOP bracket.
         }
-
-
-
         //  end of MAIN bracket
-    }
+      }
 
     //    methods below here
 
@@ -110,7 +107,7 @@ public class Index {
             List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
             displayThree = three.stream().collect(Collectors.joining("\n"));
 
-            switch (tries) {
+            switch (getTries()) {
                 case 1:
                     result = displayThree;
                     System.out.print(result);
@@ -172,6 +169,7 @@ public class Index {
         } else correctLetters += input;
         return secretWord.contains(input);
     }
+
 
 
     public String displayBoard(int pos) {
