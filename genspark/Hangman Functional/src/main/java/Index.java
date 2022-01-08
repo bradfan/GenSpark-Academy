@@ -56,27 +56,30 @@ public class Index {
 
     public static void main(String[] args) throws IOException {
         Index index = new Index();
-        index.userName();
-        index.setSecretWord(index.determineWord());
-        index.letterInput();
-
-        index.displayWord(index.getSecretWord(), index.correctLetters);
-
         int tries = index.getTries();
         char again = 'y';
 //        while the game is running
 //        while (again == 'y' && tries > 0) {
-//
-//            // end of WHILE LOOP bracket.
-//        }
+        index.userName();
+        index.setSecretWord(index.determineWord());
         index.retrieveDisplay();
         System.out.println();
+        index.missedLetterDisplay(index.missedLetter);
+        index.letterInput();
+
+
+//
+//        index.displayWord(index.getSecretWord(), index.correctLetters);
+//            // end of WHILE LOOP bracket.
+//        }
+
 
 
         //  end of MAIN bracket
     }
 
     //    methods below here
+
 //    default constructor
     public Index() {
 
