@@ -50,9 +50,5 @@ class IndexTest {
 
 }
 
-@Test
-    void missedLetterDisplay() {
-        assertEquals("Missed Letters: k", index.missedLetterDisplay("k"));
-}
 
 }

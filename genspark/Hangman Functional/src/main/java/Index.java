@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Index {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
     int tries = 3;
-    String missedLetter;
+    String missedLetter = "Missed Letters: ";
     String input;
     String correctLetters = "";
     String secretWord;
@@ -59,14 +59,14 @@ public class Index {
         int tries = index.getTries();
         index.userName();
         index.setSecretWord(index.determineWord());
+        System.out.println("Just for dev: " + index.secretWord);
         char again = 'y';
 //        while the game is running
         while (again == 'y' && tries > 0) {
 
-        System.out.println("Just for dev: " + index.secretWord);
         index.retrieveDisplay();
         System.out.println();
-        index.missedLetterDisplay(index.missedLetter);
+        System.out.println(index.missedLetter);
         index.letterInput();
         index.isCorrectLetter(index.getSecretWord(), index.getInput());
         index.displayWord(index.getSecretWord(), index.correctLetters);
@@ -154,7 +154,7 @@ public class Index {
         } catch (Exception e) {
             e.getMessage();
         }
-        System.out.println("input " + input);
+        System.out.println("Your guess: " + input);
     }
 
     public String determineWord() {
@@ -163,18 +163,16 @@ public class Index {
 
     public boolean isCorrectLetter(String secretWord, String input) {
 // if secretWord does not contain guessedLetter add to "missedLetter" string and decrement tries
-        System.out.println("NULL? " + input);
+//        System.out.println("for dev, NULL? " + input);
         if (!secretWord.contains(input)) {
-
             tries--;
+            setTries(tries);
             missedLetter += input;
+            setMissedLetter(missedLetter);
         } else correctLetters += input;
         return secretWord.contains(input);
     }
 
-    public String missedLetterDisplay(String missedLetter) {
-        return "Missed Letters: " + missedLetter;
-    }
 
     public String displayBoard(int pos) {
         return switch (pos) {
