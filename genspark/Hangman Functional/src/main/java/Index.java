@@ -10,7 +10,7 @@ public class Index {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
     int tries = 3;
     String missedLetter;
-    String guessedLetter;
+    String input;
     String correctLetters = "";
     String secretWord;
 
@@ -38,12 +38,12 @@ public class Index {
         this.missedLetter = missedLetter;
     }
 
-    public String getGuessedLetter() {
-        return guessedLetter;
+    public String getInput() {
+        return input;
     }
 
-    public void setGuessedLetter(String guessedLetter) {
-        this.guessedLetter = guessedLetter;
+    public void setInput(String input) {
+        this.input = input;
     }
 
     public String getCorrectLetters() {
@@ -57,21 +57,22 @@ public class Index {
     public static void main(String[] args) throws IOException {
         Index index = new Index();
         int tries = index.getTries();
-        char again = 'y';
-//        while the game is running
-//        while (again == 'y' && tries > 0) {
         index.userName();
         index.setSecretWord(index.determineWord());
+        char again = 'y';
+//        while the game is running
+        while (again == 'y' && tries > 0) {
+
+        System.out.println("Just for dev: " + index.secretWord);
         index.retrieveDisplay();
         System.out.println();
         index.missedLetterDisplay(index.missedLetter);
         index.letterInput();
+        index.isCorrectLetter(index.getSecretWord(), index.getInput());
+        index.displayWord(index.getSecretWord(), index.correctLetters);
 
-
-//
-//        index.displayWord(index.getSecretWord(), index.correctLetters);
 //            // end of WHILE LOOP bracket.
-//        }
+        }
 
 
 
@@ -86,9 +87,9 @@ public class Index {
     }
 
     //    parameterized constructor
-    public Index(int tries, String secretWord, String guessedLetter, String missedLetter, String correctLetters) {
+    public Index(int tries, String secretWord, String input, String missedLetter, String correctLetters) {
         this.tries = tries;
-        this.guessedLetter = guessedLetter;
+        this.input = input;
         this.missedLetter = missedLetter;
         this.correctLetters = correctLetters;
         this.secretWord = secretWord;
@@ -141,32 +142,34 @@ public class Index {
         return name;
     }
 
-    public String letterInput() {
+    public void letterInput() {
         System.out.println("Guess a letter.");
         System.out.println();
         String input = "";
-        String guessedLetter = null;
+
         try {
             Scanner letterInput = new Scanner(System.in);
             input = letterInput.nextLine();
-            guessedLetter = String.valueOf(input);
+            setInput(input);
         } catch (Exception e) {
             e.getMessage();
         }
-        return guessedLetter;
+        System.out.println("input " + input);
     }
 
     public String determineWord() {
         return wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
     }
 
-    public boolean isCorrectLetter(String secretWord, String guessedLetter) {
+    public boolean isCorrectLetter(String secretWord, String input) {
 // if secretWord does not contain guessedLetter add to "missedLetter" string and decrement tries
-        if (!secretWord.contains(guessedLetter)) {
+        System.out.println("NULL? " + input);
+        if (!secretWord.contains(input)) {
+
             tries--;
-            missedLetter += guessedLetter;
-        } else correctLetters += guessedLetter;
-        return secretWord.contains(guessedLetter);
+            missedLetter += input;
+        } else correctLetters += input;
+        return secretWord.contains(input);
     }
 
     public String missedLetterDisplay(String missedLetter) {
@@ -202,15 +205,19 @@ public class Index {
     }
 
     public String displayWord(String secretWord, String correctLetters) {
-        return Arrays.stream(secretWord.split(""))
+        String word =  Arrays.stream(secretWord.split(""))
                       .map(s -> {
                     if (correctLetters.contains(s)) {
+                        System.out.println(s);
                         return s;
                     }
+                          System.out.println(" ");
                     return "_";
+
                     })
                       .collect(Collectors.joining(" "));
-
+        System.out.println(word);
+        return word;
     }
 
 
