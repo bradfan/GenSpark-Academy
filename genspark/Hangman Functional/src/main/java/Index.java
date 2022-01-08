@@ -1,3 +1,5 @@
+import com.sun.jdi.CharValue;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -63,7 +65,7 @@ public class Index {
         char again = 'y';
 //        while the game is running
         while (again == 'y') {
-        index.retrieveDisplay();
+        index.retrieveDisplay(index.getTries());
         System.out.println();
         System.out.println(index.missedLetter);
         index.letterInput();
@@ -92,7 +94,7 @@ public class Index {
         this.secretWord = secretWord;
     }
 
-    public void retrieveDisplay() throws IOException {
+    public void retrieveDisplay(int temp) throws IOException {
         String result = null;
         try {
             String displayOne = null;
@@ -107,7 +109,8 @@ public class Index {
             List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
             displayThree = three.stream().collect(Collectors.joining("\n"));
 
-            switch (getTries()) {
+            temp = this.tries;
+            switch (temp) {
                 case 1:
                     result = displayThree;
                     System.out.print(result);
@@ -166,11 +169,13 @@ public class Index {
             setTries(tries);
             missedLetter += input;
             setMissedLetter(missedLetter);
+            if(missedLetter.contains(input)){
+                System.out.println("You have already chosen that letter. Choose again.");
+                missedLetter.replace(input, "");
+            }
         } else correctLetters += input;
         return secretWord.contains(input);
     }
-
-
 
     public String displayBoard(int pos) {
         return switch (pos) {
