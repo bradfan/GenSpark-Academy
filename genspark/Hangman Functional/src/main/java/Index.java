@@ -11,10 +11,29 @@ import java.util.stream.Collectors;
 public class Index {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
     int tries = 3;
+    int score;
+    int high;
     String missedLetter = "Missed Letters: ";
     String input;
     String correctLetters = "";
     String secretWord;
+
+
+    public int getHigh() {
+        return high;
+    }
+
+    public void setHigh(int high) {
+        this.high = high;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 
     public String getSecretWord() {
         return secretWord;
@@ -58,56 +77,64 @@ public class Index {
 
     public static void main(String[] args) throws IOException {
         Index index = new Index();
-//       index.setTries(3);
+        index.setTries(3);
+        index.setSecretWord(index.determineWord());
+        System.out.println("Just for dev: " + index.secretWord);
         index.userName();
 //       boolean win = false;
         char again = 'y';
 //        while the game is running
         while (again == 'y') {
-        index.setTries(3);
-        index.setSecretWord(index.determineWord());
-        System.out.println(index.secretWord);
-        index.retrieveDisplay(index.getTries());
-        System.out.println();
-        System.out.println(index.missedLetter);
-        index.letterInput();
-        index.isCorrectLetter(index.getSecretWord(), index.getInput());
-        System.out.println("You can guess " + index.tries + " times.");
-        index.displayWord(index.getSecretWord(), index.correctLetters);
-        if(index.tries == 0) {
-            again = 'n';
-            System.out.println("Sorry. The word was " + index.secretWord + ".");
-        }
-        if(index.correctLetters.equals(index.secretWord)) {
-//            win = true;
-            System.out.println("Yes! The secret word was " + index.secretWord + " You have won!");
-            System.out.println("Do you want to play again? (yes or no)");
-            try {
-                Scanner restart = new Scanner(System.in);
-                again = restart.nextLine().charAt(0);
-            } catch(Exception e) {
-                System.out.println(e.getMessage());
+//        index.setTries(3);
+//            index.setSecretWord(index.determineWord());
+//            System.out.println("Just for dev: " + index.secretWord);
+            index.retrieveDisplay(index.getTries());
+            System.out.println();
+            System.out.println(index.missedLetter);
+            index.letterInput();
+            index.isCorrectLetter(index.getSecretWord(), index.getInput());
+            System.out.println("You can guess " + index.tries + " times.");
+            index.displayWord(index.getSecretWord(), index.correctLetters);
+            if (index.tries == 0) {
+                again = 'n';
+                System.out.println("Sorry. The word was " + index.secretWord + ".");
             }
-        }
+            if (index.correctLetters.equals(index.secretWord)) {
+//            win = true;
+                System.out.println("Yes! The secret word was " + index.secretWord + " You have won!");
+                System.out.println("YOUR SCORE: " + index.getScore());
+                System.out.println("YOUR HIGH SCORE: " + index.getHigh());
+                System.out.println("Do you want to play again? (yes or no)");
+                try {
+                    Scanner restart = new Scanner(System.in);
+                    again = restart.nextLine().charAt(0);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+            index.points(index.getTries());
+            index.highScore();
 //            // end of WHILE LOOP bracket.
-        }
+            }
         //  end of MAIN bracket
-      }
+    }
 
     //    methods below here
 
-//    default constructor
+    //    default constructor
     public Index() {
 
     }
 
     //    parameterized constructor
-    public Index(int tries, String secretWord, String input, String missedLetter, String correctLetters) {
+    public Index(int tries, int score, int high, String secretWord, String input, String missedLetter, String correctLetters) {
         this.tries = tries;
+        this.score = score;
         this.input = input;
         this.missedLetter = missedLetter;
         this.correctLetters = correctLetters;
         this.secretWord = secretWord;
+        this.high = high;
     }
 
     public void retrieveDisplay(int temp) throws IOException {
@@ -182,58 +209,51 @@ public class Index {
         if (!secretWord.contains(input)) {
             tries--;
             setTries(tries);
+            if (missedLetter.contains(input)) {
+                System.out.println("You have already chosen that letter. Choose again.");
+            }
             missedLetter += input;
             setMissedLetter(missedLetter);
-            if(missedLetter.contains(input)){
-                System.out.println("You have already chosen that letter. Choose again.");
-                missedLetter.replace(input, "");
-            }
         } else correctLetters += input;
         return secretWord.contains(input);
     }
 
-    public String displayBoard(int pos) {
-        return switch (pos) {
-            case 1 -> """
-                    +---+
-                        |
-                        |
-                        |
-                       ===
-                    """;
-            case 2 -> """
-                    +---+
-                      0 |
-                        |
-                        |
-                       ===
-                    """;
-            case 3 -> """
-                    +---+
-                      0 |
-                      | |
-                        |
-                       ===
-                    """;
-
-            default -> throw new IllegalStateException(pos + "Is out of bounds.");
-        };
-    }
-
     public String displayWord(String secretWord, String correctLetters) {
-       String word =  Arrays.stream(secretWord.split(""))
-                      .map(s -> {
+        String word = Arrays.stream(secretWord.split(""))
+                .map(s -> {
                     if (correctLetters.contains(s)) {
                         System.out.println(s);
                         return s;
                     }
-                          System.out.println(" ");
+                    System.out.println(" ");
                     return "_";
 
-                    })
-                      .collect(Collectors.joining(" "));
+                })
+                .collect(Collectors.joining(" "));
         System.out.println(word);
         return word;
+    }
+
+    public void points(int proxy) {
+        switch (proxy) {
+            case 1:
+                score = 100;
+                break;
+            case 2:
+                score = 200;
+                break;
+            case 3:
+                score = 300;
+                break;
+        }
+        setScore(score);
+    }
+    public void highScore(){
+        high = 0;
+        if(score > high) {
+            high = score;
+        }
+        setHigh(high);
     }
 
 
