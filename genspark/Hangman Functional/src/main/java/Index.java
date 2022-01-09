@@ -58,13 +58,15 @@ public class Index {
 
     public static void main(String[] args) throws IOException {
         Index index = new Index();
-        index.setTries(3);
+//       index.setTries(3);
         index.userName();
-        index.setSecretWord(index.determineWord());
-        System.out.println("Just for dev: " + index.secretWord);
+//       boolean win = false;
         char again = 'y';
 //        while the game is running
         while (again == 'y') {
+        index.setTries(3);
+        index.setSecretWord(index.determineWord());
+        System.out.println(index.secretWord);
         index.retrieveDisplay(index.getTries());
         System.out.println();
         System.out.println(index.missedLetter);
@@ -72,7 +74,21 @@ public class Index {
         index.isCorrectLetter(index.getSecretWord(), index.getInput());
         System.out.println("You can guess " + index.tries + " times.");
         index.displayWord(index.getSecretWord(), index.correctLetters);
-
+        if(index.tries == 0) {
+            again = 'n';
+            System.out.println("Sorry. The word was " + index.secretWord + ".");
+        }
+        if(index.correctLetters.equals(index.secretWord)) {
+//            win = true;
+            System.out.println("Yes! The secret word was " + index.secretWord + " You have won!");
+            System.out.println("Do you want to play again? (yes or no)");
+            try {
+                Scanner restart = new Scanner(System.in);
+                again = restart.nextLine().charAt(0);
+            } catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
 //            // end of WHILE LOOP bracket.
         }
         //  end of MAIN bracket
@@ -102,14 +118,13 @@ public class Index {
             displayOne = one.stream().collect(Collectors.joining("\n"));
 
             String displayTwo = null;
-            List<String> two = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
+            List<String> two = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display2.text")).collect(Collectors.toList());
             displayTwo = two.stream().collect(Collectors.joining("\n"));
 
             String displayThree = null;
-            List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
+            List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display3.text")).collect(Collectors.toList());
             displayThree = three.stream().collect(Collectors.joining("\n"));
 
-            temp = this.tries;
             switch (temp) {
                 case 1:
                     result = displayThree;
@@ -206,7 +221,7 @@ public class Index {
     }
 
     public String displayWord(String secretWord, String correctLetters) {
-        String word =  Arrays.stream(secretWord.split(""))
+       String word =  Arrays.stream(secretWord.split(""))
                       .map(s -> {
                     if (correctLetters.contains(s)) {
                         System.out.println(s);
