@@ -18,6 +18,15 @@ public class Index {
     String correctLetters = "";
     String secretWord;
     String name;
+    char again;
+
+    public char getAgain() {
+        return again;
+    }
+
+    public void setAgain(char again) {
+        this.again = again;
+    }
 
     public String getName() {return name;}
 
@@ -86,9 +95,9 @@ public class Index {
         System.out.println("Just for dev: " + index.secretWord);
         index.userName();
 //       boolean win = false;
-        char again = 'y';
+        index.again = 'y';
 //        while the game is running
-        while (again == 'y') {
+        while (index.again == 'y') {
 //        index.setTries(3);
 //            index.setSecretWord(index.determineWord());
 //            System.out.println("Just for dev: " + index.secretWord);
@@ -99,10 +108,8 @@ public class Index {
             index.isCorrectLetter(index.getSecretWord(), index.getInput());
             System.out.println("You can guess " + index.tries + " times.");
             index.displayWord(index.getSecretWord(), index.correctLetters);
-            if (index.tries == 0) {
-                again = 'n';
-                System.out.println("Sorry, " + index.getName() +  ", the word was " + index.secretWord + ".");
-            }
+            index.outOfTries();
+
             if (index.correctLetters.equals(index.secretWord)) {
 //            win = true;
                 System.out.println("Yes " + index.getName() + "! The secret word was " + index.secretWord + ". You have won!");
@@ -111,7 +118,7 @@ public class Index {
                 System.out.println("Do you want to play again? (yes or no)");
                 try {
                     Scanner restart = new Scanner(System.in);
-                    again = restart.nextLine().charAt(0);
+                    index.again = restart.nextLine().charAt(0);
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
@@ -237,6 +244,13 @@ public class Index {
                 .collect(Collectors.joining(" "));
         System.out.println(word);
         return word;
+    }
+
+    public void outOfTries() {
+        if (tries == 0) {
+            again = 'n';
+            System.out.println("Sorry, " + getName() +  ", the word was " + secretWord + ".");
+        }
     }
 
     public void points(int proxy) {
