@@ -17,7 +17,11 @@ public class Index {
     String input;
     String correctLetters = "";
     String secretWord;
+    String name;
 
+    public String getName() {return name;}
+
+    public void setName(String name) {this.name = name;}
 
     public int getHigh() {
         return high;
@@ -97,13 +101,13 @@ public class Index {
             index.displayWord(index.getSecretWord(), index.correctLetters);
             if (index.tries == 0) {
                 again = 'n';
-                System.out.println("Sorry. The word was " + index.secretWord + ".");
+                System.out.println("Sorry, " + index.getName() +  ", the word was " + index.secretWord + ".");
             }
             if (index.correctLetters.equals(index.secretWord)) {
 //            win = true;
-                System.out.println("Yes! The secret word was " + index.secretWord + " You have won!");
-                System.out.println("YOUR SCORE: " + index.getScore());
-                System.out.println("YOUR HIGH SCORE: " + index.getHigh());
+                System.out.println("Yes " + index.getName() + "! The secret word was " + index.secretWord + ". You have won!");
+                System.out.println(index.getName() + "'s Score: " + index.getScore());
+                System.out.println(index.getName() + "'s High Score: " + index.getHigh());
                 System.out.println("Do you want to play again? (yes or no)");
                 try {
                     Scanner restart = new Scanner(System.in);
@@ -135,6 +139,7 @@ public class Index {
         this.correctLetters = correctLetters;
         this.secretWord = secretWord;
         this.high = high;
+        this.name = name;
     }
 
     public void retrieveDisplay(int temp) throws IOException {
@@ -172,8 +177,8 @@ public class Index {
 
     }
 
-    public String userName() {
-        String name = "";
+    public void userName() {
+//        String name = "";
         try {
             System.out.println("Hello, welcome to HANGMAN! What is your name?");
             Scanner nameInput = new Scanner(System.in);
@@ -181,7 +186,7 @@ public class Index {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return name;
+        setName(name);
     }
 
     public void letterInput() {
