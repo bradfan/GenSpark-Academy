@@ -240,19 +240,10 @@ public class Index {
     }
 
     public void points(int proxy) {
-        switch (proxy) {
-            case 1:
-                score = 100;
-                break;
-            case 2:
-                score = 200;
-                break;
-            case 3:
-                score = 300;
-                break;
-        }
+       score = tries * 100;
         setScore(score);
     }
+
     public void highScore(){
         high = 0;
         if(score > high) {
