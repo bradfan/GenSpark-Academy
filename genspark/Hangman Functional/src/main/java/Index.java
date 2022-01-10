@@ -20,13 +20,9 @@ public class Index {
     String name;
     char again;
 
-    public char getAgain() {
-        return again;
-    }
+    public char getAgain() {return again;}
 
-    public void setAgain(char again) {
-        this.again = again;
-    }
+    public void setAgain(char again) {this.again = again;}
 
     public String getName() {return name;}
 
@@ -109,20 +105,7 @@ public class Index {
             System.out.println("You can guess " + index.tries + " times.");
             index.displayWord(index.getSecretWord(), index.correctLetters);
             index.outOfTries();
-
-            if (index.correctLetters.equals(index.secretWord)) {
-//            win = true;
-                System.out.println("Yes " + index.getName() + "! The secret word was " + index.secretWord + ". You have won!");
-                System.out.println(index.getName() + "'s Score: " + index.getScore());
-                System.out.println(index.getName() + "'s High Score: " + index.getHigh());
-                System.out.println("Do you want to play again? (yes or no)");
-                try {
-                    Scanner restart = new Scanner(System.in);
-                    index.again = restart.nextLine().charAt(0);
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
-            }
+            index.success();
             index.points(index.getTries());
             index.highScore();
 //            // end of WHILE LOOP bracket.
@@ -250,6 +233,21 @@ public class Index {
         if (tries == 0) {
             again = 'n';
             System.out.println("Sorry, " + getName() +  ", the word was " + secretWord + ".");
+        }
+    }
+    public void success() {
+        if (correctLetters.equals(secretWord)) {
+//            win = true;
+            System.out.println("Yes " + getName() + "! The secret word was " + secretWord + ". You have won!");
+            System.out.println(getName() + "'s Score: " + getScore());
+            System.out.println(getName() + "'s High Score: " + getHigh());
+            System.out.println("Do you want to play again? (yes or no)");
+            try {
+                Scanner restart = new Scanner(System.in);
+                again = restart.nextLine().charAt(0);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
