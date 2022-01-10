@@ -29,6 +29,16 @@ class IndexTest {
         assertFalse(index.isCorrectLetter("cat", "@"));
 
     }
+//@Test
+//void retrieveDisplay() {
+//        assertEquals("""
+//                +---+
+//                    |
+//                    |
+//                    |
+//                   ===
+//                """, index.retrieveDisplay(3));
+//}
 
 @Test
     void displayWord() {
