@@ -92,7 +92,7 @@ public class Index {
         index.userName();
 //       boolean win = false;
         index.again = 'y';
-//        while the game is running
+
         while (index.again == 'y') {
 //        index.setTries(3);
 //            index.setSecretWord(index.determineWord());
@@ -113,13 +113,10 @@ public class Index {
         //  end of MAIN bracket
     }
 
-    //    methods below here
-
     //    default constructor
     public Index() {
 
     }
-
     //    parameterized constructor
     public Index(int tries, int score, int high, String secretWord, String input, String missedLetter, String correctLetters) {
         this.tries = tries;
