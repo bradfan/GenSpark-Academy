@@ -51,8 +51,16 @@ public class Human {
         } catch (Exception e) {
             e.getMessage();
         }
-
     }
+
+    public boolean humanAlive(int hp) {
+        hitPoints = hp;
+        if(hp <= 0) {
+            isAlive = false;
+        }
+        return true;
+    }
+    
     public String toString(){
         String humanGrid = "X";
         byte[] bytes = humanGrid.getBytes(StandardCharsets.UTF_8);

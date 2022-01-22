@@ -50,8 +50,16 @@ public class Goblin {
         } catch (Exception e) {
             e.getMessage();
         }
-
     }
+
+    public boolean goblinAlive(int hp) {
+        hitPoints = hp;
+        if(hp <= 0) {
+            isAlive = false;
+        }
+        return true;
+    }
+
     public String toString(){
         String goblinGrid = "0";
         byte[] bytes = goblinGrid.getBytes(StandardCharsets.UTF_8);
