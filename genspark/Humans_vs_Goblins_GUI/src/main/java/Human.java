@@ -60,7 +60,7 @@ public class Human {
         }
         return true;
     }
-    
+
     public String toString(){
         String humanGrid = "X";
         byte[] bytes = humanGrid.getBytes(StandardCharsets.UTF_8);
