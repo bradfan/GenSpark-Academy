@@ -10,7 +10,7 @@ public class Goblin {
 
     }
     //    parameterized constructor
-    public Goblin(int hitPoints, int offense, int location) {
+    public Goblin(int hitPoints, int location) {
         this.hitPoints = hitPoints;
         this.location = location;
     }
