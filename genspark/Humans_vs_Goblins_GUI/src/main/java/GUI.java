@@ -51,7 +51,7 @@ public class GUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         buttonStart.setVisible(false);
-        label.setText("As you were briefed before the mission, you have entered the Goblin Maze! Navigate this terrible place by using the grid above.");
+        label.setText("You have entered the Goblin Maze! Wave your cursor to reveal the Goblin's Lair. Click on a square to search for the Goblin; if he's there, TAKE HIM OUT!!");
         fr.setVisible(true);
         frame.add(fr, BorderLayout.CENTER);
 
