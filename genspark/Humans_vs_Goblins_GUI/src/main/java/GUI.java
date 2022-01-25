@@ -13,7 +13,11 @@ public class GUI implements ActionListener {
     private JPanel panel;
     private JButton buttonStart;
     private JPanel panel2;
+    private JButton[] combatButtons = new JButton[4];
     Font font = new Font("Ink Free", Font.BOLD,30);
+
+    Goblin goblin = new Goblin();
+    Human human = new Human();
 
     public GUI() {
 
@@ -36,29 +40,36 @@ public class GUI implements ActionListener {
         panel2 = new JPanel();
 
         JButton b1 = new JButton("");
-        JButton b2 = new JButton("North");
-        b2.setFont(font);
+        JButton north = new JButton("North");
         JButton b3 = new JButton("");
-        JButton b4 = new JButton("West");
-        b4.setFont(font);
-        JButton b5 = new JButton("\"Click North, South, East or West\"");
-        b5.setFont(font);
-        JButton b6 = new JButton("East");
-        b6.setFont(font);
+        JButton west = new JButton("West");
+        JButton center = new JButton("\"Click North, South, East or West\"");
+        center.setFont(font);
+        JButton east = new JButton("East");
         JButton b7 = new JButton("");
-        JButton b8 = new JButton("South");
-        b8.setFont(font);
+        JButton south = new JButton("South");
         JButton b9 = new JButton("");
-        panel2.add(b1); panel2.add(b2); panel2.add(b3);
-        panel2.add(b4); panel2.add(b5); panel2.add(b6);
-        panel2.add(b7); panel2.add(b8); panel2.add(b9);
+        panel2.add(b1); panel2.add(north); panel2.add(b3);
+        panel2.add(west); panel2.add(center); panel2.add(east);
+        panel2.add(b7); panel2.add(south); panel2.add(b9);
         b1.setVisible(false);
         b3.setVisible(false);
         b7.setVisible(false);
         b9.setVisible(false);
-        panel2.setLayout(new GridLayout(3, 3));
+        panel2.setLayout(new GridLayout(3, 3, 2, 2));
         panel2.setSize(300,300);
         panel2.setVisible(true);
+
+        combatButtons[0] = north;
+        combatButtons[1] = west;
+        combatButtons[2] = east;
+        combatButtons[3] = south;
+
+        for(int i = 0; i <= 3; i++) {
+            combatButtons[i].setFont(font);
+            combatButtons[i].addActionListener(this);
+            combatButtons[i].setBackground(Color.LIGHT_GRAY);
+        }
 
     }
 
@@ -69,8 +80,20 @@ public class GUI implements ActionListener {
         label.setText("");
         panel2.setVisible(true);
         frame.add(panel2, BorderLayout.CENTER);
-
+        int locationIndex = (int) ((Math.random() * 4 ) + 1);
+        if(e.equals(combatButtons[locationIndex]) ) {
+            goblin.goblinAttack(human);
+//compare the click to the random location of the goblin; if it matches then combat ensues, if not "The goblin isn't here."
+        } else combatButtons[(int) e.getSource()].setText("The Goblin isn't here.");
     }
 
 
+
 }
+
+
+
+
+
+
+

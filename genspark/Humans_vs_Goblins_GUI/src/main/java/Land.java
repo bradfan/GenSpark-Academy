@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Land {
 
     ArrayList<Object> grid = new ArrayList<>();
+    Goblin goblin = new Goblin();
 
     public Land() {
 
@@ -40,10 +41,7 @@ public class Land {
             e.getMessage();
         }
     }
-    public void setGoblinLocation(Goblin goblin) {
-        grid.set(goblin.getLocation(), goblin);
-        goblin.setLocation(goblin.getLocation());
-    }
+
 
 
 

@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.nio.charset.StandardCharsets;
 
 public class Goblin {
@@ -59,6 +60,7 @@ public class Goblin {
         }
         return true;
     }
+
 
     public String toString(){
         String goblinGrid = "0";

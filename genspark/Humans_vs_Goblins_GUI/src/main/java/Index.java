@@ -8,7 +8,7 @@ public class Index {
         Goblin goblin = new Goblin();
 //      human.setLocation(24);
         human.isAlive();
-//      goblin.setLocation(0);
+        goblin.getLocation();
         goblin.isAlive();
 //      land.createGrid();
 //      land.setHumanLocation(human);
