@@ -44,9 +44,11 @@ public class Goblin {
             int damage = (int)(Math.random() * 10);
             if (damage >= human.getHitPoints()) {
                 human.setHitPoints(0);
+                System.out.println("Goblin won!");
             } else {
                 human.setHitPoints(human.getHitPoints() - damage);
                 this.setHitPoints(this.getHitPoints() - damage);
+                System.out.println("Human is wounded.");
             }
         } catch (Exception e) {
             e.getMessage();

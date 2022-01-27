@@ -44,6 +44,7 @@ public class Human {
             int damage = (int)(Math.random() * 10);
             if (damage >= goblin.getHitPoints()) {
                 goblin.setHitPoints(0);
+                System.out.println("You wasted his ass!");
             } else {
                 goblin.setHitPoints(goblin.getHitPoints() - damage);
                 this.setHitPoints(this.getHitPoints() - damage);
