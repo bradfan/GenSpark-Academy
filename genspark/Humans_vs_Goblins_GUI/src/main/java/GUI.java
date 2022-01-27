@@ -15,9 +15,9 @@ public class GUI implements ActionListener {
     private JPanel panel2;
     private JButton[] combatButtons = new JButton[4];
     Font font = new Font("Ink Free", Font.BOLD,30);
-
     Goblin goblin = new Goblin();
     Human human = new Human();
+    int locationIndex = (int) (Math.random() * 4);
 
     public GUI() {
 
@@ -80,7 +80,6 @@ public class GUI implements ActionListener {
         label.setText("");
         panel2.setVisible(true);
         frame.add(panel2, BorderLayout.CENTER);
-        int locationIndex = (int) (Math.random() * 4) ;
         if(e.getSource() == combatButtons[locationIndex] ) {
             goblin.goblinAttack(human);
             System.out.println("Eureka!!");
