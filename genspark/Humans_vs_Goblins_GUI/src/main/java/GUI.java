@@ -90,7 +90,7 @@ public class GUI implements ActionListener {
                     goblin.setAlive(false);
                 }
             }
-//compare the click to the random location of the goblin; if it matches then combat ensues, if not "The goblin isn't here."
+//set end of game when one dies. Set text/background color as the game progresses.
         } else if(e.getSource() != combatButtons[locationIndex]) {
             System.out.println("Click!!");
         }

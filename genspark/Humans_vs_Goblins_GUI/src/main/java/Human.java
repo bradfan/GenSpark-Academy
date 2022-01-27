@@ -2,7 +2,6 @@ import java.nio.charset.StandardCharsets;
 
 public class Human {
     private boolean isAlive = true;
-    private int location;
     private int hitPoints = 12;
 
     //default constructor
@@ -11,9 +10,8 @@ public class Human {
     }
 
     //    parameterized constructor
-    public Human(int hitPoints, int offense, int location) {
+    public Human(int hitPoints) {
         this.hitPoints = hitPoints;
-        this.location = location;
     }
 
     //    setters and getters
@@ -24,12 +22,6 @@ public class Human {
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
-
-    public int getLocation() {
-        return location;
-    }
-
-    public void setLocation(int location) {this.location = location;}
 
     public int getHitPoints() {
         return hitPoints;

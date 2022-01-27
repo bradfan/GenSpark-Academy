@@ -3,7 +3,6 @@ import java.nio.charset.StandardCharsets;
 
 public class Goblin {
     private boolean isAlive = true;
-    private int location;
     private int hitPoints = 10;
 
     //default constructor
@@ -11,9 +10,8 @@ public class Goblin {
 
     }
     //    parameterized constructor
-    public Goblin(int hitPoints, int location) {
+    public Goblin(int hitPoints) {
         this.hitPoints = hitPoints;
-        this.location = location;
     }
 
     //    setters and getters
@@ -24,12 +22,6 @@ public class Goblin {
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
-
-    public int getLocation() {
-        return location;
-    }
-
-    public void setLocation(int location) { this.location = location;}
 
     public int getHitPoints() {
         return hitPoints;
