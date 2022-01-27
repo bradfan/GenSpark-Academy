@@ -80,11 +80,14 @@ public class GUI implements ActionListener {
         label.setText("");
         panel2.setVisible(true);
         frame.add(panel2, BorderLayout.CENTER);
-        int locationIndex = (int) ((Math.random() * 4 ) + 1);
-        if(e.equals(combatButtons[locationIndex]) ) {
+        int locationIndex = (int) (Math.random() * 4) ;
+        if(e.getSource() == combatButtons[locationIndex] ) {
             goblin.goblinAttack(human);
+            System.out.println("Eureka!!");
 //compare the click to the random location of the goblin; if it matches then combat ensues, if not "The goblin isn't here."
-        } else combatButtons[(int) e.getSource()].setText("The Goblin isn't here.");
+        } else if(e.getSource() != combatButtons[locationIndex]) {
+            System.out.println("Click!!");
+        }
     }
 
 
