@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 public class ChallengeStorage {
 
+
+
+
     public void writeOutputOneFile() throws IOException {
             var getInputOne = Files.lines(Paths.get("input/one_to_seven.txt")).collect(Collectors.toList());
             System.out.println(getInputOne);
@@ -30,7 +33,7 @@ public class ChallengeStorage {
 //                StandardOpenOption.APPEND);
         }
 
-        public void writeOutputTwoFile() throws IOException {
+        public static void writeOutputTwoFile() throws IOException {
             var getInputTwo = Files.lines(Paths.get("input/one_to_twenty_five.txt")).collect(Collectors.toList());
             System.out.println(getInputTwo);
             List<String> a = new ArrayList<>();
@@ -40,48 +43,60 @@ public class ChallengeStorage {
             List<String> e = new ArrayList<>();
             List<String> f = new ArrayList<>();
 
-            for (int i = 0; i <= getInputTwo.size() - 1; i += 9) {
-                a.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
+            int start = 0;
+            int counter = 0;
 
+            while(start < 8) {
+                f.add(getInputTwo.get(counter));
+                counter += 9;
+                if(counter > getInputTwo.size() - 1) {
+                    start ++;
+                    counter = start;
+                }
             }
-            for (int i = 1; i <= getInputTwo.size() - 1; i += 9) {
-                a.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
 
-            }
-            for (int i = 2; i <= getInputTwo.size() - 1; i += 9) {
-                b.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-
-            }
-            for (int i = 3; i <= getInputTwo.size() - 1; i += 9) {
-                b.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-
-            }
-            for (int i = 4; i <= getInputTwo.size() - 1; i += 9) {
-                c.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-
-            }
-            for (int i = 5; i <= getInputTwo.size() - 1; i += 9) {
-                c.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-
-            }
-            for (int i = 6; i <= getInputTwo.size() - 1; i += 9) {
-                d.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-            }
-            for (int i = 7; i <= getInputTwo.size() - 1; i += 9) {
-                d.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-            }
-            for (int i = 8; i <= getInputTwo.size() - 1; i += 9) {
-                e.add(getInputTwo.get(i));
-                f.add(getInputTwo.get(i));
-            }
+//            for (int i = 0; i <= getInputTwo.size() - 1; i += 9) {
+//                a.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//
+//            }
+//            for (int i = 1; i <= getInputTwo.size() - 1; i += 9) {
+//                a.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//
+//            }
+//            for (int i = 2; i <= getInputTwo.size() - 1; i += 9) {
+//                b.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//
+//            }
+//            for (int i = 3; i <= getInputTwo.size() - 1; i += 9) {
+//                b.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//
+//            }
+//            for (int i = 4; i <= getInputTwo.size() - 1; i += 9) {
+//                c.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//
+//            }
+//            for (int i = 5; i <= getInputTwo.size() - 1; i += 9) {
+//                c.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//
+//            }
+//            for (int i = 6; i <= getInputTwo.size() - 1; i += 9) {
+//                d.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//            }
+//            for (int i = 7; i <= getInputTwo.size() - 1; i += 9) {
+//                d.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//            }
+//            for (int i = 8; i <= getInputTwo.size() - 1; i += 9) {
+//                e.add(getInputTwo.get(i));
+//                f.add(getInputTwo.get(i));
+//            }
 
             System.out.println("A: " + a);
             System.out.println("B: " + b);
@@ -94,7 +109,10 @@ public class ChallengeStorage {
                     StandardOpenOption.CREATE, StandardOpenOption.APPEND);
         }
 
+    public static void main(String[] args) throws IOException {
 
+         writeOutputTwoFile();
+    }
 
 
 }
