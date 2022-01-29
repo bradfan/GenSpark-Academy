@@ -9,5 +9,6 @@ public class DITypeApp {
         Person person = context.getBean(Person.class);
         System.out.println(person.getName());
         System.out.println(person.getAddress().getStreet());
+        System.out.println(person.getOccupation().getJobTitle());
     }
 }

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 public class Person {
     private final Name name;
     private Address address;
+    @Autowired
+    private Occupation occupation;
 
     public Person(Name name) {
         this.name = name;
@@ -24,4 +26,11 @@ public class Person {
     public void setHome(Address address) {
         this.address = address;
     }
+
+    public Occupation getOccupation() {
+        return occupation;
+    }
+
+
+
 }

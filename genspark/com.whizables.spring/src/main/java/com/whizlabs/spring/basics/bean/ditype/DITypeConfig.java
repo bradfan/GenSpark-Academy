@@ -10,9 +10,15 @@ public class DITypeConfig {
     public Name getName() {
         return new Name("Rod", "Johnson");
     }
+
     @Bean
     public Address getAddress() {
         return new Address("High Street");
+    }
+
+    @Bean
+    public Occupation getOccupation() {
+        return new Occupation("Java Developer");
     }
 
 
