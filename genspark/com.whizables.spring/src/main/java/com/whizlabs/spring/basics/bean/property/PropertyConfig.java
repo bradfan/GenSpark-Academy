@@ -1,0 +1,11 @@
+package com.whizlabs.spring.basics.bean.property;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.PropertySource;
+
+@ComponentScan
+@PropertySource("bean/app.properties")
+public class PropertyConfig {
+
+}
