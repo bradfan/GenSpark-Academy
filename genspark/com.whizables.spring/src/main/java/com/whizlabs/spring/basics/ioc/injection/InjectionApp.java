@@ -1,4 +1,4 @@
-package com.whizlabs.spring.basics.resource.injection;
+package com.whizlabs.spring.basics.ioc.injection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

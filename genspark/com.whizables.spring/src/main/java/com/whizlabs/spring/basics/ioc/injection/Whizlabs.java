@@ -1,4 +1,4 @@
-package com.whizlabs.spring.basics.resource.injection;
+package com.whizlabs.spring.basics.ioc.injection;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
