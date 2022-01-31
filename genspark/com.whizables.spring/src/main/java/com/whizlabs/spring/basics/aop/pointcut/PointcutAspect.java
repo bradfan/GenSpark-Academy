@@ -19,7 +19,8 @@ public class PointcutAspect {
 //    }
 
     @Pointcut("execution(public void com.whizlabs..Person.*(*))")
-    private void singleParamExecutionPointcut() {}
+    private void singleParamExecutionPointcut() {
+    }
 
 //
 //    @Before("singleParamExecutionPointcut()")
@@ -27,8 +28,33 @@ public class PointcutAspect {
 //        System.out.println("Printed by singleParameterExecutionAdvice.");
 //    }
 
-@Before("noParamExecutionPointcut() && singleParamExecutionPointcut()")
+    @Before("noParamExecutionPointcut() && singleParamExecutionPointcut()")
     private void executionAdvice() {
-    System.out.println("Printed by executionAdvice.");
+        System.out.println("Printed by executionAdvice.");
     }
+
+    @Pointcut("within(com.whizlabs.spring.basics.aop.pointcut..*) && noParamExecutionPointcut()")
+    private void withinPointcut() {
+    }
+
+    @Before("withinPointcut()")
+    private void withinAdvice() {
+        System.out.println("Printed by withinAdvice.");
+
+    }
+
+    @Pointcut("target(com.whizlabs.spring.basics.aop.pointcut.service.LogService)")
+    private void targetPointcut() {
+    }
+
+    @Before("targetPointcut() && execution(void log(..))")
+    private void targetAdvice() {
+        System.out.println("Printed by targetAdvice.");
+    }
+
+    @Before("bean(getPerson) && execution(* printFullName())")
+    private void beanAdvice() {
+        System.out.println("Printed by beanAdvice.");
+    }
+
 }

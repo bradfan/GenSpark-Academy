@@ -1,6 +1,8 @@
-package com.whizlabs.spring.basics.aop.pointcut;
+package com.whizlabs.spring.basics.aop.pointcut.data;
 
-public class Person {
+import com.whizlabs.spring.basics.aop.pointcut.service.LogService;
+
+public class Person implements LogService {
     private String fullName;
 
     public Person(String fullName) {

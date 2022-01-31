@@ -1,5 +1,6 @@
 package com.whizlabs.spring.basics.aop.pointcut;
 
+import com.whizlabs.spring.basics.aop.pointcut.data.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
