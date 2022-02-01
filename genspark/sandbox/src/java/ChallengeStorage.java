@@ -25,23 +25,10 @@ public class ChallengeStorage {
             System.out.println("Append: " + append);
             i++;
         }
-
         System.out.println(append);
         var outputOne = Files.write(Paths.get("output_one.txt"), append, StandardCharsets.UTF_8,
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-
     }
-
-//    int counter = 0;
-//        while(counter <= getInputOne.size() - 1) {
-//        append.add(getInputOne.get(counter));
-//            if(getInputOne.size() < counter + 3) {
-//        append.add(getInputOne.get(counter + 3));
-//            }
-//        counter ++;
-//    }
-
-
 
     public static void main(String[] args) throws IOException {
 
