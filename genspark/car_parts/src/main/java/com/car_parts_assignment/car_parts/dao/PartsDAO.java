@@ -4,7 +4,7 @@ import com.car_parts_assignment.car_parts.entity.Part;
 
 import java.util.List;
 
-public interface PartDAO {
+public interface PartsDAO {
     List<Part> findAll();
     Object findById(int theId);
     void saveOrUpdate(Part thePart);

@@ -12,12 +12,12 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
-public class PartIMPL implements PartDAO{
+public class PartsIMPL implements PartsDAO {
 
     private final EntityManager entityManager;
 
     @Autowired
-    public PartIMPL(EntityManager entityManager) {
+    public PartsIMPL(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
