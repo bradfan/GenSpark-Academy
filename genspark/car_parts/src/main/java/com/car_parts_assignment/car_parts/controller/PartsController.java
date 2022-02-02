@@ -26,6 +26,12 @@ public class PartsController {
         return partsService.findAll();
     }
 
+    //http://localhost:8080/retrieveById/1
+    @GetMapping("/retrieveById/{partId}")
+    public Object findById(@PathVariable int partId) {
+        return partsService.findById(partId);
+    }
+
     //http://localhost:8080/addPart
     @PostMapping("/addPart")
     public Part addPart(@RequestBody Part thePart) {
@@ -42,7 +48,7 @@ public class PartsController {
     }
 
     //http://localhost:8080/deletePart/1
-    @DeleteMapping("/deleteEmployee/{partId}")
+    @DeleteMapping("/deletePart/{partId}")
     public String deletePart(@PathVariable int partId) {
         partsService.deleteById(partId);
         return "Deleted part ID: " + partId;

@@ -8,5 +8,5 @@ public interface PartsDAO {
     List<Part> findAll();
     Object findById(int theId);
     void saveOrUpdate(Part thePart);
-    void deleteById(int theId);
+    void deleteById(int partId);
 }

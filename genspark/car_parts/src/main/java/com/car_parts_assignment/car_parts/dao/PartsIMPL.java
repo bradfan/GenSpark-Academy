@@ -32,9 +32,9 @@ public class PartsIMPL implements PartsDAO {
 
     @Override
     @Transactional
-    public Part findById(int theId) {
+    public Part findById(int partId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(Part.class, theId);
+        return currentSession.get(Part.class, partId);
     }
 
 
@@ -48,9 +48,9 @@ public class PartsIMPL implements PartsDAO {
 
     @Override
     @Transactional
-    public void deleteById(int theId) {
+    public void deleteById(int partId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        Part myPart = currentSession.get(Part.class, theId);
+        Part myPart = currentSession.get(Part.class, partId);
         currentSession.delete(myPart);
     }
 
