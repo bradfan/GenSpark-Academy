@@ -17,7 +17,7 @@ public class Part {
     private String carPart;
 
     @Column(name = "in_stock")
-    private String inStock;
+    private int inStock;
 
     @Column(name = "car_model")
     private String carModel;
@@ -27,7 +27,7 @@ public class Part {
 
     }
 
-    public Part(int id, String carPart, String inStock, String carModel) {
+    public Part(int id, String carPart, int inStock, String carModel) {
         this.id = id;
         this.carPart = carPart;
         this.inStock = inStock;
@@ -50,11 +50,11 @@ public class Part {
         this.carPart = carPart;
     }
 
-    public String getInStock() {
+    public int getInStock() {
         return inStock;
     }
 
-    public void setInStock(String inStock) {
+    public void setInStock(int inStock) {
         this.inStock = inStock;
     }
 
