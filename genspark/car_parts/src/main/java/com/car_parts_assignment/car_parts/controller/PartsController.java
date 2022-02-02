@@ -14,6 +14,7 @@ public class PartsController {
 
     private final PartsService partsService;
 
+//    An example of Constructor Injection
     @Autowired
     public PartsController(@Qualifier("partsServiceIMPL") PartsService partsService) {
         this.partsService = partsService;

@@ -3,9 +3,11 @@ package com.car_parts_assignment.car_parts.service;
 import com.car_parts_assignment.car_parts.dao.PartsDAO;
 import com.car_parts_assignment.car_parts.entity.Part;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PartsServiceIMPL implements PartsService{
 
     private final PartsDAO partsDAO;
