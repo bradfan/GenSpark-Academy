@@ -74,5 +74,5 @@ public class Song {
                 ", onAlbum='" + onAlbum + '\'' +
                 '}';
     }
-    
+
 }
