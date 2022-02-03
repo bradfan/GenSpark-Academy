@@ -20,19 +20,23 @@ public class SongController {
         this.songService = songService;
     }
 
-    //http://localhost:8080/retrieveAllSongs
+    //   localhost:8080/retrieveAllSongs
     @GetMapping("/retrieveAllSongs")
     public List<Song> findAll() {
         return songService.findAll();
     }
 
-    //http://localhost:8080/retrieveById/1
+    //   localhost:8080/retrieveById/1
     @GetMapping("/retrieveById/{songId}")
     public Object findById(@PathVariable int songId) {
         return songService.findById(songId);
     }
 
-    //http://localhost:8080/addSong
+    //   localhost:8080/retrieveByArtist/Metallica
+    @GetMapping("/retrieveByArtist/{artistName}")
+    public Object findByArtist(@PathVariable Song artistName) {return songService.findByArtist(artistName); }
+
+    //   localhost:8080/addSong
     @PostMapping("/addSong")
     public Song addSong(@RequestBody Song theSong) {
         theSong.setId(0);
@@ -40,14 +44,14 @@ public class SongController {
         return theSong;
     }
 
-    //http://localhost:8080/updateSong
+    //   localhost:8080/updateSong
     @PutMapping("/updateSong")
     public Song updateSong(@RequestBody Song updateSong) {
         songService.saveOrUpdate(updateSong);
         return updateSong;
     }
 
-    //http://localhost:8080/deleteSong/1
+    //    localhost:8080/deleteSong/1
     @DeleteMapping("/deleteSong/{songId}")
     public String deleteSong(@PathVariable int songId) {
         songService.deleteById(songId);

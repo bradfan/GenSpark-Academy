@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 
+import java.io.Serializable;
 import java.util.List;
 
 //DAO = Data Access Object
@@ -35,6 +36,14 @@ public class SongIMPL implements SongDao {
     public Song findById(int songId) {
         Session currentSession = entityManager.unwrap(Session.class);
         return currentSession.get(Song.class, songId);
+    }
+
+//    findByArtist code does not work in Postman - code left in place (service, DAO, Controller)
+    @Override
+    @Transactional
+    public Song findByArtist(Song artistName) {
+        Session currentSession = entityManager.unwrap(Session.class);
+        return currentSession.get(Song.class, (Serializable) artistName);
     }
 
     @Override

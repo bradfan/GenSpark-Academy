@@ -4,7 +4,7 @@ package com.car_parts_assignment.car_parts.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "car_part")
+@Table(name = "parts")
 public class Part {
 
 
