@@ -4,7 +4,7 @@ package com.songapi.apipractice.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "song_list")
+@Table(name = "songs")
 public class Song {
 
     @Id

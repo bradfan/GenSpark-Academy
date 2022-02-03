@@ -48,11 +48,10 @@ public class SongController {
     }
 
     //http://localhost:8080/deleteSong/1
-    @DeleteMapping("/deletePart/{songId}")
+    @DeleteMapping("/deleteSong/{songId}")
     public String deleteSong(@PathVariable int songId) {
         songService.deleteById(songId);
         return "Deleted song ID: " + songId;
     }
-
 
 }
