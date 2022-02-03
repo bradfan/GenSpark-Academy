@@ -49,9 +49,7 @@ public class Song {
         this.songTitle = songTitle;
     }
 
-    public String getArtistName() {
-        return artistName;
-    }
+    public String getArtistName() {return artistName;}
 
     public void setArtistName(String artistName) {
         this.artistName = artistName;
