@@ -12,6 +12,8 @@ import javax.persistence.EntityManager;
 
 import java.util.List;
 
+//DAO = Data Access Object
+//Implements functionality for the methods called in DAO/SongService
 @Repository
 public class SongIMPL implements SongDao {
 
