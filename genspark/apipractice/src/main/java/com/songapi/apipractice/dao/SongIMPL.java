@@ -13,7 +13,8 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class SongIMPL {
+public class SongIMPL implements SongDao {
+
     private final EntityManager entityManager;
 
     @Autowired
@@ -32,6 +33,13 @@ public class SongIMPL {
     public Song findById(int songId) {
         Session currentSession = entityManager.unwrap(Session.class);
         return currentSession.get(Song.class, songId);
+    }
+
+    @Override
+    @Transactional
+    public  void saveOrUpdate(Song theSong) {
+        Session currentSession = entityManager.unwrap(Session.class);
+        currentSession.saveOrUpdate(theSong);
     }
 
     @Override
