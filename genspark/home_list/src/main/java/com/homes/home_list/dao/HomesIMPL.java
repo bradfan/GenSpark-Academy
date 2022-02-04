@@ -12,7 +12,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class HomesIMPL {
+public class HomesIMPL implements HomesDAO {
 
     private final EntityManager entityManager;
 
