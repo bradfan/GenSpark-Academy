@@ -2,6 +2,7 @@ package com.contacts.demo.controller;
 
 
 import com.contacts.demo.entity.Contact;
+import com.contacts.demo.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;

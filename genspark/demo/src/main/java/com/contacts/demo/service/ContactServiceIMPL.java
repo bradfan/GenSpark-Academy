@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ContactServiceIMPL {
+public class ContactServiceIMPL implements ContactService{
     private final ContactDao contactDao;
 
     @Autowired

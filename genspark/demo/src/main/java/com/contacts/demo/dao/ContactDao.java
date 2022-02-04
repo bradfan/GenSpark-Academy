@@ -8,7 +8,7 @@ import java.util.List;
 //DAO = Data Access Object
 public interface ContactDao {
     List<Contact> findAll();
-    Object findById();
+    Object findById(int contactId);
     void saveOrUpdate(Contact theContact);
     void deleteById(int contactId);
 }
