@@ -2,30 +2,31 @@ package com.songapi.apipractice.service;
 
 import com.songapi.apipractice.dao.GenreDao;
 import com.songapi.apipractice.entity.Genre;
-import com.songapi.apipractice.entity.Song;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class GenreServiceIMPL implements GenreService{
 
     private final GenreDao genreDao;
 
     @Autowired
-    public GenreServiceIMPL(GenreDao songDao) {this.genreDao = genreDao; }
+    public GenreServiceIMPL(GenreDao genreDao) {this.genreDao = genreDao; }
 
     @Override
-    public List<Genre> findAll() {return genreDao.findAll();}
+    public List<Genre> findAllGenre() {return genreDao.findAllGenres();}
 
     @Override
-    public Object findById(int songId) {return genreDao.findById(genreId);}
+    public Object findByGenreId(int genreId) {return genreDao.findByGenreId(genreId);}
 
     @Override
-    public void saveOrUpdate(Genre theGenre) {
-        genreDao.saveOrUpdate(theGenre);}
+    public void saveOrUpdateGenre(Genre theGenre) {
+        genreDao.saveOrUpdateGenre(theGenre);}
 
     @Override
-    public void deleteById(int genreId) {
-        genreDao.deleteById(genreId);}
+    public void deleteByGenreId(int genreId) {
+        genreDao.deleteByGenreId(genreId);}
 
 }

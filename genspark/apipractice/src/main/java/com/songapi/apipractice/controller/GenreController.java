@@ -22,35 +22,35 @@ GenreController(@Qualifier("genreServiceIMPL") GenreService genreService) {
 
     //   localhost:8080/retrieveAllGenres
     @GetMapping("/retrieveAllGenres")
-    public List<Song> findAll() {
-        return genreService.findAll();
+    public List<Genre> findAllGenre() {
+        return genreService.findAllGenre();
     }
 
-    //   localhost:8080/retrieveById/1
-    @GetMapping("/retrieveById/{genreId}")
-    public Object findById(@PathVariable int genreId) {
-        return genreService.findById(genreId);
+    //   localhost:8080/retrieveByGenreId/1
+    @GetMapping("/retrieveByGenreId/{genreId}")
+    public Object findByGenreId(@PathVariable int genreId) {
+        return genreService.findByGenreId(genreId);
     }
 
-    //   localhost:8080/addSong
+    //   localhost:8080/addGenre
     @PostMapping("/addGenre")
     public Genre addGenre(@RequestBody Genre theGenre) {
         theGenre.setId(0);
-        genreService.saveOrUpdate(theGenre);
+        genreService.saveOrUpdateGenre(theGenre);
         return theGenre;
     }
 
     //   localhost:8080/updateGenre
     @PutMapping("/updateGenre")
     public Genre updateGenre(@RequestBody Genre updateGenre) {
-        genreService.saveOrUpdate(updateGenre);
+        genreService.saveOrUpdateGenre(updateGenre);
         return updateGenre;
     }
 
     //    localhost:8080/deleteGenre/1
     @DeleteMapping("/deleteGenre/{genreId}")
     public String deleteGenre(@PathVariable int genreId) {
-        genreService.deleteById(genreId);
+        genreService.deleteByGenreId(genreId);
         return "Deleted genre ID: " + genreId;
     }
 

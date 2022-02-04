@@ -6,8 +6,8 @@ import com.songapi.apipractice.entity.Song;
 import java.util.List;
 
 public interface GenreService {
-    List<Genre> findAll();
-    Object findById(int genreID);
-    void saveOrUpdate(Genre theGenre);
-    void deleteById(int genreId);
+    List<Genre> findAllGenre();
+    Object findByGenreId(int genreID);
+    void saveOrUpdateGenre(Genre theGenre);
+    void deleteByGenreId(int genreId);
 }
