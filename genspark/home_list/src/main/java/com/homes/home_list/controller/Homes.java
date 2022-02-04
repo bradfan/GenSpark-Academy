@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name= "homes")
-public class HomesController {
+public class Homes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +26,11 @@ public class HomesController {
 
 //    default constructor
 
-    public Contact() {
+    public Homes() {
 
     }
 
-    public HomesController(int id, int streetAddress, String streetName, String phoneNumber, String state) {
+    public Homes(int id, int streetAddress, String streetName, String phoneNumber, String state) {
         this.id = id;
         this.streetAddress = streetAddress;
         this.streetName = streetName;
