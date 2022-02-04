@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 public class GenreController {
-    public final SongService songService;
+    public final GenreService genreService;
 
 //    Constructor Injection
 @Autowired
@@ -36,7 +36,7 @@ GenreController(@Qualifier("genreServiceIMPL") GenreService genreService) {
     @PostMapping("/addGenre")
     public Genre addGenre(@RequestBody Genre theGenre) {
         theGenre.setId(0);
-        songService.saveOrUpdate(theGenre);
+        genreService.saveOrUpdate(theGenre);
         return theGenre;
     }
 
