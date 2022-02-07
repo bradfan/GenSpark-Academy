@@ -23,7 +23,7 @@ public class HomesIMPL implements HomesDAO {
     @Transactional
     public List<Homes> findAll() {
         Session currentSession = entityManager.unwrap(Session.class);
-        Query<Homes> myQuery = currentSession.createQuery("from Contact");
+        Query<Homes> myQuery = currentSession.createQuery("from Homes");
         return myQuery.getResultList();
     }
 

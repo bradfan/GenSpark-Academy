@@ -18,7 +18,7 @@ public class Homes {
     private String streetName;
 
     @Column(name = "city_name")
-    private String phoneNumber;
+    private String cityName;
 
     @Column(name = "state")
     private String state;
@@ -33,7 +33,7 @@ public class Homes {
         this.id = id;
         this.streetAddress = streetAddress;
         this.streetName = streetName;
-        this.phoneNumber = phoneNumber;
+        this.cityName = phoneNumber;
         this.state = state;
     }
 
@@ -61,12 +61,12 @@ public class Homes {
         this.streetName = streetName;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setCityName(String phoneNumber) {
+        this.cityName = phoneNumber;
     }
 
     public String getState() {
@@ -83,7 +83,7 @@ public class Homes {
                 "id=" + id +
                 ", streetAddress=" + streetAddress +
                 ", streetName='" + streetName + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
+                ", phoneNumber='" + cityName + '\'' +
                 ", state='" + state + '\'' +
                 '}';
     }
