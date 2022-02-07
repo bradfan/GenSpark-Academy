@@ -18,7 +18,7 @@ public class WidgetController {
     WidgetController(@Qualifier("widgetServiceIMPL") WidgetService widgetService) {this.widgetService = widgetService;}
 
 //   localhost:8080/retrieveAll
-    @GetMapping("/retriveAll")
+    @GetMapping("/retrieveAll")
     public List<Widget> findAll() {
         return widgetService.findAll();
     }
