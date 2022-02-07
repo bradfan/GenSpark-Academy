@@ -50,5 +50,5 @@ public class WidgetController {
         widgetService.deleteById(widgetId);
         return "Deleted widget ID: " + widgetId;
     }
-    
+
 }
