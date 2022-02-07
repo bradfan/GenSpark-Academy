@@ -1,10 +1,10 @@
-package com.homes.home_list.dao;
+package com.widget.trainingAPI.dao;
 
-
-import com.homes.home_list.entity.Homes;
+import com.widget.trainingAPI.entity.Widget;
+import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,40 +12,40 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class HomesIMPL implements HomesDAO {
-
+public class WidgetIMPL implements WidgetDAO{
     private final EntityManager entityManager;
 
     @Autowired
-    public HomesIMPL(EntityManager entityManager) {this.entityManager = entityManager;}
+    public WidgetIMPL(EntityManager entityManager) {this.entityManager = entityManager;}
 
     @Override
     @Transactional
-    public List<Homes> findAll() {
+    public List<Widget> findAll() {
         Session currentSession = entityManager.unwrap(Session.class);
-        Query<Homes> myQuery = currentSession.createQuery("from Homes");
+        Query<Widget> myQuery = currentSession.createQuery("from Widget");
         return myQuery.getResultList();
     }
 
     @Override
     @Transactional
-    public Homes findById(int homesId) {
+    public Widget findById(int widgetId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(Homes.class, homesId);
+        return currentSession.get(Widget.class, widgetId);
     }
 
     @Override
     @Transactional
-    public  void saveOrUpdate(Homes theHomes) {
+    public void saveOrUpdate(Widget theWidget) {
         Session currentSession = entityManager.unwrap(Session.class);
-        currentSession.saveOrUpdate(theHomes);
+        currentSession.saveOrUpdate(theWidget);
     }
 
     @Override
     @Transactional
-    public void deleteById(int contactId) {
+    public void deleteById(int widgetId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        Homes myHomes = currentSession.get(Homes.class, contactId);
-        currentSession.delete(myHomes);
+        Widget myWidget = currentSession.get(Widget.class, widgetId);
+        currentSession.delete(myWidget);
     }
+
 }
