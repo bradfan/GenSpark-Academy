@@ -19,13 +19,13 @@ HomesController(@Qualifier("homesServiceIMPL") HomesService homesService) {this.
     //   localhost:8080/retrieveAll
     @GetMapping("/retrieveAll")
     public List<Homes> findAll() {
-        return homesService.findAll();
+    return homesService.findAll();
     }
 
     //   localhost:8080/retrieveById/1
     @GetMapping("/retrieveById/{homesId}")
     public Object findById(@PathVariable int homesId) {
-        return homesService.findById(homesId);
+    return homesService.findById(homesId);
     }
 
     //   localhost:8080/addHome
@@ -47,6 +47,6 @@ HomesController(@Qualifier("homesServiceIMPL") HomesService homesService) {this.
     @DeleteMapping("/deleteById/{homesId}")
     public String deleteById(@PathVariable int homesId) {
         homesService.deleteById(homesId);
-        return "Deleted genre ID: " + homesId;
+        return "Deleted home ID: " + homesId;
     }
 }
