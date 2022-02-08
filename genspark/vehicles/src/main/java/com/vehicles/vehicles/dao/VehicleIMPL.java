@@ -16,7 +16,6 @@ public class VehicleIMPL implements VehicleDAO {
     private final EntityManager entityManager;
 
     @Autowired
-    @Autowired
     public VehicleIMPL(EntityManager entityManager) {this.entityManager = entityManager;}
 
     @Override
