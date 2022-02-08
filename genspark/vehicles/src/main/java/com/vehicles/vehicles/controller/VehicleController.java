@@ -49,5 +49,4 @@ public class VehicleController {
         vehicleService.deleteById(vehicleId);
         return "Deleted vehicle ID: " + vehicleId;
     }
-
 }

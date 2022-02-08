@@ -4,6 +4,7 @@ import com.vehicles.vehicles.entity.Vehicle;
 
 import java.util.List;
 
+// DAO = Data Access Object
 public interface VehicleDAO {
     List<Vehicle> findAll();
     Object findById(int vehicleId);
