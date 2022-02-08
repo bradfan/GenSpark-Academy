@@ -6,7 +6,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "widget")
 public class Widget {
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
