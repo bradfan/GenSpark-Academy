@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class VehicleServiceIMPL {
+public class VehicleServiceIMPL implements VehicleService{
     private final VehicleDAO vehicleDAO;
 
     @Autowired
@@ -25,5 +25,5 @@ public class VehicleServiceIMPL {
 
     @Override
     public void deleteById(int vehicleId) {vehicleDAO.deleteById(vehicleId);}
-    
+
 }
