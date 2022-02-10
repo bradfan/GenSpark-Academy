@@ -10,28 +10,26 @@ import java.util.stream.Collectors;
 
 public class Practice {
 
-
-    public static void main(String[] args) throws IOException {
-        Files.write(Paths.get("file_name.txt"), "NAME email age gender destination \n".getBytes(StandardCharsets.UTF_8));
-        var brainFart = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\sandbox\\practice_name.txt")).filter(i -> i.contains("Phone")) .collect(Collectors.toList());
-        System.out.println(brainFart);
-        Files.write(Paths.get("what_we_want.txt"), brainFart);
-
-
-
-//        myList.add("boarding_pass.txt");
-//        myList.add("Goodbye");
-//        myList.add("Don't call me.");
-
-
-
-
-
-
+    public void method() {
+        System.out.println("Hello");
     }
 
 
+
+    public static void main(String[] args) {
+
+        Practice practice = new Practice();
+        practice.method();
+    }
 }
+
+
+
+
+
+
+
+
 
 
 //    public static void main(String[] args) {

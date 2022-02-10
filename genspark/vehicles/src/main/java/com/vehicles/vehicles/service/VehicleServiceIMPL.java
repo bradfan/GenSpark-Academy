@@ -12,7 +12,7 @@ public class VehicleServiceIMPL implements VehicleService{
     private final VehicleDAO vehicleDAO;
 
     @Autowired
-    public VehicleServiceIMPL(VehicleDAO vehicleDAO) {this.vehicleDAO  =vehicleDAO;}
+    public VehicleServiceIMPL(VehicleDAO vehicleDAO) {this.vehicleDAO = vehicleDAO;}
 
     @Override
     public List<Vehicle> findAll() {return vehicleDAO.findAll();}
