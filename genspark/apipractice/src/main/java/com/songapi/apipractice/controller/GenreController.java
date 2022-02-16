@@ -18,9 +18,7 @@ public class GenreController {
 
 //    Constructor Injection
 @Autowired
-GenreController(@Qualifier("genreServiceIMPL") GenreService genreService) {
-    this.genreService = genreService;
-}
+GenreController(@Qualifier("genreServiceIMPL") GenreService genreService) {this.genreService = genreService;}
 
     //   localhost:8080/retrieveAllGenres
     @GetMapping("/retrieveAllGenres")
