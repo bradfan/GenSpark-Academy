@@ -1,7 +1,6 @@
 package react_db.db.dao;
 
 
-
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,9 @@ public class SongIMPL implements SongDao {
     private final EntityManager entityManager;
 
     @Autowired
-    public SongIMPL(EntityManager entityManager) {this.entityManager = entityManager;}
+    public SongIMPL(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     @Override
     @Transactional
@@ -38,7 +39,7 @@ public class SongIMPL implements SongDao {
         return currentSession.get(Song.class, songId);
     }
 
-//    findByArtist code does not work in Postman - code left in place (service, DAO, Controller)
+    //    findByArtist code does not work in Postman - code left in place (service, DAO, Controller)
     @Override
     @Transactional
     public Song findByArtist(Song artistName) {
@@ -48,7 +49,7 @@ public class SongIMPL implements SongDao {
 
     @Override
     @Transactional
-    public  void saveOrUpdate(Song theSong) {
+    public void saveOrUpdate(Song theSong) {
         Session currentSession = entityManager.unwrap(Session.class);
         currentSession.saveOrUpdate(theSong);
     }
