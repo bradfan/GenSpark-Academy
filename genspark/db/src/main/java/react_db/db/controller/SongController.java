@@ -10,8 +10,8 @@ import react_db.db.service.SongService;
 
 import java.util.List;
 
-////This is to allow calls from React
-//@CrossOrigin(origins = { "http://localhost:3000"})
+//This is to allow calls from React
+@CrossOrigin(origins = { "http://localhost:3000"})
 @RestController
 public class SongController {
 
