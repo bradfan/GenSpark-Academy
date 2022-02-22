@@ -21,7 +21,7 @@ public class LoginController {
 
     //   localhost:8080/retrieveAllLogin
     @GetMapping("/retrieveAllLogin")
-    public List<Login> findAllGenre() {
+    public List<Login> findAllLogin() {
         return loginService.findAllLogin();
     }
 
@@ -33,7 +33,7 @@ public class LoginController {
 
     //   localhost:8080/addLogin
     @PostMapping("/addLogin")
-    public Login addGenre(@RequestBody Login theLogin) {
+    public Login addLogin(@RequestBody Login theLogin) {
         theLogin.setId(0);
         loginService.saveOrUpdateLogin(theLogin);
         return theLogin;
