@@ -50,5 +50,8 @@ public class AssessmentApp {
         //  because dog extends animal, INHERITANCE occurs when the limbs method is called via the Dog object even though it isn't evident in the child class.
 //      ENCAPSULATION:  we are accessing the number of limbs provided in the Variable class which is private but accessible through the getter
         System.out.println("Dogs are usually born with " + dog.limbs(variable.getLimbs()) + " limbs.");
+
+
+
     }
 }

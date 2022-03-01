@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,23 +21,26 @@ public class ProjectApp {
                 result.add("Buzz" + " ");
             } else if (i % 3 == 0) {
                 result.add("Fizz" + " ");
-            } else result.add( i + " ");
+            } else result.add(i + " ");
         }
         return result;
     }
 
     public static abstract class Animal {
         public abstract void sound();
+
         public abstract Integer limbs();
+
         int trial = 4;
     }
 
     public static abstract class Mammal extends Animal {
-//        @Override  this is METHOD OVERRIDE but it's not necessary to add the @Override annotation
+        //        @Override  this is METHOD OVERRIDE but it's not necessary to add the @Override annotation
         public void sound() {
             System.out.println("Noise");
         }
-//        @Override  this is METHOD OVERRIDE but it's not necessary to add the @Override annotation
+
+        //        @Override  this is METHOD OVERRIDE but it's not necessary to add the @Override annotation
         public Integer limbs() {
             int mammalLimbs = trial;
             System.out.println("Limbs: " + mammalLimbs);
@@ -51,7 +51,7 @@ public class ProjectApp {
     }
 
     public static class Dog extends Mammal {
-//        @Override  this is METHOD OVERRIDE but it's not necessary to add the @Override annotation
+        //        @Override  this is METHOD OVERRIDE but it's not necessary to add the @Override annotation
         public void sound() {
             System.out.println("Dogs Bark");
         }
@@ -72,6 +72,7 @@ public class ProjectApp {
         public void sound() {
             System.out.println("Spiders are inaudible");
         }
+
         public Integer limbs() {
             int spiderLimbs = 8;
             System.out.println("Limbs: " + spiderLimbs);
@@ -86,12 +87,12 @@ public class ProjectApp {
         var example = word.toString();
         System.out.println("In Method: " + example);
         String reverse = "";
-        for (int i = example.length() - 1; i >= 0; i--){
+        for (int i = example.length() - 1; i >= 0; i--) {
             reverse += example.charAt(i);
         }
 
 //        return word.reduce("", (a, b) -> b + a, (a1, a2) -> a2 + a1);
-      return reverse;
+        return reverse;
     }
 //    public String solution(String word) {
 //        // ↓↓↓↓ your code goes here ↓↓↓↓
@@ -106,29 +107,84 @@ public class ProjectApp {
 //        return reverse;
 //    }
 
+
+
     public String practice(String s) {
         Stack<Character> stack = new Stack<>();
-        if(s.isEmpty()) return "unbalanced";
+        if (s.isEmpty()) return "unbalanced";
         for (var c : s.toCharArray()) {
 //            must use single quotes ' character ' here and not double quotes " character "
             if (c == '(') {
                 stack.push(c);
             } else {
-                if(stack.isEmpty()) {
+                if (stack.isEmpty()) {
                     return "unbalanced";
                 } else stack.pop();
             }
         }
-        if(!stack.isEmpty()) {
+        if (!stack.isEmpty()) {
             return "unbalanced";
         }
         return "balanced";
     }
 
+    public String parentheses(String string) {
+        if (string.isEmpty()) return "unbalanced";
+        int count = 0;
+        for (var c: string.toCharArray()) {
+            if (c == '(') {
+                count += 1;
+            } else count -= 1;
+        }
+        System.out.println("() count: " + count);
+        if (count == 0) {
+            return "balanced";
+        } else return "unbalanced";
+    }
+
+    public List<Integer> removeDuplicates() {
+        HashSet<Integer> input = new HashSet<>();
+        input.add(4);
+        input.add(1);
+        input.add(1);
+        input.add(4);
+        input.add(3);
+        input.add(2);
+        input.add(-1);
+        List<Integer> result = new ArrayList<>(input);
+        return result;
+    }
+
+
+    public int[] solution(int[] nums) {
+        HashSet<Integer> filter = new HashSet<>();
+        for (int i = 0; i <= nums.length; i++) {
+            filter.add(nums[i]);
+        }
+        int[] result = filter.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+        return result;
+    }
+
+    public boolean solution(String pally) {
+        String reversePally = "";
+        for (int i = pally.length()-1; i >= 0; i--){
+            reversePally += pally.charAt(i);
+        }
+        if (pally.equals(reversePally)) {
+            return true;
+        } else return false;
+    }
+
+
+
+
+
 
     public static void main(String[] args) {
         String argument = "always in reverse, like the French Army";
-        String parentheses = "(()(()))";
+        String parentheses = ")(((())))(";
         ProjectApp project = new ProjectApp();
         System.out.println(project.method(argument));
         System.out.println(project.fizzBuzz(100));
@@ -141,8 +197,17 @@ public class ProjectApp {
         var stream = argument.lines();
         System.out.println("Stream solution: " + project.solution(stream));
         System.out.println("Parentheses: " + project.practice(parentheses));
+        System.out.println("Alternate Parentheses: " + project.parentheses(parentheses));
+        System.out.println(project.removeDuplicates());
+        System.out.println(project.solution("radar"));
+     
+    }
+
+
+
+
 
     }
 
 
-}
+
