@@ -1,8 +1,7 @@
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ProjectApp {
+public class TestApp {
     //set up for a mock interview
     public String method(String str) {
         String reverse = "";
@@ -108,7 +107,6 @@ public class ProjectApp {
 //    }
 
 
-
     public String practice(String s) {
         Stack<Character> stack = new Stack<>();
         if (s.isEmpty()) return "unbalanced";
@@ -131,7 +129,7 @@ public class ProjectApp {
     public String parentheses(String string) {
         if (string.isEmpty()) return "unbalanced";
         int count = 0;
-        for (var c: string.toCharArray()) {
+        for (var c : string.toCharArray()) {
             if (c == '(') {
                 count += 1;
             } else count -= 1;
@@ -169,7 +167,7 @@ public class ProjectApp {
 
     public boolean solution(String pally) {
         String reversePally = "";
-        for (int i = pally.length()-1; i >= 0; i--){
+        for (int i = pally.length() - 1; i >= 0; i--) {
             reversePally += pally.charAt(i);
         }
         if (pally.equals(reversePally)) {
@@ -178,16 +176,12 @@ public class ProjectApp {
     }
 
 
-
-
-
-
     public static void main(String[] args) {
         String argument = "always in reverse, like the French Army";
         String parentheses = ")(((())))(";
-        ProjectApp project = new ProjectApp();
-        System.out.println(project.method(argument));
-        System.out.println(project.fizzBuzz(100));
+        TestApp test = new TestApp();
+        System.out.println(test.method(argument));
+        System.out.println(test.fizzBuzz(100));
         Animal dog = new Dog();
         dog.sound();
         dog.limbs();
@@ -195,19 +189,38 @@ public class ProjectApp {
         spider.sound();
         spider.limbs();
         var stream = argument.lines();
-        System.out.println("Stream solution: " + project.solution(stream));
-        System.out.println("Parentheses: " + project.practice(parentheses));
-        System.out.println("Alternate Parentheses: " + project.parentheses(parentheses));
-        System.out.println(project.removeDuplicates());
-        System.out.println(project.solution("radar"));
-     
+        System.out.println("Stream solution: " + test.solution(stream));
+        System.out.println("Parentheses: " + test.practice(parentheses));
+        System.out.println("Alternate Parentheses: " + test.parentheses(parentheses));
+        System.out.println(test.removeDuplicates());
+        System.out.println(test.solution("radar"));
+        System.out.println("Practice/Testing");
+        System.out.println();
+
+
+        Scanner sc = new Scanner(System.in);
+        boolean correctLength = false;
+        while(!correctLength) {
+            System.out.println("Please enter nine (9) Xs, Os or _ s:");
+//        String input = "_________";
+            String input = sc.nextLine().toUpperCase();
+            String [] firstField = {String.valueOf(input.charAt(0)), String.valueOf(input.charAt(1)), String.valueOf(input.charAt(2))};
+            String [] secondField = {String.valueOf(input.charAt(3)), String.valueOf(input.charAt(4)), String.valueOf(input.charAt(5))};
+            String [] thirdField = {String.valueOf(input.charAt(6)), String.valueOf(input.charAt(7)), String.valueOf(input.charAt(8))};
+            if(input.length() == 9) {
+                correctLength = true;
+                System.out.println("-------");
+                System.out.println("|" + Arrays.toString(firstField).replace(",", "").replace("[", "").replace("]", "") + "|");
+                System.out.println("|" + Arrays.toString(secondField).replace(",", "").replace("[", "").replace("]", "")  + "|");
+                System.out.println("|" + Arrays.toString(thirdField).replace(",", "").replace("[", "").replace("]", "") + "|");
+                System.out.println("-------");
+            } else {
+                System.out.println("You must choose 9 characters.");
+            }
+
+        }
+
     }
 
 
-
-
-
-    }
-
-
-
+}

@@ -114,3 +114,6 @@ public class Practice {
 //        System.out.println("Congratulations, have a nice day!"); // Do not change this text
 //    }
 //}
+
+//    Be Careful! Bears shouldn't Ingest Large Furry Dogs
+//        Boolean -> Char -> Byte -> Short -> Int -> Long -> Float -> Double
