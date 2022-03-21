@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -12,6 +13,9 @@ public class HangmanApp {
     static int tries = 3;
     static String input = "";
     static String missedLetters = "";
+    static String correctLetters = "";
+    static char again = 'y';
+    static int high = 0;
 
     public static String determineWord() {
         return wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
@@ -34,12 +38,9 @@ public class HangmanApp {
             String displayThree = String.join("\n", three);
 
             switch (temp) {
-                case 1 ->
-                        System.out.print(displayThree);
-                case 2 ->
-                        System.out.print(displayTwo);
-                case 3 ->
-                        System.out.print(displayOne);
+                case 1 -> System.out.print(displayThree);
+                case 2 -> System.out.print(displayTwo);
+                case 3 -> System.out.print(displayOne);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -47,21 +48,94 @@ public class HangmanApp {
 
     }
 
-    public static void letterInput() {
+    public static String letterInput() {
         System.out.println("Guess a letter.");
         Scanner sc = new Scanner(System.in);
-        String userInput = sc.nextLine();
+        String userInput = sc.next();
         input += userInput;
         System.out.println("Your guess: " + userInput);
+        return userInput;
+    }
+
+    public static void isCorrectLetter(String secretWord, String input) {
+        if (!secretWord.contains(input)) {
+            tries--;
+            missedLetters += input;
+            if (missedLetters.contains(input)) {
+                System.out.println("You have already chosen that letter. Choose again.");
+            }
+        } else correctLetters += input;
+    }
+
+    public static String displayWord(String secretWord, String correctLetters) {
+        String word = Arrays.stream(secretWord.split(""))
+                .map(s -> {
+                    if (correctLetters.contains(s)) {
+                        System.out.println(s);
+                        return s;
+                    }
+                    System.out.println(" ");
+                    return "_";
+
+                })
+                .collect(Collectors.joining(" "));
+        System.out.println(word);
+        return word;
+    }
+
+    public static void outOfTries(String word) {
+        if (tries == 0) {
+            again = 'n';
+            System.out.println("Sorry, " + name + ", the word was " + word + ".");
+        }
+    }
+
+    public static void success(String word, int score, int high) {
+        if (correctLetters.equals(word)) {
+//            win = true;
+            System.out.println("Yes " + name + "! The secret word was " + word + ". You have won!");
+            System.out.println(name + "'s Score: " + score);
+            System.out.println(name + "'s High Score: ");
+//                    + getHigh());
+            System.out.println("Do you want to play again? (yes or no)");
+            try {
+                Scanner restart = new Scanner(System.in);
+                again = restart.nextLine().charAt(0);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    public static int points() {
+        int score = tries * 100;
+        return score;
+    }
+
+    public static int highScore(int points) {
+        high = 0;
+        if (points > high) {
+            high = points;
+        }
+        return high;
     }
 
 
     public static void main(String[] args) throws IOException {
         determineWord();
+        String secretWord = determineWord();
         userName();
         retrieveDisplay(tries);
         System.out.println("Missed Letters: " + input);
         letterInput();
+        String nextLetter = letterInput();
+        isCorrectLetter(determineWord(), nextLetter);
+        displayWord(determineWord(), correctLetters);
+        outOfTries(secretWord);
+        int score = points();
+        int high = highScore(score);
+        success(secretWord, score, high);
+
 
 
     }
