@@ -60,9 +60,9 @@ public class HangmanApp {
     public static void isCorrectLetter(String secretWord, String input) {
         if (!secretWord.contains(input)) {
             tries--;
-            missedLetters += input;
             if (missedLetters.contains(input)) {
                 System.out.println("You have already chosen that letter. Choose again.");
+                missedLetters += input;
             }
         } else correctLetters += input;
     }
@@ -92,11 +92,10 @@ public class HangmanApp {
 
     public static void success(String word, int score, int high) {
         if (correctLetters.equals(word)) {
-//            win = true;
+            again = 'n';
             System.out.println("Yes " + name + "! The secret word was " + word + ". You have won!");
             System.out.println(name + "'s Score: " + score);
-            System.out.println(name + "'s High Score: ");
-//                    + getHigh());
+            System.out.println(name + "'s High Score: " + high);
             System.out.println("Do you want to play again? (yes or no)");
             try {
                 Scanner restart = new Scanner(System.in);
@@ -125,18 +124,18 @@ public class HangmanApp {
         determineWord();
         String secretWord = determineWord();
         userName();
-        retrieveDisplay(tries);
-        System.out.println("Missed Letters: " + input);
-        letterInput();
-        String nextLetter = letterInput();
-        isCorrectLetter(determineWord(), nextLetter);
-        displayWord(determineWord(), correctLetters);
-        outOfTries(secretWord);
-        int score = points();
-        int high = highScore(score);
-        success(secretWord, score, high);
-
-
-
+        while (again == 'y') {
+            retrieveDisplay(tries);
+            System.out.println();
+            System.out.println("Missed Letters: " + input);
+            letterInput();
+            String nextLetter = letterInput();
+            isCorrectLetter(determineWord(), nextLetter);
+            displayWord(determineWord(), correctLetters);
+            outOfTries(secretWord);
+            int score = points();
+            int high = highScore(score);
+            success(secretWord, score, high);
+        }
     }
 }
