@@ -109,7 +109,7 @@ public class Index {
             index.points(index.getTries());
             index.highScore();
 //            // end of WHILE LOOP bracket.
-            }
+        }
         //  end of MAIN bracket
     }
 
@@ -249,7 +249,7 @@ public class Index {
     }
 
     public void points(int proxy) {
-       score = tries * 100;
+        score = tries * 100;
         setScore(score);
     }
 
