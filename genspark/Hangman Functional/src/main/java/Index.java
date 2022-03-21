@@ -133,16 +133,16 @@ public class Index {
         String result = null;
         try {
             String displayOne = null;
-            List<String> one = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).collect(Collectors.toList());
-            displayOne = one.stream().collect(Collectors.joining("\n"));
+            List<String> one = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).toList();
+            displayOne = String.join("\n", one);
 
             String displayTwo = null;
             List<String> two = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display2.text")).collect(Collectors.toList());
-            displayTwo = two.stream().collect(Collectors.joining("\n"));
+            displayTwo = String.join("\n", two);
 
             String displayThree = null;
-            List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display3.text")).collect(Collectors.toList());
-            displayThree = three.stream().collect(Collectors.joining("\n"));
+            List<String> three = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display3.text")).toList();
+            displayThree = String.join("\n", three);
 
             switch (temp) {
                 case 1:
