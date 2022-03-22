@@ -11,11 +11,9 @@ import java.util.stream.Collectors;
 public class HangmanApp {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
     private static int tries = 3;
-    private static String input = "";
     private static String missedLetters = "";
     private static String correctLetters = "";
     private static char again = 'y';
-    private static int high = 0;
     private static boolean win = false;
 
     public static String determineWord() {
@@ -51,9 +49,7 @@ public class HangmanApp {
     public static String letterInput() {
         System.out.println("Guess a letter.");
         Scanner sc = new Scanner(System.in);
-        String userInput = sc.next();
-        input += userInput;
-        return userInput;
+        return sc.next();
     }
 
     public static void isCorrectLetter(String secretWord, String input) {
@@ -77,7 +73,6 @@ public class HangmanApp {
                     }
                     System.out.println(" ");
                     return "_";
-
                 })
                 .collect(Collectors.joining(" "));
         System.out.println(word);
@@ -108,18 +103,16 @@ public class HangmanApp {
             win = false;
             tries = 3;
             missedLetters = "";
-            input = "";
             correctLetters = "";
         }
     }
 
     public static int points() {
-        int score = tries * 100;
-        return score;
+        return tries * 100;
     }
 
     public static int highScore(int points) {
-        high = 0;
+        int high = 0;
         if (points > high) {
             high = points;
         }
