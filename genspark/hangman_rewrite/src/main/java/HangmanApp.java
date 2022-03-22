@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 public class HangmanApp {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
-    static String name = "";
     static int tries = 3;
     static String input = "";
     static String missedLetters = "";
@@ -21,10 +20,10 @@ public class HangmanApp {
         return wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
     }
 
-    public static void userName() {
+    public static String userName() {
         System.out.println("Hello, welcome to HANGMAN! What is your name?");
         Scanner sc = new Scanner(System.in);
-        name = sc.nextLine();
+        return sc.nextLine();
     }
 
     public static void retrieveDisplay(int temp) throws IOException {
@@ -83,14 +82,14 @@ public class HangmanApp {
         return word;
     }
 
-    public static void outOfTries(String word) {
+    public static void outOfTries(String word, String name) {
         if (tries == 0) {
             again = 'n';
             System.out.println("Sorry, " + name + ", the word was " + word + ".");
         }
     }
 
-    public static void success(String word, int score, int high) {
+    public static void success(String word, String name, int score, int high) {
         if (correctLetters.equals(word)) {
             again = 'n';
             System.out.println("Yes " + name + "! The secret word was " + word + ". You have won!");
@@ -121,21 +120,21 @@ public class HangmanApp {
 
 
     public static void main(String[] args) throws IOException {
-        determineWord();
+//        determineWord();
         String secretWord = determineWord();
-        userName();
+        String name = userName();
         while (again == 'y') {
             retrieveDisplay(tries);
             System.out.println();
             System.out.println("Missed Letters: " + input);
-            letterInput();
+//            letterInput();
             String nextLetter = letterInput();
-            isCorrectLetter(determineWord(), nextLetter);
-            displayWord(determineWord(), correctLetters);
-            outOfTries(secretWord);
+            isCorrectLetter(secretWord, nextLetter);
+            displayWord(secretWord, correctLetters);
+            outOfTries(secretWord, name);
             int score = points();
             int high = highScore(score);
-            success(secretWord, score, high);
+            success(secretWord, name,  score, high);
         }
     }
 }

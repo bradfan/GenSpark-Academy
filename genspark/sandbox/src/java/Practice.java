@@ -60,17 +60,24 @@ public class Practice {
 
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
+        System.out.println();
+        int val = 50;
 
-        float counter = 10;
-        float occupancy = 100;
-
-        float percentage = counter / occupancy;
-
-        System.out.println("$$%%%%%%:  " + percentage);
-
-
+        if (val == 10) {
+            System.out.println("val = 10");
+        } else if (val >= 20 && val < 50) {
+            System.out.println("20 <= val < 50");
+        } else {
+            if (val < 20) {
+                System.out.println("val < 20");
+            } else {
+                System.out.println("val >= 50");
+            }
+        }
 
     }
+
+
 }
 
 
