@@ -136,6 +136,7 @@ public class HangmanApp {
                 success(secretWord, name, score, high);
             }
         }
+        
     }
 
     public static void main(String[] args) throws IOException {
