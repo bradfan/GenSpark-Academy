@@ -3,6 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -17,7 +18,9 @@ public class HangmanApp {
     static int high = 0;
 
     public static String determineWord() {
-        return wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
+        String word =  wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
+        System.out.println("Development only: " + word);
+        return word;
     }
 
     public static String userName() {
@@ -59,14 +62,17 @@ public class HangmanApp {
     public static void isCorrectLetter(String secretWord, String input) {
         if (!secretWord.contains(input)) {
             tries--;
+            missedLetters += input;
+        } else {
+            correctLetters += input;
+        }
             if (missedLetters.contains(input)) {
                 System.out.println("You have already chosen that letter. Choose again.");
-                missedLetters += input;
             }
-        } else correctLetters += input;
-    }
+        }
 
-    public static String displayWord(String secretWord, String correctLetters) {
+
+    public static void displayWord(String secretWord, String correctLetters) {
         String word = Arrays.stream(secretWord.split(""))
                 .map(s -> {
                     if (correctLetters.contains(s)) {
@@ -79,13 +85,12 @@ public class HangmanApp {
                 })
                 .collect(Collectors.joining(" "));
         System.out.println(word);
-        return word;
     }
 
     public static void outOfTries(String word, String name) {
         if (tries == 0) {
             again = 'n';
-            System.out.println("Sorry, " + name + ", the word was " + word + ".");
+            System.out.println("Sorry, " + name + ", the word was " + word.toUpperCase(Locale.ROOT) + ".");
         }
     }
 
@@ -126,7 +131,7 @@ public class HangmanApp {
         while (again == 'y') {
             retrieveDisplay(tries);
             System.out.println();
-            System.out.println("Missed Letters: " + input);
+            System.out.println("Missed Letters: " + missedLetters);
 //            letterInput();
             String nextLetter = letterInput();
             isCorrectLetter(secretWord, nextLetter);
