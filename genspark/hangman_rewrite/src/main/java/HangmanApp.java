@@ -17,7 +17,7 @@ public class HangmanApp {
     private static boolean win = false;
 
     public static String determineWord() {
-        String word = wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
+        String word = wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size()));
         return word;
     }
 
@@ -145,5 +145,4 @@ public class HangmanApp {
             restart();
         }
     }
-    
 }
