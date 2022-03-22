@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class Index {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
-    int tries = 3;
+    private static int tries = 3;
     int score;
     int high;
     String missedLetter = "Missed Letters: ";

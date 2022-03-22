@@ -10,16 +10,16 @@ import java.util.stream.Collectors;
 
 public class HangmanApp {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
-    static int tries = 3;
-    static String input = "";
-    static String missedLetters = "";
-    static String correctLetters = "";
-    static char again = 'y';
-    static int high = 0;
+    private static int tries = 3;
+    private static String input = "";
+    private static String missedLetters = "";
+    private static String correctLetters = "";
+    private static char again = 'y';
+    private static int high = 0;
+    private static boolean win = false;
 
     public static String determineWord() {
-        String word =  wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
-        System.out.println("Development only: " + word);
+        String word = wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size() - 1));
         return word;
     }
 
@@ -30,7 +30,6 @@ public class HangmanApp {
     }
 
     public static void retrieveDisplay(int temp) throws IOException {
-
         try {
             List<String> one = Files.lines(Paths.get("C:\\GenSpark-Academy\\genspark\\Hangman Functional\\src\\main\\java\\hangman_display1.text")).toList();
             String displayOne = String.join("\n", one);
@@ -47,7 +46,6 @@ public class HangmanApp {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     public static String letterInput() {
@@ -55,28 +53,26 @@ public class HangmanApp {
         Scanner sc = new Scanner(System.in);
         String userInput = sc.next();
         input += userInput;
-        System.out.println("Your guess: " + userInput);
         return userInput;
     }
 
     public static void isCorrectLetter(String secretWord, String input) {
         if (!secretWord.contains(input)) {
             tries--;
-            missedLetters += input;
+            if (missedLetters.contains(input)) {
+                System.out.println("You have already chosen that letter. Choose again.");
+            } else {
+                missedLetters += input;
+            }
         } else {
             correctLetters += input;
         }
-            if (missedLetters.contains(input)) {
-                System.out.println("You have already chosen that letter. Choose again.");
-            }
-        }
-
+    }
 
     public static void displayWord(String secretWord, String correctLetters) {
         String word = Arrays.stream(secretWord.split(""))
                 .map(s -> {
                     if (correctLetters.contains(s)) {
-                        System.out.println(s);
                         return s;
                     }
                     System.out.println(" ");
@@ -96,17 +92,24 @@ public class HangmanApp {
 
     public static void success(String word, String name, int score, int high) {
         if (correctLetters.equals(word)) {
-            again = 'n';
-            System.out.println("Yes " + name + "! The secret word was " + word + ". You have won!");
+            System.out.println("Yes " + name + "! The secret word was " + word.toUpperCase(Locale.ROOT) + ". You have won!");
             System.out.println(name + "'s Score: " + score);
             System.out.println(name + "'s High Score: " + high);
-            System.out.println("Do you want to play again? (yes or no)");
-            try {
-                Scanner restart = new Scanner(System.in);
-                again = restart.nextLine().charAt(0);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
+            win = true;
+            again = 'n';
+        }
+    }
+
+    public static void restart() {
+        System.out.println("Do you want to play again? (yes or no)");
+        Scanner sc = new Scanner(System.in);
+        again = sc.next().charAt(0);
+        if (again == 'y') {
+            win = false;
+            tries = 3;
+            missedLetters = "";
+            input = "";
+            correctLetters = "";
         }
     }
 
@@ -123,23 +126,30 @@ public class HangmanApp {
         return high;
     }
 
+    public static void playGame(String name) throws IOException {
+        if (!win) {
+            String secretWord = determineWord();
+            while (again == 'y') {
+                retrieveDisplay(tries);
+                System.out.println();
+                System.out.println("Missed Letters: " + missedLetters);
+                String nextLetter = letterInput();
+                System.out.println("Your guess: " + nextLetter);
+                isCorrectLetter(secretWord, nextLetter);
+                displayWord(secretWord, correctLetters);
+                outOfTries(secretWord, name);
+                int score = points();
+                int high = highScore(score);
+                success(secretWord, name, score, high);
+            }
+        }
+    }
 
     public static void main(String[] args) throws IOException {
-//        determineWord();
-        String secretWord = determineWord();
         String name = userName();
         while (again == 'y') {
-            retrieveDisplay(tries);
-            System.out.println();
-            System.out.println("Missed Letters: " + missedLetters);
-//            letterInput();
-            String nextLetter = letterInput();
-            isCorrectLetter(secretWord, nextLetter);
-            displayWord(secretWord, correctLetters);
-            outOfTries(secretWord, name);
-            int score = points();
-            int high = highScore(score);
-            success(secretWord, name,  score, high);
+            playGame(name);
+            restart();
         }
     }
 }
