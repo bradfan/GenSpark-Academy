@@ -75,6 +75,7 @@ public class Practice {
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
+        System.out.println(10 / (2 + 2) + 4 * 8);
 
 
     }
