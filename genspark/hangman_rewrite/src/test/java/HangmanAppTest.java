@@ -12,46 +12,16 @@ class HangmanAppTest {
     }
 
     @org.junit.jupiter.api.Test
-    void determineWord() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void userName() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void retrieveDisplay() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void letterInput() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void isCorrectLetter() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void displayWord() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void outOfTries() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void success() {
-    }
-
-    @org.junit.jupiter.api.Test
     void points() {
+        assertEquals(300, app.points());
+        assertNotEquals(100, app.points());
     }
 
     @org.junit.jupiter.api.Test
     void highScore() {
+        assertEquals(100, app.highScore(100));
+        assertNotEquals(100, app.highScore(0));
+        assertNotEquals(300, app.highScore(100));
     }
 
-    @org.junit.jupiter.api.Test
-    void main() {
-    }
 }
