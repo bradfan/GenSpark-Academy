@@ -9,6 +9,8 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+
+
     public static void reverseNumber(int n) {
         String temp = String.valueOf(n);
         String reverse = "";
@@ -18,6 +20,8 @@ public class Practice {
         int result = Integer.parseInt(reverse);
         System.out.println("Reverse Number: " + result);
     }
+
+
 
     public static void main(String[] args) {
         Practice practice = new Practice();
@@ -71,10 +75,6 @@ public class Practice {
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
-
-
-
-
 
 
     }

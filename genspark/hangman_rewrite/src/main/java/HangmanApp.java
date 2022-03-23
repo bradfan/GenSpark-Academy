@@ -17,8 +17,7 @@ public class HangmanApp {
     private static boolean win = false;
 
     public static String determineWord() {
-        String word = wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size()));
-        return word;
+        return wordBank.get(ThreadLocalRandom.current().nextInt(0, wordBank.size()));
     }
 
     public static String userName() {
