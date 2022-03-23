@@ -9,6 +9,16 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+    public static void reverseNumber(int n) {
+        String temp = String.valueOf(n);
+        String reverse = "";
+        for (int i = temp.length() - 1; i >= 0; i--) {
+            reverse += temp.charAt(i);
+        }
+        int result = Integer.parseInt(reverse);
+        System.out.println("Reverse Number: " + result);
+    }
+
     public static void main(String[] args) {
         Practice practice = new Practice();
         String argument = "always in reverse, like the French Army";
@@ -57,23 +67,15 @@ public class Practice {
             }
         }
         System.out.println();
-
+        reverseNumber(7859);
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
-        int val = 50;
 
-        if (val == 10) {
-            System.out.println("val = 10");
-        } else if (val >= 20 && val < 50) {
-            System.out.println("20 <= val < 50");
-        } else {
-            if (val < 20) {
-                System.out.println("val < 20");
-            } else {
-                System.out.println("val >= 50");
-            }
-        }
+
+
+
+
 
     }
 

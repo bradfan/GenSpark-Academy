@@ -2,9 +2,9 @@ type: choice
 is_multiple_choice: true
 options:
 - text: Creating matrices
-- text: 2D map on which objects are positioned with coordinates
 - text: Creating tables
 - text: Position of an object in 3D space
+- text: 2D map on which objects are positioned with coordinates
 files:
 - name: src/Task.java
   visible: true
