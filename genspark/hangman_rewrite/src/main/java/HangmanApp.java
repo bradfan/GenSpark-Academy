@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class HangmanApp {
     static List<String> wordBank = List.of("cat", "dog", "bat", "mice", "bird");
     private static int tries = 3;
+    private static int high = 0;
     private static String missedLetters = "";
     private static String correctLetters = "";
     private static char again = 'y';
@@ -111,7 +112,6 @@ public class HangmanApp {
     }
 
     public static int highScore(int points) {
-        int high = 0;
         if (points > high) {
             high = points;
         }
