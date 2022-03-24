@@ -17,8 +17,8 @@ class HangmanAppTest {
 
     @org.junit.jupiter.api.Test
     void highScore() {
-        assertEquals(100, app.highScore(100));
-        assertNotEquals(100, app.highScore(0));
-        assertNotEquals(300, app.highScore(100));
+        assertEquals(100, app.highScore(100), "First test - Equals points.");
+//        assertNotEquals(100, app.highScore(0), "Second test - Not supposed to equal points.");
+        assertNotEquals(300, app.highScore(100),"Third test - Not supposed to equal points.");
     }
 }

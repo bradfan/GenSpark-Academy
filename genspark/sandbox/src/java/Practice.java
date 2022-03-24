@@ -9,6 +9,13 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+    public static boolean isTheSame(String a, String b) {
+        if (a.equals(b)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     public static void reverseNumber(int n) {
@@ -74,8 +81,7 @@ public class Practice {
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
-
-
+        System.out.println(isTheSame("mice", "mcie"));
 
 
     }

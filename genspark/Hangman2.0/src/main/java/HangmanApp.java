@@ -23,7 +23,6 @@ public class HangmanApp {
         System.out.println("Hello, welcome to HANGMAN! What is your name?");
         Scanner sc = new Scanner(System.in);
         String user = sc.nextLine();
-//        hangman.setName(user);
         return user;
     }
 
@@ -65,7 +64,6 @@ public class HangmanApp {
         } else {
             rightLetter += input;
             hangman.setCorrectLetters(rightLetter);
-            ;
         }
     }
 
@@ -90,12 +88,13 @@ public class HangmanApp {
     }
 
     public void success(String word, String name, int score, int high) {
+//        need to find a better way of comparing the strings ie "mice" and "mcie" are NOT equal but would create a win.
         if (hangman.getCorrectLetters().equals(word)) {
             System.out.println("Yes " + name + "! The secret word was " + word.toUpperCase(Locale.ROOT) + ". You have won!");
             System.out.println(name + "'s Score: " + score);
             System.out.println(name + "'s High Score: " + high);
             hangman.setWin(true);
-//            hangman.setAgain('n');
+//            program is not recognizing when the game is won. 
         }
     }
 
