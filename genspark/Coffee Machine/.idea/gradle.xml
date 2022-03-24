@@ -13,6 +13,27 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Coffee Machine/task" />
+            <option value="$PROJECT_DIR$/Coffee Machine/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Coffee Machine/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Coffee Machine/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Coffee Machine/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Coffee Machine/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Coffee Machine/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics (1)/Overview of the basic program/Find a keyword" />
+            <option value="$PROJECT_DIR$/Topics (1)/Overview of the basic program/Find a word that is not a keyword" />
+            <option value="$PROJECT_DIR$/Topics (1)/Overview of the basic program/Hello, Java" />
+            <option value="$PROJECT_DIR$/Topics (1)/Overview of the basic program/Keywords" />
+            <option value="$PROJECT_DIR$/Topics (1)/Overview of the basic program/The Hello World program" />
+            <option value="$PROJECT_DIR$/Topics (1)/Overview of the basic program/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Fixing errors in main" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Fixing the main method" />
+            <option value="$PROJECT_DIR$/Topics/The main method/No main args" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Print  Hello, Java" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Select all correct statements" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Select correct main method" />
+            <option value="$PROJECT_DIR$/Topics/The main method/The correct declaration" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Who is the main" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
