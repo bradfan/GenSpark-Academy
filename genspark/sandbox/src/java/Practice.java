@@ -11,7 +11,7 @@ public class Practice {
 
 //    come up with a method that compares two strings that have matching characters but are out of order.
     public static boolean isTheSame(String a, String b) {
-        if (a.equals(b)) {
+        if (a.contains(b)) {
             return true;
         } else {
             return false;
