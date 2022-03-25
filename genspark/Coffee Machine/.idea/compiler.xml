@@ -24,6 +24,13 @@
       <module name="Coffee_Machine.Topics__1_-Overview_of_the_basic_program-Keywords.main" target="11" />
       <module name="Coffee_Machine.Topics__1_-Overview_of_the_basic_program-The_Hello_World_program.main" target="11" />
       <module name="Coffee_Machine.Topics__1_-Overview_of_the_basic_program-Theory.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-Digits_from_0_to_9_backwards.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-From_0_to_4.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-Printing_a_magic_letter.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-Stars.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-The_result_of_a_Tic-Tac-Toe_game.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-Theory.main" target="11" />
+      <module name="Coffee_Machine.Topics__1_-Printing_data-We_need_to_learn_Java.main" target="11" />
       <module name="Coffee_Machine.util.main" target="11" />
     </bytecodeTargetLevel>
   </component>

@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+//    come up with a method that compares two strings that have matching characters but are out of order.
     public static boolean isTheSame(String a, String b) {
         if (a.equals(b)) {
             return true;
@@ -80,6 +81,7 @@ public class Practice {
         reverseNumber(7859);
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
+
         System.out.println();
         System.out.println(isTheSame("mice", "mcie"));
 

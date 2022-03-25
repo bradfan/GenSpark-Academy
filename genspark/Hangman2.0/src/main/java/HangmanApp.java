@@ -94,7 +94,7 @@ public class HangmanApp {
             System.out.println(name + "'s Score: " + score);
             System.out.println(name + "'s High Score: " + high);
             hangman.setWin(true);
-//            program is not recognizing when the game is won. 
+//            program is not recognizing when the game is won.
         }
     }
 
