@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -9,15 +11,34 @@ import java.util.stream.Stream;
 
 public class Practice {
 
-//    come up with a method that compares two strings that have matching characters but are out of order.
+
+
+    //    come up with a method that compares two strings that have matching characters but are out of order.
     public static boolean isTheSame(String a, String b) {
-        if (a.contains(b)) {
-            return true;
-        } else {
-            return false;
-        }
+        if (a.length() == b.length()) {
+            char[] sortRandom = new char[a.length()];
+            char[] sortCorrect = new char[b.length()];
+            for (int i = 0; i < a.length(); i++) {
+                sortRandom[i] = a.charAt(i);
+                sortCorrect[i] = b.charAt(i);
+            }
+            Arrays.sort(sortRandom);
+            Arrays.sort(sortCorrect);
+            return Arrays.equals(sortRandom, sortCorrect);
+        } else return false;
     }
 
+
+    public static void countTheDigits() {
+        int n = 4; // n gets assigned a positive integer number
+        int numberOfDigits = 0;
+        while (n > 0) {
+            n /= 10;
+            System.out.println(n);
+            numberOfDigits++;
+            System.out.println(numberOfDigits);
+        }
+    }
 
     public static void reverseNumber(int n) {
         String temp = String.valueOf(n);
@@ -79,12 +100,11 @@ public class Practice {
         }
         System.out.println();
         reverseNumber(7859);
+        System.out.println("Is the same? ");
+        System.out.println(isTheSame("mice", "cmie"));
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
-
         System.out.println();
-        System.out.println(isTheSame("mice", "mcie"));
-
 
     }
 

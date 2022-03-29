@@ -86,7 +86,7 @@ public class HangmanApp {
     }
 
     public static void success(String word, String name, int score, int high) {
-        if (correctLetters.equals(word)) {
+        if (correctLetters.length() == word.length()) {
             System.out.println("Yes " + name + "! The secret word was " + word.toUpperCase(Locale.ROOT) + ". You have won!");
             System.out.println(name + "'s Score: " + score);
             System.out.println(name + "'s High Score: " + high);
