@@ -19,24 +19,15 @@ public class Machine {
         System.out.println("Write action (buy, fill, take, remaining, exit):");
         String action = sc.nextLine().toLowerCase(Locale.ROOT);
         switch (action) {
-            case "buy":
-                verifySupply();
-                break;
-            case "fill":
-                fill();
-                break;
-            case "take":
-                take();
-                break;
-            case "remaining":
-                state.printState();
-                break;
-            case "exit":
-                off = true;
-                break;
-            default:
+            case "buy" -> verifySupply();
+            case "fill" -> fill();
+            case "take" -> take();
+            case "remaining" -> state.printState();
+            case "exit" -> off = true;
+            default -> {
                 System.out.println("Please choose from the available menu.");
                 options();
+            }
         }
     }
 

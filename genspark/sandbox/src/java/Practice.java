@@ -105,6 +105,8 @@ public class Practice {
         System.out.println();
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
+        String str = "poop";
+        System.out.println(str.charAt(5));
 
     }
 
