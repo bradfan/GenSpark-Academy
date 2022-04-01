@@ -36,12 +36,14 @@ public class GenreIMPL implements GenreDao {
         Session currentSession = entityManager.unwrap(Session.class);
         return currentSession.get(Genre.class, genreId);
     }
+
     @Override
     @Transactional
     public  void saveOrUpdateGenre(Genre theGenre) {
         Session currentSession = entityManager.unwrap(Session.class);
         currentSession.saveOrUpdate(theGenre);
     }
+
     @Override
     @Transactional
     public void deleteByGenreId(int genreId) {
