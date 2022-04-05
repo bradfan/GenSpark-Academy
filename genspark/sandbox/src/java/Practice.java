@@ -51,6 +51,7 @@ public class Practice {
     }
 
 
+
     public static void main(String[] args) {
         Practice practice = new Practice();
         String argument = "always in reverse, like the French Army";
