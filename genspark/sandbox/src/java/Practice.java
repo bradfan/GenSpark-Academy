@@ -11,6 +11,27 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+    public static void printArray(char[][] state) {
+        System.out.println("2D Array:");
+        for (int i = 1; i <= state[1].length; i++) {
+            System.out.print(" " + i);
+        }
+//        ^ prints the top line of columns ^
+        int counter = 1;
+        for (char[] row : state) {
+            System.out.println();
+            System.out.print(counter + " ");
+            counter++;
+//            ^ prints the vertical line of rows ^
+            for (char c : row) {
+                System.out.print(c + " ");
+            }
+        }
+        System.out.println();
+//        ^ prints the spaces in array ^
+
+    }
+
     //    come up with a method that turns a phrase into camelCase
     public static void convertPhrase(String phrase) {
         String[] words = phrase.split("[\\W_]+");
@@ -18,7 +39,7 @@ public class Practice {
         for (int i = 0; i < words.length; i++) {
             String word = words[i];
             if (i == 0) {
-               word = word.isEmpty() ? word : word.toLowerCase();
+                word = word.isEmpty() ? word : word.toLowerCase();
 //                word.toLowerCase();
             } else {
                 word = word.isEmpty() ? word : Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
@@ -115,6 +136,10 @@ public class Practice {
                 System.out.print(c + " ");
             }
         }
+
+        System.out.println("Create 2D Char array: ");
+        char[][] twoDCharArray = new char[9][9];
+        printArray(twoDCharArray);
         System.out.println();
         reverseNumber(7859);
         System.out.println("Is the same? ");
@@ -124,8 +149,6 @@ public class Practice {
         convertPhrase("I'm going to try and break the method without the ternary operator. Not sure why it's there and it's easier to understand without it.");
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
-        String str = "poop";
-
 
 
     }

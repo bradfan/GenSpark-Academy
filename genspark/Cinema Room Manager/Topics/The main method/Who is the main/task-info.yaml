@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: It will not compile
-- text: I'm the main
-- text: It will compile but throw an error in runtime
-- text: No! I'm still the main!
+- text: The code will not compile
+- text: The application will print "No! I'm still the boss!"
+- text: The application will print "I'm the boss"
+- text: The code will compile but throw an error during runtime
 files:
 - name: src/Task.java
   visible: true
