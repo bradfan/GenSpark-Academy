@@ -181,6 +181,15 @@ files:
         }
     }
   learner_created: false
+- name: src/machine/Beverage.java
+  visible: true
+  learner_created: true
+- name: src/machine/MachineState.java
+  visible: true
+  learner_created: true
+- name: src/machine/Machine.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5331#comment
 status: Failed
 feedback:
