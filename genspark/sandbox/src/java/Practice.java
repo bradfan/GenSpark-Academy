@@ -11,6 +11,23 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+    //    come up with a method that turns a phrase into camelCase
+    public static void convertPhrase(String phrase) {
+        String[] words = phrase.split("[\\W_]+");
+        StringBuilder camelCase = new StringBuilder();
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            if (i == 0) {
+               word = word.isEmpty() ? word : word.toLowerCase();
+//                word.toLowerCase();
+            } else {
+                word = word.isEmpty() ? word : Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
+//                word = Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
+            }
+            camelCase.append(word);
+        }
+        System.out.println(camelCase);
+    }
 
 
     //    come up with a method that compares two strings that have matching characters but are out of order.
@@ -49,7 +66,6 @@ public class Practice {
         int result = Integer.parseInt(reverse);
         System.out.println("Reverse Number: " + result);
     }
-
 
 
     public static void main(String[] args) {
@@ -104,10 +120,13 @@ public class Practice {
         System.out.println("Is the same? ");
         System.out.println(isTheSame("mice", "cmie"));
         System.out.println();
+        System.out.println("Convert phrase to camelCase: ");
+        convertPhrase("I'm going to try and break the method without the ternary operator. Not sure why it's there and it's easier to understand without it.");
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
         String str = "poop";
-        System.out.println(str.charAt(5));
+
+
 
     }
 
