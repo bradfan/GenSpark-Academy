@@ -11,6 +11,18 @@ import java.util.stream.Stream;
 
 public class Practice {
 
+    public static boolean hasUniqueChars(String str) {
+        boolean[] vessel = new boolean[128];
+        for (int i = 0; i < str.length(); i++) {
+            int val =   str.charAt(i);
+            if (vessel[val]) {
+                return false;
+            }
+           vessel[val] = true;
+        }
+        return true;
+    }
+
     public static void printArray(char[][] state) {
         System.out.println("2D Array:");
         for (int i = 1; i <= state[1].length; i++) {
@@ -147,6 +159,7 @@ public class Practice {
         System.out.println();
         System.out.println("Convert phrase to camelCase: ");
         convertPhrase("I'm going to try and break the method without the ternary operator. Not sure why it's there and it's easier to understand without it.");
+        System.out.println("DOES STRING HAVE UNIQUE CHARS? " + hasUniqueChars("Fuck you"));
         System.out.println("Jet Brains snippets below: ");
         System.out.println();
 

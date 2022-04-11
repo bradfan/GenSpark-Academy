@@ -1,0 +1,12 @@
+type: code
+feedback_link: https://hyperskill.org/learn/step/9898#comment
+status: Failed
+feedback:
+  message: |
+    Compilation error
+    Main.java:9: error: class, interface, enum, or record expected
+    java.util.Scanner scanner = new java.util.Scanner(System.in);
+    ^
+    1 error
+  time: Fri, 08 Apr 2022 18:08:26 UTC
+record: -1

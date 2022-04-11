@@ -7,6 +7,15 @@ public class Project5Worksheet {
 //    When invoked, the proper method is chosen based on the provided arguments.
 //    If the argument has a different type from what is expected, the closest type of the argument in order of the implicit casting is used.
 
+//    CASTING
+//    Be Careful! Bears shouldn't Ingest Large Furry Dogs
+//    Boolean -> Char -> Byte -> Short -> Int -> Long -> Float -> Double
+
+//    ACCESS MODIFIERS
+//    private == access within the same class
+//    protected == access in any class within the package and sub-classes(extends)
+//    public == public
+
     public static void print(String stringToPrint) {
         System.out.println(stringToPrint);
     }
@@ -27,12 +36,16 @@ public class Project5Worksheet {
         System.out.println(val);
     }
 
+
+
     public static void main(String[] args) {
         //    OVERLOADING
         print("some string");
         print("another string", 2);
         print(2, "another string again");
         print(5);
+
+
 
     }
 }
