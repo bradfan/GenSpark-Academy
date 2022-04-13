@@ -5,9 +5,202 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a78d355-b37b-4ad2-a6d8-1ff8cd967722" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../sandbox/out/production/sandbox/Practice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sandbox/out/production/sandbox/Practice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Initializing long value/Budget_Manager.Topics-Boxing_and_unboxing-Initializing_long_value.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Initializing long value/Budget_Manager.Topics-Boxing_and_unboxing-Initializing_long_value.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Initializing long value/Budget_Manager.Topics-Boxing_and_unboxing-Initializing_long_value.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Safe converting/Budget_Manager.Topics-Boxing_and_unboxing-Safe_converting.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Safe converting/Budget_Manager.Topics-Boxing_and_unboxing-Safe_converting.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Safe converting/Budget_Manager.Topics-Boxing_and_unboxing-Safe_converting.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Theory/Budget_Manager.Topics-Boxing_and_unboxing-Theory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Theory/Budget_Manager.Topics-Boxing_and_unboxing-Theory.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Boxing and unboxing/Theory/Budget_Manager.Topics-Boxing_and_unboxing-Theory.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Boxes are not just objects/Budget_Manager.Topics-Generics_and_Object-Boxes_are_not_just_objects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Boxes are not just objects/Budget_Manager.Topics-Generics_and_Object-Boxes_are_not_just_objects.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Boxes are not just objects/Budget_Manager.Topics-Generics_and_Object-Boxes_are_not_just_objects.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Correct the usage of non-generic class/Budget_Manager.Topics-Generics_and_Object-Correct_the_usage_of_non-generic_class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Correct the usage of non-generic class/Budget_Manager.Topics-Generics_and_Object-Correct_the_usage_of_non-generic_class.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Correct the usage of non-generic class/Budget_Manager.Topics-Generics_and_Object-Correct_the_usage_of_non-generic_class.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Instance without type argument/Budget_Manager.Topics-Generics_and_Object-Instance_without_type_argument.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Instance without type argument/Budget_Manager.Topics-Generics_and_Object-Instance_without_type_argument.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Instance without type argument/Budget_Manager.Topics-Generics_and_Object-Instance_without_type_argument.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Reusing code with Object/Budget_Manager.Topics-Generics_and_Object-Reusing_code_with_Object.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Reusing code with Object/Budget_Manager.Topics-Generics_and_Object-Reusing_code_with_Object.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Reusing code with Object/Budget_Manager.Topics-Generics_and_Object-Reusing_code_with_Object.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Theory/Budget_Manager.Topics-Generics_and_Object-Theory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Theory/Budget_Manager.Topics-Generics_and_Object-Theory.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Generics and Object/Theory/Budget_Manager.Topics-Generics_and_Object-Theory.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Creating instances/Budget_Manager.Topics-Introduction_to_generic_programming-Creating_instances.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Creating instances/Budget_Manager.Topics-Introduction_to_generic_programming-Creating_instances.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Creating instances/Budget_Manager.Topics-Introduction_to_generic_programming-Creating_instances.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Pastry packing optimization/Budget_Manager.Topics-Introduction_to_generic_programming-Pastry_packing_optimization.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Pastry packing optimization/Budget_Manager.Topics-Introduction_to_generic_programming-Pastry_packing_optimization.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Pastry packing optimization/Budget_Manager.Topics-Introduction_to_generic_programming-Pastry_packing_optimization.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Theory/Budget_Manager.Topics-Introduction_to_generic_programming-Theory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Theory/Budget_Manager.Topics-Introduction_to_generic_programming-Theory.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Theory/Budget_Manager.Topics-Introduction_to_generic_programming-Theory.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Type arguments - 2/Budget_Manager.Topics-Introduction_to_generic_programming-Type_arguments_-_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Type arguments - 2/Budget_Manager.Topics-Introduction_to_generic_programming-Type_arguments_-_2.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Type arguments - 2/Budget_Manager.Topics-Introduction_to_generic_programming-Type_arguments_-_2.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Type arguments/Budget_Manager.Topics-Introduction_to_generic_programming-Type_arguments.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Type arguments/Budget_Manager.Topics-Introduction_to_generic_programming-Type_arguments.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Introduction to generic programming/Type arguments/Budget_Manager.Topics-Introduction_to_generic_programming-Type_arguments.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/A keyword for importing a class/Budget_Manager.Topics-Package-A_keyword_for_importing_a_class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/A keyword for importing a class/Budget_Manager.Topics-Package-A_keyword_for_importing_a_class.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/A keyword for importing a class/Budget_Manager.Topics-Package-A_keyword_for_importing_a_class.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/Sorting arrays/Budget_Manager.Topics-Package-Sorting_arrays.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/Sorting arrays/Budget_Manager.Topics-Package-Sorting_arrays.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/Sorting arrays/Budget_Manager.Topics-Package-Sorting_arrays.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/The default import/Budget_Manager.Topics-Package-The_default_import.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/The default import/Budget_Manager.Topics-Package-The_default_import.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/The default import/Budget_Manager.Topics-Package-The_default_import.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/The full name of a class/Budget_Manager.Topics-Package-The_full_name_of_a_class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/The full name of a class/Budget_Manager.Topics-Package-The_full_name_of_a_class.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/Package/The full name of a class/Budget_Manager.Topics-Package-The_full_name_of_a_class.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Concat all strings without digits/Budget_Manager.Topics-StringBuilder-Concat_all_strings_without_digits.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Concat all strings without digits/Budget_Manager.Topics-StringBuilder-Concat_all_strings_without_digits.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Concat all strings without digits/Budget_Manager.Topics-StringBuilder-Concat_all_strings_without_digits.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Multiple modifications/Budget_Manager.Topics-StringBuilder-Multiple_modifications.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Multiple modifications/Budget_Manager.Topics-StringBuilder-Multiple_modifications.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Multiple modifications/Budget_Manager.Topics-StringBuilder-Multiple_modifications.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/The English alphabet/Budget_Manager.Topics-StringBuilder-The_English_alphabet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/The English alphabet/Budget_Manager.Topics-StringBuilder-The_English_alphabet.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/The English alphabet/Budget_Manager.Topics-StringBuilder-The_English_alphabet.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Theory/Budget_Manager.Topics-StringBuilder-Theory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Theory/Budget_Manager.Topics-StringBuilder-Theory.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules/Topics/StringBuilder/Theory/Budget_Manager.Topics-StringBuilder-Theory.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Concat positive numbers/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Concat positive numbers/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Concat positive numbers/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Concat positive numbers/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Theory/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/ArrayList/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Initializing long value/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Initializing long value/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Initializing long value/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Initializing long value/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Safe converting/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Safe converting/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Safe converting/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Safe converting/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Theory/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Boxing and unboxing/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Boxes are not just objects/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Boxes are not just objects/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Boxes are not just objects/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Boxes are not just objects/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Correct the usage of non-generic class/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Correct the usage of non-generic class/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Correct the usage of non-generic class/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Correct the usage of non-generic class/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Instance without type argument/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Instance without type argument/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Instance without type argument/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Instance without type argument/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Reusing code with Object/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Reusing code with Object/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Reusing code with Object/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Reusing code with Object/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Theory/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Generics and Object/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Creating instances/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Creating instances/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Creating instances/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Creating instances/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Pastry packing optimization/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Pastry packing optimization/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Pastry packing optimization/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Pastry packing optimization/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Theory/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments - 2/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments - 2/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments - 2/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments - 2/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/Type arguments/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Introduction to generic programming/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/A keyword for importing a class/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/A keyword for importing a class/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/A keyword for importing a class/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/A keyword for importing a class/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/Sorting arrays/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/Sorting arrays/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/Sorting arrays/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/Sorting arrays/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The default import/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The default import/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The default import/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The default import/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The full name of a class/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The full name of a class/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The full name of a class/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/The full name of a class/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/What's the name/answer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/What's the name/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/What's the name/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/What's the name/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Concat all strings without digits/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Concat all strings without digits/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Concat all strings without digits/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Concat all strings without digits/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Multiple modifications/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Multiple modifications/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Multiple modifications/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Multiple modifications/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/The English alphabet/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/The English alphabet/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/The English alphabet/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/The English alphabet/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Theory/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/StringBuilder/lesson-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Creating instances/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Creating instances/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Creating instances/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Creating instances/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Inheritance of standard collections/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Inheritance of standard collections/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Inheritance of standard collections/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Inheritance of standard collections/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Squares list/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Squares list/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Squares list/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Squares list/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Theory/src/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Theory/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Theory/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/Theory/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Budget Manager/Topics/The Collections Framework overview/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/Topics/Package/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/Topics/Package/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/Topics/section-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/Topics/section-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Budget Manager/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Budget Manager/course-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sandbox/out/production/sandbox/Project5Worksheet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../sandbox/out/production/sandbox/Project5Worksheet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sandbox/src/java/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sandbox/src/java/Practice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sandbox/src/java/Project5Worksheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sandbox/src/java/Project5Worksheet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
