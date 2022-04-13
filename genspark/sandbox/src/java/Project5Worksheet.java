@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class Project5Worksheet {
 
@@ -12,9 +16,25 @@ public class Project5Worksheet {
 //    Boolean -> Char -> Byte -> Short -> Int -> Long -> Float -> Double
 
 //    ACCESS MODIFIERS
-//    private == access within the same class
-//    protected == access in any class within the package and sub-classes(extends)
-//    public == public
+//    private: available only for the class itself;
+//    default: available for classes from the same package (= package-private);
+//    protected: available for classes from the same package and the extending classes.
+//    public: available from everywhere;
+//    "If you're not sure whether the method is useful for other classes, it’s better to first make it private and expand its availability later if needed."
+
+//    An interface can contain:
+//
+//    public constants;
+//    abstract methods without an implementation (the keyword abstract is not required here);
+//    default methods with implementation (the keyword default is required);
+//    static methods with implementation (the keyword static is required);
+//    private methods with implementation.
+
+//    Comparing wrappers
+//    Just like for any reference type, the operator == checks whether two wrapper objects are actually equal,
+//    i.e. if they refer to the same object in memory.
+//    The method equals , on the other hand, checks whether two wrapper objects are meaningfully equal,
+//            for example, it checks if two wrappers or strings have the same value.
 
     public static void print(String stringToPrint) {
         System.out.println(stringToPrint);
@@ -37,6 +57,14 @@ public class Project5Worksheet {
     }
 
 
+    public static StringBuilder createEnglishAlphabet() {
+        StringBuilder alphabet = new StringBuilder();
+        for (int i = 65; i < 91; i++) {
+            alphabet.append(Character.toString(i) + " ");
+        }
+        return alphabet.deleteCharAt(51);
+    }
+
 
     public static void main(String[] args) {
         //    OVERLOADING
@@ -44,8 +72,13 @@ public class Project5Worksheet {
         print("another string", 2);
         print(2, "another string again");
         print(5);
+        System.out.println(createEnglishAlphabet());
+        System.out.println("JetBrains snippets: ");
+        int[] a = {3, 5, 2, 1};
 
 
 
     }
 }
+
+
