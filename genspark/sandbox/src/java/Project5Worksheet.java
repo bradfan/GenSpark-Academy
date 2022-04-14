@@ -75,6 +75,23 @@ public class Project5Worksheet {
         System.out.println(createEnglishAlphabet());
         System.out.println("JetBrains snippets: ");
         int[] a = {3, 5, 2, 1};
+        String ass = """
+                "Over hill, over dale,
+                Thorough bush, thorough brier,
+                Over park, over pale,
+                Thorough flood, thorough fire!"\s
+                """;
+        System.out.println(ass);
+
+        String textBlock = """
+                   Hello world
+                       Goodbye world""";
+
+
+        String reply = "The world did not reply, but one of its oceans waved.";
+
+        System.out.println(textBlock + reply);
+
 
 
 

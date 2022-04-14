@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Budget Manager/task" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/Concat positive numbers" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/Find the nearest number" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/Output the list's elements" />
@@ -18,6 +19,10 @@
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Initializing long value" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Safe converting" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Comparable/Implement compareTo method" />
+            <option value="$PROJECT_DIR$/Topics/Comparable/Implement comparing by additional fields" />
+            <option value="$PROJECT_DIR$/Topics/Comparable/Natural ordering" />
+            <option value="$PROJECT_DIR$/Topics/Comparable/Theory" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Division" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Greatest common divisor" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Raise to the power" />
@@ -42,6 +47,14 @@
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Reading integer numbers" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/The sum of digits" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Area of a circle" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Implementing an interface" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Interface methods" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Marker interface" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Properties of methods" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Statements" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Interface/What does an interface define" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Creating instances" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Pastry packing optimization" />
             <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Theory" />
@@ -67,6 +80,11 @@
             <option value="$PROJECT_DIR$/Topics/Package/The default import" />
             <option value="$PROJECT_DIR$/Topics/Package/The full name of a class" />
             <option value="$PROJECT_DIR$/Topics/Package/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Convert a date" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the value" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Find the first occurrence of the word  the" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Move the first N characters" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Theory" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Guest list of a hotel" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Print strings in the reverse order" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Printing each word in a new line" />

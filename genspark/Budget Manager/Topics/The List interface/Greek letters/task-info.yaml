@@ -2,56 +2,10 @@ type: code
 files:
 - name: src/Main.java
   visible: true
-  text: |-
-    import java.util.*;
-
-    public class Main {
-
-        public static void main(String[] args) {
-            List<GreekLetter> letterList = new ArrayList<>();
-
-            letterList.add(new GreekLetter("Gamma",  3));
-            letterList.add(new GreekLetter("Omega", 24));
-            letterList.add(new GreekLetter("Alpha",  1));
-        }
-
-        static class GreekLetter {
-
-            private String letter;
-            private Integer position;
-
-            public GreekLetter(String letter, Integer position) {
-                this.letter = letter;
-                this.position = position;
-            }
-
-            @Override
-            public String toString() {
-                return "{" +
-                        "letter='" + letter + '\'' +
-                        ", position=" + position +
-                        '}';
-            }
-        }
-    }
-  learner_created: false
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/2324#comment
-status: Failed
+status: Solved
 feedback:
-  message: |
-    Failed. Wrong answer
-
-    This is a sample test from the problem statement!
-
-    Test input:
-
-    Correct output:
-    {letter='Gamma', position=3}
-    {letter='Omega', position=24}
-    {letter='Alpha', position=1}
-
-
-    Your code output:
-    [{letter='Gamma', position=3}, {letter='Omega', position=24}, {letter='Alpha', position=1}]
-  time: Wed, 13 Apr 2022 20:29:41 UTC
+  message: <html>Correct solution</html>
+  time: Wed, 13 Apr 2022 20:31:55 UTC
 record: -1
