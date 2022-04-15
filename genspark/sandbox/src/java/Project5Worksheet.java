@@ -83,14 +83,7 @@ public class Project5Worksheet {
                 """;
         System.out.println(ass);
 
-        String textBlock = """
-                   Hello world
-                       Goodbye world""";
 
-
-        String reply = "The world did not reply, but one of its oceans waved.";
-
-        System.out.println(textBlock + reply);
 
 
 
