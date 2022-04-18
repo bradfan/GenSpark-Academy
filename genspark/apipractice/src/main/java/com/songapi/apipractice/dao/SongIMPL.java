@@ -21,7 +21,9 @@ public class SongIMPL implements SongDao {
     private final EntityManager entityManager;
 
     @Autowired
-    public SongIMPL(EntityManager entityManager) {this.entityManager = entityManager;}
+    public SongIMPL(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     @Override
     @Transactional
@@ -38,17 +40,20 @@ public class SongIMPL implements SongDao {
         return currentSession.get(Song.class, songId);
     }
 
-//    findByArtist code does not work in Postman - code left in place (service, DAO, Controller)
+    //    findByArtist code does not work in Postman - code left in place (service, DAO, Controller)
     @Override
     @Transactional
-    public Song findByArtist(Song artistName) {
+    public Song findByArtist(String artistName) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(Song.class, (Serializable) artistName);
+        return currentSession.get(Song.class, artistName);
+//        Query<Song> myQuery = currentSession.createQuery("from Song");
+//        return (Song) myQuery.getResultList();
+
     }
 
     @Override
     @Transactional
-    public  void saveOrUpdate(Song theSong) {
+    public void saveOrUpdate(Song theSong) {
         Session currentSession = entityManager.unwrap(Session.class);
         currentSession.saveOrUpdate(theSong);
     }

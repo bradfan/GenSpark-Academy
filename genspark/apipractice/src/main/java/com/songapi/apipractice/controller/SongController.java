@@ -37,7 +37,7 @@ public class SongController {
 
     //   localhost:8080/retrieveByArtist/Metallica
     @GetMapping("/retrieveByArtist/{artistName}")
-    public Object findByArtist(@PathVariable Song artistName) {return songService.findByArtist(artistName); }
+    public Object findByArtist(@PathVariable String artistName) {return songService.findByArtist(artistName); }
 
     //   localhost:8080/addSong
     @PostMapping("/addSong")

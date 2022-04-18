@@ -8,7 +8,7 @@ import java.util.List;
 public interface SongDao {
     List<Song> findAll();
     Object findById(int songId);
-    Object findByArtist(Song artistName);
+    Object findByArtist(String artistName);
     void saveOrUpdate(Song theSong);
     void deleteById(int songId);
 }
