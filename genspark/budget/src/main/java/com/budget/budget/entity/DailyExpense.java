@@ -22,7 +22,8 @@ public class DailyExpense {
     @Column(name = "location") //This will map the location field to the column named location in the table.
     private String location;
 
-    @Column(name = "date_of_expense") //This will map the dateOfExpense field to the column named date_of_expense in the table.
+    @Column(name = "date_of_expense")
+    //This will map the dateOfExpense field to the column named date_of_expense in the table.
     private String dateOfExpense;
 
     public DailyExpense() {

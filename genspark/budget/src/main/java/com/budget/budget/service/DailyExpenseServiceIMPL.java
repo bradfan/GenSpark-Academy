@@ -17,18 +17,22 @@ public class DailyExpenseServiceIMPL implements DailyExpenseService {
     public DailyExpenseServiceIMPL(DailyExpenseDao dailyExpenseDao) {
         this.dailyExpenseDao = dailyExpenseDao;
     }
+
     @Override
     public List<DailyExpense> findAll() {
         return dailyExpenseDao.findAll();
     }
+
     @Override
     public Object findById(int dailyExpenseId) {
         return dailyExpenseDao.findById(dailyExpenseId);
     }
+
     @Override
     public void saveOrUpdate(DailyExpense dailyExpense) {
         dailyExpenseDao.saveOrUpdate(dailyExpense);
     }
+
     @Override
     public void deleteById(int dailyExpenseId) {
         dailyExpenseDao.deleteById(dailyExpenseId);

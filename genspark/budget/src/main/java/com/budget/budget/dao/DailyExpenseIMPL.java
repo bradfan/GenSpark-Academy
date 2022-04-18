@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+
 import org.hibernate.query.Query;
+
 import java.util.List;
 
 @Repository
@@ -18,17 +20,18 @@ public class DailyExpenseIMPL implements DailyExpenseDao {
         to find entities by their primary key, and to query over entities. */
     private final EntityManager entityManager;
 
-//    Set up constructor injection
+    //    Set up constructor injection
     @Autowired
-    public  DailyExpenseIMPL(EntityManager entityManager) {
-        this.entityManager = entityManager;}
+    public DailyExpenseIMPL(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
     public List<DailyExpense> findAll() {
         Session currentSession = entityManager.unwrap(Session.class);
         Query<DailyExpense> myQuery = currentSession.createQuery("from DailyExpense");
-        return myQuery.getresultList();
+        return myQuery.getResultList();
     }
 
     @Override
@@ -52,8 +55,5 @@ public class DailyExpenseIMPL implements DailyExpenseDao {
         DailyExpense dailyExpense = currentSession.get(DailyExpense.class, dailyExpenseId);
         currentSession.delete(dailyExpense);
     }
-
-
-
 
 }

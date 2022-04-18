@@ -65,8 +65,7 @@ public class DailyExpenseController {
     public String deleteExpense(@PathVariable int dailyExpenseId) {
         //This will execute the deleteByID.
         dailyExpenseService.deleteById(dailyExpenseId);
-        return "Deleted employee id : " + dailyExpenseId;
+        return "Deleted expense id : " + dailyExpenseId;
     }
-
 
 }
