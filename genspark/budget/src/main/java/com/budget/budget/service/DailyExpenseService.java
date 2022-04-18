@@ -1,2 +1,4 @@
-package com.budget.budget.service;public interface DailyExpenseService {
+package com.budget.budget.service;
+
+public interface DailyExpenseService {
 }

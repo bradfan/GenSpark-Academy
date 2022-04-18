@@ -1,2 +1,4 @@
-package com.budget.budget.controller;public class DailyExpenseController {
+package com.budget.budget.controller;
+
+public class DailyExpenseController {
 }

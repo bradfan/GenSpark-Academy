@@ -1,2 +1,4 @@
-package com.budget.budget.dao;public interface DailyExpenseDao {
+package com.budget.budget.dao;
+
+public interface DailyExpenseDao {
 }
