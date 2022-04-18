@@ -12,16 +12,16 @@ public class Category {
     @Column(name = "id") //This is mapping the primary key to the id column in the table.
     private int id;
 
-    @Column(name = "category_desc") //This will map the jobTitle field to the column named job_title in the table.
-    private String categoryDesc;
+    @Column(name = "category_desc") //This will map the category description field to the column named category_desc in the table.
+    private String categoryDescription;
 
     public Category() {
 
     }
 
-    public Category(int id, String categoryDesc) {
+    public Category(int id, String categoryDescription) {
         this.id = id;
-        this.categoryDesc = categoryDesc;
+        this.categoryDescription = categoryDescription;
     }
 
     public int getId() {
@@ -32,19 +32,19 @@ public class Category {
         this.id = id;
     }
 
-    public String getCategoryDesc() {
-        return categoryDesc;
+    public String getCategoryDescription() {
+        return categoryDescription;
     }
 
-    public void setCategoryDesc(String categoryDesc) {
-        this.categoryDesc = categoryDesc;
+    public void setCategoryDescription(String categoryDescription) {
+        this.categoryDescription = categoryDescription;
     }
 
     @Override
     public String toString() {
         return "Category{" +
                 "id=" + id +
-                ", categoryDesc='" + categoryDesc + '\'' +
+                ", categoryDescription='" + categoryDescription + '\'' +
                 '}';
     }
 }

@@ -31,8 +31,8 @@ public class CategoryController {
     }
 
     //This is a GET request that will read one category selected by ID.
-    //http://localhost:8080/retrieveById/1
-    @GetMapping("/retrieveById/{categoryId}")
+    //http://localhost:8080/retrieveCategoryById/1
+    @GetMapping("/retrieveCategoryById/{categoryId}")
     public Object findById(@PathVariable int categoryId) {
         return categoryService.findById(categoryId);
     }
