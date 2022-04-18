@@ -65,6 +65,24 @@ public class Project5Worksheet {
         return alphabet.deleteCharAt(51);
     }
 
+    public static void findNumber(int[] array) {
+        Arrays.sort(array);
+        for (int i = 0; i <= array.length - 1; i++) {
+            if (array[i] + 1 != array[i + 1]) {
+                System.out.println(array[i] + 1);
+                break;
+            }
+        }
+    }
+
+    public static void pseudocode(int[] array) {
+        int result = 0;
+        for (int i = 0; i <= array.length - 1; i++) {
+            result += array[i];
+        }
+        System.out.println(result / array.length);
+    }
+
 
     public static void main(String[] args) {
         //    OVERLOADING
@@ -74,18 +92,17 @@ public class Project5Worksheet {
         print(5);
         System.out.println(createEnglishAlphabet());
         System.out.println("JetBrains snippets: ");
-        int[] a = {3, 5, 2, 1};
-        String ass = """
-                "Over hill, over dale,
-                Thorough bush, thorough brier,
-                Over park, over pale,
-                Thorough flood, thorough fire!"\s
-                """;
-        System.out.println(ass);
-
-
-
-
+        int[] a = {6, 3, 5, 8, 7, 4, 9, 11};
+//        String ass = """
+//                "Over hill, over dale,
+//                Thorough bush, thorough brier,
+//                Over park, over pale,
+//                Thorough flood, thorough fire!"\s
+//                """;
+//        System.out.println(ass);
+        findNumber(a);
+        int[] b = {1, 2, 3, 4, 5};
+        pseudocode(b);
 
 
     }

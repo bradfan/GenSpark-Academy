@@ -23,9 +23,12 @@
       <module name="Budget_Manager.Topics-Declaring_a_method-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Generics_and_Object-Boxes_are_not_just_objects.main" target="11" />
       <module name="Budget_Manager.Topics-Generics_and_Object-Correct_the_usage_of_non-generic_class.main" target="11" />
+      <module name="Budget_Manager.Topics-Generics_and_Object-Initialize_an_object_of_a_generic_class.main" target="11" />
       <module name="Budget_Manager.Topics-Generics_and_Object-Instance_without_type_argument.main" target="11" />
       <module name="Budget_Manager.Topics-Generics_and_Object-Reusing_code_with_Object.main" target="11" />
       <module name="Budget_Manager.Topics-Generics_and_Object-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Generics_and_Object-What_is_a_type.main" target="11" />
+      <module name="Budget_Manager.Topics-Generics_and_Object-Why_generics.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Account.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Book.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Choose_a_pair_of_getter_and_setter.main" target="11" />
