@@ -84,9 +84,11 @@
             <option value="$PROJECT_DIR$/Topics/Package/The full name of a class" />
             <option value="$PROJECT_DIR$/Topics/Package/Theory" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Convert a date" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the output" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Determine the value" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Find the first occurrence of the word  the" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Move the first N characters" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Palindrome" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Theory" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Guest list of a hotel" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Print strings in the reverse order" />
@@ -117,6 +119,8 @@
             <option value="$PROJECT_DIR$/Topics/The List interface/Setting a new name" />
             <option value="$PROJECT_DIR$/Topics/The List interface/The longest string in the list" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Types and variables/Assignments" />
+            <option value="$PROJECT_DIR$/Topics/Types and variables/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

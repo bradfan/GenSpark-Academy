@@ -76,9 +76,11 @@
       <module name="Budget_Manager.Topics-Package-The_full_name_of_a_class.main" target="11" />
       <module name="Budget_Manager.Topics-Package-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Convert_a_date.main" target="11" />
+      <module name="Budget_Manager.Topics-Processing_strings-Determine_the_output.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Determine_the_value.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Find_the_first_occurrence_of_the_word__the.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Move_the_first_N_characters.main" target="11" />
+      <module name="Budget_Manager.Topics-Processing_strings-Palindrome.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Scanning_the_input-Guest_list_of_a_hotel.main" target="11" />
       <module name="Budget_Manager.Topics-Scanning_the_input-Print_strings_in_the_reverse_order.main" target="11" />
@@ -109,6 +111,8 @@
       <module name="Budget_Manager.Topics-The_List_interface-Setting_a_new_name.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-The_longest_string_in_the_list.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Types_and_variables-Assignments.main" target="11" />
+      <module name="Budget_Manager.Topics-Types_and_variables-Theory.main" target="11" />
       <module name="Budget_Manager.util.main" target="11" />
     </bytecodeTargetLevel>
   </component>
