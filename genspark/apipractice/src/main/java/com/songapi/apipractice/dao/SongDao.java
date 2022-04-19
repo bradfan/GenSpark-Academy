@@ -8,7 +8,8 @@ import java.util.List;
 public interface SongDao {
     List<Song> findAll();
     Object findById(int songId);
-    Object findByArtist();
+    @org.springframework.data.jpa.repository.Query("FROM songs WHERE artist_name = ?1")
+    List<Song> findSongsByArtist(String artistName);
     void saveOrUpdate(Song theSong);
     void deleteById(int songId);
 }

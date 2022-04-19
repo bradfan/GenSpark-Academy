@@ -40,16 +40,16 @@ public class SongIMPL implements SongDao {
         return currentSession.get(Song.class, songId);
     }
 
-    //    findByArtist code does not work in Postman - code left in place (service, DAO, Controller)
     @Override
     @Transactional
-    public List<Song> findByArtist() {
+    public List<Song> findSongsByArtist(String artistName) {
         Session currentSession = entityManager.unwrap(Session.class);
-//        return currentSession.get(Song.class, artistName);
-        Query<Song> myQuery = currentSession.createQuery("SELECT artist_name FROM song");
-        return myQuery.getResultList();
 
+        return (List<Song>) currentSession.get(Song.class, artistName);
     }
+
+
+
 
     @Override
     @Transactional

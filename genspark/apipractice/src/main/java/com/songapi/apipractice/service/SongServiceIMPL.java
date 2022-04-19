@@ -24,7 +24,7 @@ public class SongServiceIMPL  implements SongService{
     public Object findById(int songId) {return songDao.findById(songId);}
 
     @Override
-    public Object findByArtist(String artistName) {return songDao.findByArtist();}
+    public List<Song> findSongsByArtist(String artistName) {return songDao.findSongsByArtist(artistName);}
 
     @Override
     public void saveOrUpdate(Song theSong) {songDao.saveOrUpdate(theSong);}
