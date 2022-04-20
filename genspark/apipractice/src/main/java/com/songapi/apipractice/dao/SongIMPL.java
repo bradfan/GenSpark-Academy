@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 
-import java.io.Serializable;
 import java.util.List;
 
 //DAO = Data Access Object
@@ -42,14 +41,13 @@ public class SongIMPL implements SongDao {
 
     @Override
     @Transactional
+    @SuppressWarnings("unchecked")
     public List<Song> findSongsByArtist(String artistName) {
         Session currentSession = entityManager.unwrap(Session.class);
-
-        return (List<Song>) currentSession.get(Song.class, artistName);
+        return currentSession.createQuery("FROM Song WHERE artistName = :artistName")
+                .setParameter("artistName", artistName)
+                .getResultList();
     }
-
-
-
 
     @Override
     @Transactional
