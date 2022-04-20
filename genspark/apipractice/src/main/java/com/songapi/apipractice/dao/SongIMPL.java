@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import java.util.List;
 
@@ -48,6 +50,22 @@ public class SongIMPL implements SongDao {
                 .setParameter("artistName", artistName)
                 .getResultList();
     }
+
+    @Override
+    @Transactional
+    @SuppressWarnings("unchecked")
+    public List<Song> findGenreByArtist(String artistName) {
+        Session currentSession = entityManager.unwrap(Session.class);
+        return currentSession.createQuery("FROM Song WHERE artistName = :artistName")
+                .setParameter("artistName", artistName)
+                .getResultList();
+    }
+    //    SQL SELECT STATEMENT
+//    SELECT s.artist_name, g.genre_type FROM songs s
+//    JOIN genre g ON s.artist_name = g.artist_name;
+//    read Hibernate docs and look into these imports
+//    @ManyToOne
+//    @JoinColumn(name="Something")
 
     @Override
     @Transactional
