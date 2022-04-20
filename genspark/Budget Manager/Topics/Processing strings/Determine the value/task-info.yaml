@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: '"H"'
-- text: '"-"'
 - text: '"SKILL"'
+- text: '"-"'
 - text: '"HYPER"'
+- text: '"H"'
 - text: '"Y"'
 files:
 - name: src/Task.java

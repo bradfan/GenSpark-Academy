@@ -2,8 +2,8 @@ type: choice
 is_multiple_choice: true
 options:
 - text: to invoke methods <b>length</b> and <b>charAt</b> multiple times.
-- text: to concatenate multiple strings into a single one.
 - text: to remove elements from a string multiple times.
+- text: to concatenate multiple strings into a single one.
 - text: 'to create a simple string and display it to the standard output. '
 files:
 - name: src/Task.java

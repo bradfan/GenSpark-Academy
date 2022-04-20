@@ -11,6 +11,15 @@
       <module name="Budget_Manager.Topics-Boxing_and_unboxing-Initializing_long_value.main" target="11" />
       <module name="Budget_Manager.Topics-Boxing_and_unboxing-Safe_converting.main" target="11" />
       <module name="Budget_Manager.Topics-Boxing_and_unboxing-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Forms_of_comments.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Hello,_Java_platform.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Incorrect_comments.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Printing_only_the_longest_line.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-The_countdown.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Three_numbers.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-Uncomment_a_line.main" target="11" />
+      <module name="Budget_Manager.Topics-Comments-What_comments_are_not_used_in_the_program.main" target="11" />
       <module name="Budget_Manager.Topics-Comparable-Implement_compareTo_method.main" target="11" />
       <module name="Budget_Manager.Topics-Comparable-Implement_comparing_by_additional_fields.main" target="11" />
       <module name="Budget_Manager.Topics-Comparable-Natural_ordering.main" target="11" />

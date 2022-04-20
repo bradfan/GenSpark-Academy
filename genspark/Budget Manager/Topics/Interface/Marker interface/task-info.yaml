@@ -2,9 +2,9 @@ type: choice
 is_multiple_choice: false
 options:
 - text: It is an interface without members (i.e. empty interface).
-- text: It is a interface without abstract methods.
-- text: It is an interface with a single method.
 - text: It is an interface that contains only constants.
+- text: It is an interface with a single method.
+- text: It is a interface without abstract methods.
 files:
 - name: src/Task.java
   visible: true

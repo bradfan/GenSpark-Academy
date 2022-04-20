@@ -3,9 +3,9 @@ is_multiple_choice: true
 options:
 - text: The interface <b>Map</b> extends the interface <b>Collection</b>.
 - text: The interface <b>Queue</b> extends the interface <b>List</b>.
-- text: The interface <b>Set</b> extends the interface <b>Collection</b>
 - text: The interface <b>Deque</b> extends the interface <b>Queue</b>
 - text: The interface <b>List</b> extends the interface <b>Collection</b>
+- text: The interface <b>Set</b> extends the interface <b>Collection</b>
 files:
 - name: src/Task.java
   visible: true

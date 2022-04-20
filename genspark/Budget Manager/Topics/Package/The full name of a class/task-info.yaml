@@ -3,8 +3,8 @@ is_multiple_choice: false
 options:
 - text: hyperskill.java.DemoClass
 - text: java.org.hyperskill.DemoClass
-- text: DemoClass
 - text: org.hyperskill.java.DemoClass.class
+- text: DemoClass
 - text: org.hyperskill.java.DemoClass
 files:
 - name: src/Task.java

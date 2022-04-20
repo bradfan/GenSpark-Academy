@@ -4,8 +4,8 @@ options:
 - text: Generics enhance type safety by shifting more type checking responsibilities
     to compiler
 - text: Generics help to detect your bugs at run time
-- text: Generics speed up your code
 - text: 'Generics can work with multiple classes without explicit type-casting '
+- text: Generics speed up your code
 files:
 - name: src/Task.java
   visible: true

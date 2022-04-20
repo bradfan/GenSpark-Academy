@@ -2,9 +2,9 @@ type: choice
 is_multiple_choice: false
 options:
 - text: Integer num = (Integer) instance.get();
+- text: String str = instance.get();
 - text: Object obj = instance.get();
 - text: String str = (String) instance.get();
-- text: String str = instance.get();
 files:
 - name: src/Task.java
   visible: true

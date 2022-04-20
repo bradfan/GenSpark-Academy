@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
+- text: it won't be compiled
 - text: the code output will be different
 - text: the code will throw a run-time exception
 - text: nothing
-- text: it won't be compiled
 files:
 - name: src/Task.java
   visible: true

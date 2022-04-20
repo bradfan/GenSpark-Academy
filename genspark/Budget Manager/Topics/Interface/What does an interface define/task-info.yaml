@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: only abstract methods
 - text: only non-static fields and static methods
-- text: abstract and instance methods, and private non-static fields
 - text: abstract, default, private or static methods, and final static fields
+- text: abstract and instance methods, and private non-static fields
+- text: only abstract methods
 files:
 - name: src/Task.java
   visible: true

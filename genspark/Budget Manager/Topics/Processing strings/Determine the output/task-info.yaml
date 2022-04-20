@@ -2,10 +2,10 @@ type: choice
 is_multiple_choice: false
 options:
 - text: '"Hello, Java"'
-- text: '"vaJ ,olle"'
-- text: '"avaJ ,olle"'
-- text: '"avaJ ,olleH"'
 - text: '"Ja ,olleH"'
+- text: '"avaJ ,olle"'
+- text: '"vaJ ,olle"'
+- text: '"avaJ ,olleH"'
 files:
 - name: src/Task.java
   visible: true

@@ -3,8 +3,8 @@ is_multiple_choice: true
 options:
 - text: A class that implements an interface must implement default and static methods
     declared in the interface.
-- text: A class can implement multiple interfaces.
 - text: An interface can contain abstract, default and static methods.
+- text: A class can implement multiple interfaces.
 - text: It's possible to create an instance of an interface.
 files:
 - name: src/Task.java

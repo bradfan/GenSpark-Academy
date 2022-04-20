@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.stream.Stream;
+
 
 public class Project5Worksheet {
 
@@ -80,6 +82,30 @@ public class Project5Worksheet {
         System.out.println(result / array.length);
     }
 
+    public static String reverseWords(String original) {
+        String[] array = original.split(" ");
+        if (array.length == 0) {
+            return original;
+        }
+        String strStream = "";
+        for (int i = 0; i <= array.length - 1; i++) {
+            strStream += Stream.of(array[i].split("")).reduce("", (a, b) -> b + a) + " ";
+        }
+        return strStream.trim();
+    }
+
+
+    public static String streamReverse(String str) {
+        return Stream.of(str.split(""))
+                .reduce("", (a, b) -> b + a);
+    }
+
+    public static String reverseStringBuilder(String input) {
+        StringBuilder result = new StringBuilder();
+        return result.append(input)
+                     .reverse() + "";
+    }
+
 
     public static void main(String[] args) {
         //    OVERLOADING
@@ -100,8 +126,9 @@ public class Project5Worksheet {
         findNumber(a);
         int[] b = {1, 2, 3, 4, 5};
         pseudocode(b);
-
-
+        System.out.println("CodeWars: " + reverseWords("Code wars sucks"));
+        System.out.println(streamReverse("This is a reversed string."));
+        System.out.println("String Builder: " + reverseStringBuilder("Java in the morning."));
 
 
     }

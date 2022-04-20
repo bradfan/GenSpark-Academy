@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: boolean[]
 - text: Boolean
 - text: Boolean[]
 - text: boolean
+- text: boolean[]
 files:
 - name: src/Task.java
   visible: true

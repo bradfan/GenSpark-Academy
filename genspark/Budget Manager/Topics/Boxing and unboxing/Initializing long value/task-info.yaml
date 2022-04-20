@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Long val = 4321L;
 - text: Long val = Long.parseLong("4321");
-- text: Long val = Long.valueOf("4321");
 - text: Long val = Long.of(4321);
+- text: Long val = Long.valueOf("4321");
+- text: Long val = 4321L;
 files:
 - name: src/Task.java
   visible: true
