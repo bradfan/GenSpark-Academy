@@ -10,6 +10,8 @@ public interface DailyExpenseDao {
 
     Object findById(int dailyExpenseId);
 
+//    List<DailyExpense> listExpenseByCategory();
+
     void saveOrUpdate(DailyExpense dailyExpense);
 
     void deleteById(int dailyExpenseId);

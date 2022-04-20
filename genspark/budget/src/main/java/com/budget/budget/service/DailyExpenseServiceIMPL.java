@@ -28,6 +28,11 @@ public class DailyExpenseServiceIMPL implements DailyExpenseService {
         return dailyExpenseDao.findById(dailyExpenseId);
     }
 
+//    @Override
+//    public List<DailyExpense> listExpenseByCategory() {
+//        return dailyExpenseDao.listExpenseByCategory();
+//    }
+
     @Override
     public void saveOrUpdate(DailyExpense dailyExpense) {
         dailyExpenseDao.saveOrUpdate(dailyExpense);

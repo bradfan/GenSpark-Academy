@@ -41,6 +41,18 @@ public class DailyExpenseIMPL implements DailyExpenseDao {
         return currentSession.get(DailyExpense.class, dailyExpenseId);
     }
 
+//    @Override
+//    @Transactional
+//    @SuppressWarnings("unchecked")
+//    public List<DailyExpense> listExpenseByCategory() {
+//        Session currentSession = entityManager.unwrap(Session.class);
+//        return entityManager.createQuery("SELECT SUM(e.expense) AS total_spent, c.category_desc FROM  daily_expense e\n" +
+//                        "JOIN  category c ON e.category_id = c.id\n" +
+//                        "GROUP BY c.id")
+////                .setParameter("artistName", artistName)
+//                .getResultList();
+//    }
+
     @Override
     @Transactional //Defines the scope of a single database transaction.
     public void saveOrUpdate(DailyExpense dailyExpense) {

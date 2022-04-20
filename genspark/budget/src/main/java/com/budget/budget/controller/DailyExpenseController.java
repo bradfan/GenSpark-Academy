@@ -36,6 +36,10 @@ public class DailyExpenseController {
         return dailyExpenseService.findById(dailyExpenseId);
     }
 
+    //   localhost:8080/retrieveListByExpense
+//    @GetMapping("retrieveListByExpense")
+//    public List<DailyExpense> listExpenseByCategory() { return dailyExpenseService.listExpenseByCategory();}
+
     //This is a POST request to add a new daily expense.
     //http://localhost:8080/addDailyExpense
     @PostMapping("/addDailyExpense")
