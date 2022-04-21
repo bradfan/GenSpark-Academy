@@ -24,6 +24,13 @@
       <module name="Budget_Manager.Topics-Comparable-Implement_comparing_by_additional_fields.main" target="11" />
       <module name="Budget_Manager.Topics-Comparable-Natural_ordering.main" target="11" />
       <module name="Budget_Manager.Topics-Comparable-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-Check_a_number_is_positive.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-Determine_the_output.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-Healthy_sleep.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-Statements.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-The_army_of_units.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-The_condition_to_travel_around_the_world.main" target="11" />
+      <module name="Budget_Manager.Topics-Conditional_statement-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Division.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Greatest_common_divisor.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Raise_to_the_power.main" target="11" />
@@ -91,6 +98,14 @@
       <module name="Budget_Manager.Topics-Processing_strings-Move_the_first_N_characters.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Palindrome.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Check_the_sum.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Check_the_value.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Exactly_one_parameter_is_positive.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Existing_operators.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Groundhogs_at_a_party.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Is_between.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Job_offer.main" target="11" />
+      <module name="Budget_Manager.Topics-Relational_operators-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Scanning_the_input-Guest_list_of_a_hotel.main" target="11" />
       <module name="Budget_Manager.Topics-Scanning_the_input-Print_strings_in_the_reverse_order.main" target="11" />
       <module name="Budget_Manager.Topics-Scanning_the_input-Printing_each_word_in_a_new_line.main" target="11" />
@@ -115,6 +130,14 @@
       <module name="Budget_Manager.Topics-The_Collections_Framework_overview-Inheritance_of_standard_collections.main" target="11" />
       <module name="Budget_Manager.Topics-The_Collections_Framework_overview-Squares_list.main" target="11" />
       <module name="Budget_Manager.Topics-The_Collections_Framework_overview-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-Determine_the_result.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-From_sum_to_product.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-Statements.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-Such_different_for_loops.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-The_count_of_numbers_divisible_by_N.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-The_product_of_numbers_from_a_to_b.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-The_sum_of_integers_from_a_to_b.main" target="11" />
+      <module name="Budget_Manager.Topics-The_for-loop-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Greek_letters.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Replacing_ArrayList_with_LinkedList.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Setting_a_new_name.main" target="11" />

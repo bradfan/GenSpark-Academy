@@ -103,9 +103,20 @@ public class Project5Worksheet {
     public static String reverseStringBuilder(String input) {
         StringBuilder result = new StringBuilder();
         return result.append(input)
-                     .reverse() + "";
+                .reverse() + "";
     }
 
+
+    public static int[] squareOrSquareRoot(int[] array) {
+        for (int i = 0; i <= array.length - 1; i++) {
+            if (Math.sqrt(array[i]) % 1 == 0) {
+                array[i] = (int) Math.sqrt(array[i]);
+            } else {
+                array[i] *= array[i];
+            }
+        }
+        return array;
+    }
 
 
 
@@ -117,7 +128,9 @@ public class Project5Worksheet {
         print(5);
         System.out.println(createEnglishAlphabet());
         System.out.println("JetBrains snippets: ");
-        int[] a = {6, 3, 5, 8, 7, 4, 9, 11};
+
+//        2,9,3,49,4,1
+//        1, 4, 9, 2, 49, 3
 //        String ass = """
 //                "Over hill, over dale,
 //                Thorough bush, thorough brier,
@@ -125,12 +138,16 @@ public class Project5Worksheet {
 //                Thorough flood, thorough fire!"\s
 //                """;
 //        System.out.println(ass);
-        findNumber(a);
+//        findNumber(a);
         int[] b = {1, 2, 3, 4, 5};
         pseudocode(b);
         System.out.println("CodeWars: " + reverseWords("Code wars sucks"));
         System.out.println(streamReverse("This is a reversed string."));
         System.out.println("String Builder: " + reverseStringBuilder("Java in the morning."));
+        int[] a = {4, 3, 9, 7, 2, 1};
+        System.out.println("Fun!!: " + Arrays.toString(squareOrSquareRoot(a)));
+        System.out.println(Math.pow(5,5));
+
 
 
     }

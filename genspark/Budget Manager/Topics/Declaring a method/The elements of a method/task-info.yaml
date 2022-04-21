@@ -1,13 +1,13 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: A method name
 - text: Variables
 - text: A list of parameters
-- text: A class
-- text: Return type, or void
 - text: A body of the method
 - text: Modifiers
+- text: A method name
+- text: Return type, or void
+- text: A class
 files:
 - name: src/Task.java
   visible: true
