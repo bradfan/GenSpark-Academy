@@ -39,7 +39,9 @@ public class SongController {
     @GetMapping("/retrieveByArtist/{artistName}")
     public List<Song> findSongsByArtist(@PathVariable String artistName) {return songService.findSongsByArtist(artistName); }
 
-    public List<Song> findGenreByArtist(@PathVariable String artistName) {return songService.findSongsByArtist(artistName); }
+
+    @GetMapping("/retrieveGenreByArtist/{artistName}")
+    public List<Song> findGenreByArtist(@PathVariable String artistName) {return songService.findGenreByArtist(artistName); }
 
     //   localhost:8080/addSong
     @PostMapping("/addSong")

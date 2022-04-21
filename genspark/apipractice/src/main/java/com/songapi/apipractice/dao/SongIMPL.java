@@ -56,8 +56,9 @@ public class SongIMPL implements SongDao {
     @SuppressWarnings("unchecked")
     public List<Song> findGenreByArtist(String artistName) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.createQuery("FROM Song WHERE artistName = :artistName")
-                .setParameter("artistName", artistName)
+        return currentSession.createQuery("SELECT s.artist_name, g.genre_type FROM songs s JOIN genre g ON s.artist_name = g.artist_name")
+//                .setParameter("artistName", artistName)
+//                .setParameter("genreType", genreType)
                 .getResultList();
     }
     //    SQL SELECT STATEMENT
