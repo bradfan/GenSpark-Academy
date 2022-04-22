@@ -48,8 +48,14 @@
       <module name="Budget_Manager.Topics-Getters_and_setters-Account.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Book.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Choose_a_pair_of_getter_and_setter.main" target="11" />
+      <module name="Budget_Manager.Topics-Getters_and_setters-Complex.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Getting_the_fullname.main" target="11" />
       <module name="Budget_Manager.Topics-Getters_and_setters-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Inheritance-Access_members_inside_child_classes.main" target="11" />
+      <module name="Budget_Manager.Topics-Inheritance-Classes_for_Hospital.main" target="11" />
+      <module name="Budget_Manager.Topics-Inheritance-Incorrect_class_hierarchies.main" target="11" />
+      <module name="Budget_Manager.Topics-Inheritance-The_lost_modifier.main" target="11" />
+      <module name="Budget_Manager.Topics-Inheritance-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Integer_types_and_operations-Calculate_the_digit.main" target="11" />
       <module name="Budget_Manager.Topics-Integer_types_and_operations-Desks.main" target="11" />
       <module name="Budget_Manager.Topics-Integer_types_and_operations-Difference_of_times.main" target="11" />

@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -118,39 +119,111 @@ public class Project5Worksheet {
         return array;
     }
 
+    public static int binToDecimal(String inp) {
+        // your code here
+        BigInteger binary = new BigInteger(inp);
+        int decimal = 0;
+        int i = 0;
+        while (true) {
+            if (binary == BigInteger.valueOf(0)) {
+                break;
+            } else {
+                BigInteger bigTemp = binary.mod(BigInteger.valueOf(10));
+                int temp = bigTemp.intValue();
+                decimal += temp * Math.pow(2, i);
+                binary = binary.divide(BigInteger.valueOf(10));
+                i++;
+            }
+        }
+        return decimal;
+    }
+
+    public static int binToDecimalSolution(String inp) {
+        return Integer.parseInt(inp, 2);
+    }
+
+    public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
+        int total = yourPoints;
+        int numberOfScores = classPoints.length + 1;
+        for (int x : classPoints) {
+            total += x;
+        }
+        return yourPoints > total / numberOfScores;
+    }
 
 
-    public static void main(String[] args) {
-        //    OVERLOADING
-        print("some string");
-        print("another string", 2);
-        print(2, "another string again");
-        print(5);
-        System.out.println(createEnglishAlphabet());
-        System.out.println("JetBrains snippets: ");
+    public static String rps(String p1, String p2) {
+        // your code sucks
+        String s = "scissors";
+        String r = "rock";
+        String p = "paper";
+        String player1 = "Player 1 won!";
+        String player2 = "Player 2 won!";
 
-//        2,9,3,49,4,1
-//        1, 4, 9, 2, 49, 3
-//        String ass = """
-//                "Over hill, over dale,
-//                Thorough bush, thorough brier,
-//                Over park, over pale,
-//                Thorough flood, thorough fire!"\s
-//                """;
-//        System.out.println(ass);
-//        findNumber(a);
-        int[] b = {1, 2, 3, 4, 5};
-        pseudocode(b);
-        System.out.println("CodeWars: " + reverseWords("Code wars sucks"));
-        System.out.println(streamReverse("This is a reversed string."));
-        System.out.println("String Builder: " + reverseStringBuilder("Java in the morning."));
-        int[] a = {4, 3, 9, 7, 2, 1};
-        System.out.println("Fun!!: " + Arrays.toString(squareOrSquareRoot(a)));
-        System.out.println(Math.pow(5,5));
-
-
+        if (p1.equals(p2)) {
+            return "Draw!";
+        }
+        if (p1.equals(s) && p2.equals(r)) {
+            return player2;
+        } else if (p1.equals(r) && p2.equals(s)) {
+            return player1;
+        } else if (p1.equals(r) && p2.equals(p)) {
+            return player2;
+        } else if (p1.equals(p) && p2.equals(r)) {
+            return player1;
+        } else if (p1.equals(p) && p2.equals(s)) {
+            return player2;
+        } else {
+            return player1;
+        }
 
     }
-}
+
+    public static int sameCase (char first, char second) {
+        if (Character.isLetter(first) && Character.isLetter(second)) {
+            return Character.isUpperCase(first) && Character.isUpperCase(second)
+                    || Character.isLowerCase(first) && Character.isLowerCase(second) ? 1 : 0;
+        } return -1;
+    }
 
 
+        public static void main (String[]args){
+            //    OVERLOADING
+            print("some string");
+            print("another string", 2);
+            print(2, "another string again");
+            print(5);
+            System.out.println(createEnglishAlphabet());
+            System.out.println("JetBrains snippets: ");
+            int[] b = {1, 2, 3, 4, 5};
+            pseudocode(b);
+            System.out.println("CodeWars: " + reverseWords("Code wars sucks"));
+            System.out.println(streamReverse("This is a reversed string."));
+            System.out.println("String Builder: " + reverseStringBuilder("Java in the morning."));
+            int[] a = {4, 3, 9, 7, 2, 1};
+            System.out.println("Fun!!: " + Arrays.toString(squareOrSquareRoot(a)));
+            System.out.println("Code Wars");
+            System.out.println(binToDecimal("1011011111111100101000"));
+            System.out.println(binToDecimalSolution("1011011111111100101000"));
+            int[] xRay = {89, 57, 93, 65};
+            System.out.println(betterThanAverage(xRay, 90));
+            System.out.println("Same Case Method: ");
+            System.out.println(sameCase('n', 'b'));
+
+
+
+        }
+    }
+
+
+//int aValue = (int) first;
+//        int bValue = (int) second;
+//        int scenario = 0;
+//        if (aValue >= 65 && aValue <= 90 && bValue >= 65 && bValue <= 90) {
+//            return 1;
+//        }
+//        if (aValue >= 97 && aValue <= 122 && bValue >= 97 && bValue <= 122) {
+//            return 1;
+//        }
+//
+//        return 0;

@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: String
+- text: Object
 - text: Integer
 - text: Class
-- text: Object
+- text: String
 files:
 - name: src/Task.java
   visible: true
