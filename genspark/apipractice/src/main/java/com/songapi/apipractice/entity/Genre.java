@@ -34,7 +34,7 @@ public class Genre {
         this.genreType = genreType;
         this.label = label;
     }
-    
+
 
 
     public int getId() {
