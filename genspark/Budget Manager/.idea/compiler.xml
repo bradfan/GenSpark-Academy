@@ -8,6 +8,14 @@
       <module name="Budget_Manager.Topics-ArrayList-Output_the_list's_elements.main" target="11" />
       <module name="Budget_Manager.Topics-ArrayList-The_behavior_of_methods.main" target="11" />
       <module name="Budget_Manager.Topics-ArrayList-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-Adding_values.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-Get_first_and_last_elements.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-Inverse_boolean_flags.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-Statements.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-The_declaration_of_the_sumAll_method.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-Varargs_method_invocation.main" target="11" />
+      <module name="Budget_Manager.Topics-Arrays_as_parameters-What_does_the_code_print.main" target="11" />
       <module name="Budget_Manager.Topics-Boxing_and_unboxing-Initializing_long_value.main" target="11" />
       <module name="Budget_Manager.Topics-Boxing_and_unboxing-Safe_converting.main" target="11" />
       <module name="Budget_Manager.Topics-Boxing_and_unboxing-Theory.main" target="11" />
@@ -32,6 +40,7 @@
       <module name="Budget_Manager.Topics-Conditional_statement-The_condition_to_travel_around_the_world.main" target="11" />
       <module name="Budget_Manager.Topics-Conditional_statement-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Division.main" target="11" />
+      <module name="Budget_Manager.Topics-Declaring_a_method-Find_the_max_of_three_numbers.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Greatest_common_divisor.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Raise_to_the_power.main" target="11" />
       <module name="Budget_Manager.Topics-Declaring_a_method-Syntactically_correct_declarations.main" target="11" />
@@ -64,6 +73,7 @@
       <module name="Budget_Manager.Topics-Integer_types_and_operations-Reading_integer_numbers.main" target="11" />
       <module name="Budget_Manager.Topics-Integer_types_and_operations-The_sum_of_digits.main" target="11" />
       <module name="Budget_Manager.Topics-Integer_types_and_operations-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-Interface-Account_Service.main" target="11" />
       <module name="Budget_Manager.Topics-Interface-Area_of_a_circle.main" target="11" />
       <module name="Budget_Manager.Topics-Interface-Implementing_an_interface.main" target="11" />
       <module name="Budget_Manager.Topics-Interface-Interface_methods.main" target="11" />

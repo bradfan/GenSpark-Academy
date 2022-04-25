@@ -16,6 +16,14 @@
             <option value="$PROJECT_DIR$/Topics/ArrayList/Output the list's elements" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/The behavior of methods" />
             <option value="$PROJECT_DIR$/Topics/ArrayList/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Adding values" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Get first and last elements" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Inverse boolean flags" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Statements" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/The declaration of the sumAll method" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Varargs method invocation" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/What does the code print" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Initializing long value" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Safe converting" />
             <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Theory" />
@@ -40,6 +48,7 @@
             <option value="$PROJECT_DIR$/Topics/Conditional statement/The condition to travel around the world" />
             <option value="$PROJECT_DIR$/Topics/Conditional statement/Theory" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Division" />
+            <option value="$PROJECT_DIR$/Topics/Declaring a method/Find the max of three numbers" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Greatest common divisor" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Raise to the power" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Syntactically correct declarations" />
@@ -72,6 +81,7 @@
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Reading integer numbers" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/The sum of digits" />
             <option value="$PROJECT_DIR$/Topics/Integer types and operations/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Account Service" />
             <option value="$PROJECT_DIR$/Topics/Interface/Area of a circle" />
             <option value="$PROJECT_DIR$/Topics/Interface/Implementing an interface" />
             <option value="$PROJECT_DIR$/Topics/Interface/Interface methods" />

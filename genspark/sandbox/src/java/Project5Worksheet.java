@@ -186,6 +186,27 @@ public class Project5Worksheet {
         } return -1;
     }
 
+    public static int[] pipeFix(int[] numbers) {
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
+            list.add(i);
+        }
+        int[] result = new int[list.size()];
+
+        for (int i = 0; i <= list.size() - 1; i++) {
+            result[i] = list.get(i);
+        }
+        System.out.println(Arrays.toString(result));
+        return result;
+
+    }
+
+    public static int howOld(final String herOld) {
+        char[] chars = herOld.toCharArray();
+        return Integer.parseInt(String.valueOf(chars[0]));
+    }
+
 
         public static void main (String[]args){
             //    OVERLOADING
@@ -209,6 +230,9 @@ public class Project5Worksheet {
             System.out.println(betterThanAverage(xRay, 90));
             System.out.println("Same Case Method: ");
             System.out.println(sameCase('n', 'b'));
+            int[] intArray = {1, 8};
+            pipeFix(intArray);
+            System.out.println(howOld("7 years old"));;
 
 
 
