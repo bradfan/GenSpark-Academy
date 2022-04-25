@@ -15,9 +15,15 @@ public class Song {
     @Column(name = "song_title")
     private String songTitle;
 
+    private Genre genre;
+
+
+
     //    "Note that we place the @OneToOne annotation on the related entity field,"
     @OneToOne(targetEntity = com.songapi.apipractice.entity.Genre.class )
-    @JoinColumn(name = "artist_name", referencedColumnName = "artist_name")
+//    @OneToOne(cascade = CascadeType.ALL) ???
+//    @OneToOne(mappedBy ="genre") ???
+    @JoinColumn(name = "artistName", referencedColumnName = "artistName")
     private String artistName;
 
     @Column(name = "on_album")
@@ -63,6 +69,9 @@ public class Song {
 
     public void setOnAlbum(String onAlbum) {
         this.onAlbum = onAlbum;
+    }
+    public Genre getGenre() {
+        return genre;
     }
 
     @Override

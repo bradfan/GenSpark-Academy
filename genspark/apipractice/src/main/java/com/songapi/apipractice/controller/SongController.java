@@ -12,6 +12,7 @@ import java.util.List;
 //This is to allow calls from React
 @CrossOrigin(origins = { "http://localhost:3000"})
 @RestController
+@RequestMapping("/song")
 public class SongController {
 
     public final SongService songService;

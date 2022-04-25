@@ -13,6 +13,7 @@ import java.util.List;
 //This is to allow calls from React...
 @CrossOrigin(origins = { "http://localhost:3000"})
 @RestController
+@RequestMapping("/genre")
 public class GenreController {
     public final GenreService genreService;
 

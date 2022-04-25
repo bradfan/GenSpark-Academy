@@ -12,7 +12,8 @@ public class Genre {
     @Column(name = "id")
     private int id;
 
-    @OneToOne(mappedBy = "song")
+    private Song song;
+    @OneToOne(mappedBy = "genre")
     @JoinColumn(name = "artist_name")
     private String artistName;
 
@@ -33,7 +34,7 @@ public class Genre {
         this.genreType = genreType;
         this.label = label;
     }
-    @OneToOne
+    
 
 
     public int getId() {
