@@ -8,9 +8,11 @@ public class Worksheet_4_25 {
         long[] result = new long[size];
         if (index > size || size > 75) {
             System.out.println("""
-                    Number input is incorrect for a variety of reasons; 
-                    we do not have the time, patience or crayons 
-                    to explain it to you.""");
+                    At least one of the numbers input is incorrect; 
+                    either the index you requested 
+                    is larger than than the size of the sequence or 
+                    the sequence that you requested is too large for this 
+                    program to process.""");
             return index;
         } else {
             result[0] = 0;
@@ -28,7 +30,7 @@ public class Worksheet_4_25 {
 
 
     public static void main(String[] args) {
-        arrayPattern(75, 75);
+        arrayPattern(14, 15);
 
     }
 }
