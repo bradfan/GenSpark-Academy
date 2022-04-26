@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/247701/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Mon, 25 Apr 2022 12:45:08 UTC
+update_date: Tue, 26 Apr 2022 12:53:59 UTC
 stages:
 - id: 421
   step: 7024
@@ -36,6 +36,8 @@ topics:
     theory_id: 16927
   - title: Computer programming
     theory_id: 8739
+  - title: Paradigms
+    theory_id: 15860
   - title: Introduction to Java
     theory_id: 3500
   - title: Basic literals
