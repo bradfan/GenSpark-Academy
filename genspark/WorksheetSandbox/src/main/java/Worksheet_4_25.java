@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Worksheet_4_25 {
@@ -115,6 +116,19 @@ public class Worksheet_4_25 {
         return String.join(" ", words);
     }
 
+    public static int[] take(int[] arr, int n) {
+        return (n > arr.length) ? arr : Arrays.copyOfRange(arr,0, n);
+
+    }
+
+    public static int hexToDecimalSolution(String hex) {
+        return Integer.parseInt(hex, 16);
+    }
+
+    public static boolean isDivisible(long n, long x, long y) {
+        return n % x == 0 && n % y == 0;
+    }
+
 
     public static void main(String[] args) {
         arrayPattern(14, 15);
@@ -131,6 +145,11 @@ public class Worksheet_4_25 {
         System.out.println(Arrays.toString(reflectPoint(p, q)));
         System.out.println(sumMul(0, 0));
         System.out.println(smash("Up", "yours", "code", "wars"));
+        int[] takeArray = {10, 5, -32, -12, -19, 10, -38, -20, 13, 13, -33, -24, -19, -15, -42, 12, -25, -43, 5, -10, -48, -28, -41, -12, -39, -22, -33, -10, -9, -21};
+        System.out.println(Arrays.toString(take(takeArray, 32)));
+        System.out.println(hexToDecimalSolution("a"));
+
+
 
 
     }
