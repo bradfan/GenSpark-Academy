@@ -113,6 +113,7 @@
       <module name="Budget_Manager.Topics-Processing_strings-Find_the_first_occurrence_of_the_word__the.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Move_the_first_N_characters.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Palindrome.main" target="11" />
+      <module name="Budget_Manager.Topics-Processing_strings-Piece_of_alphabet.main" target="11" />
       <module name="Budget_Manager.Topics-Processing_strings-Theory.main" target="11" />
       <module name="Budget_Manager.Topics-Relational_operators-Check_the_sum.main" target="11" />
       <module name="Budget_Manager.Topics-Relational_operators-Check_the_value.main" target="11" />
@@ -154,11 +155,23 @@
       <module name="Budget_Manager.Topics-The_for-loop-The_product_of_numbers_from_a_to_b.main" target="11" />
       <module name="Budget_Manager.Topics-The_for-loop-The_sum_of_integers_from_a_to_b.main" target="11" />
       <module name="Budget_Manager.Topics-The_for-loop-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-The_List_interface-Count_the_value_occurrences.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Greek_letters.main" target="11" />
+      <module name="Budget_Manager.Topics-The_List_interface-Implementations.main" target="11" />
+      <module name="Budget_Manager.Topics-The_List_interface-Mutable_lists.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Replacing_ArrayList_with_LinkedList.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Setting_a_new_name.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-The_longest_string_in_the_list.main" target="11" />
       <module name="Budget_Manager.Topics-The_List_interface-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Fixing_the_main_method.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-No_main_args.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Print__Hello,_Java.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Print__We_are_robots.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Select_all_correct_statements.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Select_correct_main_method.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-The_correct_declaration.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Theory.main" target="11" />
+      <module name="Budget_Manager.Topics-The_main_method-Who_is_the_main.main" target="11" />
       <module name="Budget_Manager.Topics-Types_and_variables-Assignments.main" target="11" />
       <module name="Budget_Manager.Topics-Types_and_variables-Theory.main" target="11" />
       <module name="Budget_Manager.util.main" target="11" />

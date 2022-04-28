@@ -121,6 +121,7 @@
             <option value="$PROJECT_DIR$/Topics/Processing strings/Find the first occurrence of the word  the" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Move the first N characters" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Palindrome" />
+            <option value="$PROJECT_DIR$/Topics/Processing strings/Piece of alphabet" />
             <option value="$PROJECT_DIR$/Topics/Processing strings/Theory" />
             <option value="$PROJECT_DIR$/Topics/Relational operators/Check the sum" />
             <option value="$PROJECT_DIR$/Topics/Relational operators/Check the value" />
@@ -154,7 +155,10 @@
             <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Inheritance of standard collections" />
             <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Squares list" />
             <option value="$PROJECT_DIR$/Topics/The Collections Framework overview/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Count the value occurrences" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Greek letters" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Implementations" />
+            <option value="$PROJECT_DIR$/Topics/The List interface/Mutable lists" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Replacing ArrayList with LinkedList" />
             <option value="$PROJECT_DIR$/Topics/The List interface/Setting a new name" />
             <option value="$PROJECT_DIR$/Topics/The List interface/The longest string in the list" />
@@ -167,6 +171,15 @@
             <option value="$PROJECT_DIR$/Topics/The for-loop/The product of numbers from a to b" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/The sum of integers from a to b" />
             <option value="$PROJECT_DIR$/Topics/The for-loop/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Fixing the main method" />
+            <option value="$PROJECT_DIR$/Topics/The main method/No main args" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Print  Hello, Java" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Print  We are robots" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Select all correct statements" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Select correct main method" />
+            <option value="$PROJECT_DIR$/Topics/The main method/The correct declaration" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The main method/Who is the main" />
             <option value="$PROJECT_DIR$/Topics/Types and variables/Assignments" />
             <option value="$PROJECT_DIR$/Topics/Types and variables/Theory" />
             <option value="$PROJECT_DIR$/util" />

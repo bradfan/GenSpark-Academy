@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/247701/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Wed, 27 Apr 2022 12:52:31 UTC
+update_date: Thu, 28 Apr 2022 12:54:00 UTC
 stages:
 - id: 421
   step: 7024
@@ -78,8 +78,6 @@ topics:
     theory_id: 3507
   - title: Switch statement
     theory_id: 3504
-  - title: Characters
-    theory_id: 3514
   - title: Sizes and ranges
     theory_id: 3532
   - title: Type casting
@@ -92,8 +90,6 @@ topics:
     theory_id: 3489
   - title: Functional decomposition
     theory_id: 10570
-  - title: String
-    theory_id: 3523
   - title: Primitive and reference types
     theory_id: 5035
   - title: Array
@@ -102,6 +98,10 @@ topics:
     theory_id: 3594
   - title: Iterating over arrays
     theory_id: 3602
+  - title: Characters
+    theory_id: 3514
+  - title: String
+    theory_id: 3523
   - title: Errors in programs
     theory_id: 3536
   - title: What is an exception

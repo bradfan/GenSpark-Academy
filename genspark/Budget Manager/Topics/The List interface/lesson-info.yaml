@@ -4,3 +4,6 @@ content:
 - Replacing ArrayList with LinkedList
 - Setting a new name
 - Greek letters
+- Implementations
+- Mutable lists
+- Count the value occurrences

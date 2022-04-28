@@ -13,3 +13,8 @@ class Main {
     }
 }
 
+// if (input.equals(isPally)) {
+//            System.out.println("yes");
+//        } else {
+//            System.out.println("no");
+//        }
